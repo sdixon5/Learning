@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj": {}
+    "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
+    "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+        "projectPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
+        "outputPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj": {
+    "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\obj\\",
+        "outputPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -86,8 +86,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj"
+              "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj"
               }
             }
           }
@@ -101,6 +101,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

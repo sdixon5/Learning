@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {}
+    "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
+    "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+        "projectPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
+        "outputPath": "d:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
