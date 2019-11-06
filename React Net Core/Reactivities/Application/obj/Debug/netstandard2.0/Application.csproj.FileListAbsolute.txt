@@ -12,3 +12,17 @@ D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\D
 D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
 D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.dll
 D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.pdb
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.deps.json
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.dll
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.pdb
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Domain.dll
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Persistence.dll
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Domain.pdb
+C:\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Persistence.pdb
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csprojAssemblyReference.cache
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csproj.CoreCompileInputs.cache
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.AssemblyInfoInputs.cache
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.AssemblyInfo.cs
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.dll
+C:\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.pdb

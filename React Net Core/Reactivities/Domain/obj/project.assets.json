@@ -179,27 +179,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shawn\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\sdixon3\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-      "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
+      "projectPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
