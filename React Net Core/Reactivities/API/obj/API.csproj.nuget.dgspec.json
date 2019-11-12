@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\api\\API.csproj": {}
+    "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\api\\API.csproj": {
+    "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\api\\API.csproj",
+        "projectUniqueName": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\api\\API.csproj",
+        "projectPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\api\\obj\\",
+        "outputPath": "C:\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
