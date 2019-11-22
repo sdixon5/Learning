@@ -1,0 +1,11 @@
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\bin\Debug\netstandard2.0\Persistence.deps.json
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\bin\Debug\netstandard2.0\Persistence.dll
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\bin\Debug\netstandard2.0\Persistence.pdb
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\bin\Debug\netstandard2.0\Domain.dll
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\bin\Debug\netstandard2.0\Domain.pdb
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.csprojAssemblyReference.cache
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfoInputs.cache
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.csproj.CopyComplete
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.dll
+D:\shawn\documents\GitHub\Learning\React Net Core\Reactivities\Persistence\obj\Debug\netstandard2.0\Persistence.pdb
