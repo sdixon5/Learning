@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\shawn\\documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {}
+    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\shawn\\documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shawn\\documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\shawn\\documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\API.csproj",
         "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-        "outputPath": "D:\\shawn\\documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\obj\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\React Net Core\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
