@@ -36,7 +36,9 @@ namespace API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
+            // when using https need to add following to properties > launch settings > application url line
+            // https://localhost:5001;
 
             app.UseRouting();
 
