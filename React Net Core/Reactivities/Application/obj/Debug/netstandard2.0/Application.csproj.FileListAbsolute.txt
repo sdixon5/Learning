@@ -1,0 +1,13 @@
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.deps.json
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Application.pdb
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Domain.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Persistence.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Domain.pdb
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\bin\Debug\netstandard2.0\Persistence.pdb
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csprojAssemblyReference.cache
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.AssemblyInfoInputs.cache
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.AssemblyInfo.cs
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Application\obj\Debug\netstandard2.0\Application.pdb

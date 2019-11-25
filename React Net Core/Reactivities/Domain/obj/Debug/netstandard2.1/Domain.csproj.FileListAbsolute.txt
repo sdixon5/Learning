@@ -1,0 +1,8 @@
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\bin\Debug\netstandard2.1\Domain.deps.json
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\bin\Debug\netstandard2.1\Domain.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\bin\Debug\netstandard2.1\Domain.pdb
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfoInputs.cache
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfo.cs
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\obj\Debug\netstandard2.1\Domain.dll
+D:\shawn\Documents\GitHub\Learning\React Net Core\Reactivities\Domain\obj\Debug\netstandard2.1\Domain.pdb
