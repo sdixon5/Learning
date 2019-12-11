@@ -38,3 +38,28 @@ Install a package globally:
 npm install package -g == yarn global add package
 ```
 
+## Lesson 18: React Project Setup
+
+Create react app gets rid of the need for babel and webpack
+
+babel will take js files with react and verify that they can run on all browsers
+
+webpack is a module bundler
+
+webpack bundles and optimizes code for production
+
+create react app is a cli
+
+the src folder is our playground/workspace
+
+package.json allows for us to have the react components
+
+the react app just replaced the `<div id="root"></div>` on the public html file
+
+react lets us write html syntax inside of our js file
+
+react dom --> the robot that replaces the dom pieces with our virtual dom changes
+
+## Lesson 19: Don't eject
+
+what eject does is create a config folder and a scripts folder
