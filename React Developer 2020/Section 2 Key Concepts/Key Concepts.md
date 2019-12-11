@@ -22,7 +22,7 @@ Use containers
 
 MVC pattern
 
-Data overflow --> hard to debug
+Data overflow --> hard to debug (remember the image with the arrows going in all directions)
 
 **2013 React Open Source**
 
