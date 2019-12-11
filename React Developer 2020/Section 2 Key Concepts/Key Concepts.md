@@ -61,3 +61,48 @@ Data overflow --> hard to debug
         can be a component or a class
 
     - able to reuse and share components
+
+## Lesson 8: One Way Data Flow
+
+3. Unidirectional data flow
+
+    - react is a javascript library for interactivity
+
+    - react has state - a javascript object, contians application data
+
+    - jsx = javascript with html inside
+
+    - virtual dom, javascript version of the dom
+
+        gives react a blueprint of how it should update
+    
+    - state has to change to change the actual webpage
+
+    - think of it as a tree, data can not flow up, data flows down, state moves to the version of the app that fits the current state
+
+## Lesson 9: UI Library
+
+4. UI, The rest is up to you
+
+    - angular is a framework, like a full kitchen
+
+    - react is a library, like a stove
+
+    - the blueprint is the react library
+
+## Lesson 10: React Developer
+
+**React keywords**
+
+- Declarative
+- JSX
+- Components
+- State
+- Props
+- VirtualDom
+
+How to be a great react developer
+1. Decide on components
+2. Decide the state and where it lives
+3. What changes when the state changes
+
