@@ -63,3 +63,14 @@ react dom --> the robot that replaces the dom pieces with our virtual dom change
 ## Lesson 19: Don't eject
 
 what eject does is create a config folder and a scripts folder
+
+## Lesson 20: Class Components
+
+By using a class component instead of a function, we now have access to something called the state, ie the state of the application.
+
+State is some js object with properties that we can access at any point within our class
+
+`Super()` calls the constructor method on the component  --> gives us access to the this.state property
+
+`this.setState` can be called to change the state, must specifiy which property of the state we want to change
+
