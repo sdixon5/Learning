@@ -104,3 +104,13 @@ the birth of spa --> instead of requesting for a page, we request data, ie calli
 
 ## Lesson 25: Fetching Content
 
+Life cycle methods are methods that get called when the component is called
+
+## Lesson 26: Optional: Promises
+
+If you are new to the concept of using the Promises  we saw in the previous video and you would like to learn more, we created a bonus video to explain promises in more detail. Simply go to Appendix 1: Key Developer Concepts at the bottom of the course video player, and watch the video titled Promises .
+
+## Lesson 28: Card List Component
+
+`<CardList name='IronMan'>Shawn</CardList>` the part that says Shawn is accessible via prop.children
+
