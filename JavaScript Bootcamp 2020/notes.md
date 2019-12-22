@@ -50,3 +50,7 @@ must use backtick characters for string literals
 
 double $$ is cuz the inner most is for the math operation and the outer most $ is for the number to be placed into the string
 
+## Lesson 32: Running code from a script
+
+Chrome console is called a REPL - Read, evaluate, print, loop
+
