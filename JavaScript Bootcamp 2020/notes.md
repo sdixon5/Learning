@@ -54,3 +54,89 @@ double $$ is cuz the inner most is for the math operation and the outer most $ i
 
 Chrome console is called a REPL - Read, evaluate, print, loop
 
+## Lesson 37: Truthy & Falsy Values
+
+JS Falsy Values:
+
+    - false
+    - 0
+    - "" (empty string)
+    - null
+    - undefined
+    - NaN
+
+Everything else is truthy!
+
+## Lesson 41: Operator Precedence
+
+NOT (!) has higher precedence than && and ||
+
+&& has higher precedence than ||
+
+Can be altered with parens ()
+
+## Lesson 42: Switch Statement
+
+```
+switch(day) {
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Tuesday');
+        break;
+}
+```
+
+Don't forget you need to break in-between the cases otherwise after a match, every other case will run
+
+Can have situation where multiple cases have the same output, can handle as follows:
+
+```
+let emoji = 'heart';
+
+switch(emoji){
+    case 'sad face':
+    case 'happy face':
+        console.log('yellow');
+        break;
+    case 'eggplant':
+        console.log('purple');
+        break;
+    case 'heart':
+    case 'lips':
+        console.log('red');
+        break;
+}
+```
+
+## Lesson 43: Ternary Operator
+
+condition ? expIfTrue: expIfFalse
+
+```
+let num = 7;
+
+//if(num === 7) {
+//    console.log('lucky');
+//}
+//else {
+//    console.log('bad');
+//}
+
+num === 7 ? console.log('lucky') : console.log('bad');
+```
+
+```
+let status = 'offline';
+
+//let color;
+//if (status === 'offline') {
+//    color = 'red';
+//}
+//else {
+//    color = 'green';
+//}
+
+let color = status === 'offline' ? 'red' : 'green';
+```
