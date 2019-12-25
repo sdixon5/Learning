@@ -140,3 +140,22 @@ let status = 'offline';
 
 let color = status === 'offline' ? 'red' : 'green';
 ```
+
+## Lesson 48: Shift and Unshift
+
+    - Push - add to end
+    - Pop - remove from end
+    - Shift - remove from start
+    - Unshift - add to start
+
+## Lesson 49: Concat
+
+    - concat - merge arrays
+    - includes - look for a value
+    - indexOf - just like str.indexOf
+    - join - creates a string from arr
+    - reverse - reverses an array!
+    - slice - copy portion of an arr
+    - splice - remove/replace elements
+    - sort - sorts an array
+
