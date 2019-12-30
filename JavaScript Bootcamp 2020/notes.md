@@ -159,3 +159,32 @@ let color = status === 'offline' ? 'red' : 'green';
     - splice - remove/replace elements
     - sort - sorts an array
 
+## Lesson 55: Intro to Reference Types
+
+```
+let fruit = 'orange';
+let color = fruit;
+fruit = 'watermelon'
+```
+
+Once fruit is set to a new value fruit and color will not have the same value
+
+This is because they are primitive types, ie value type variables
+
+Arrays store info via a pointer, so if you have two arrays set to the same values they will reference any changes, this is because the data is not stored in their container instead they store a reference to where the actual values are being stored.
+
+## Lesson 56: Using Const with Arrays
+
+You can store an array as a const, because the array stores the reference to the array and not the values of the array itself.
+
+## Lesson 57: Nested Arrays
+```
+const animalPairs = [
+    ['doe', 'buck'],
+    ['ewe', 'ram'],
+    ['peahen', 'peacock']
+]
+
+animalPairs[2][0] //returns 'peahen'
+```
+
