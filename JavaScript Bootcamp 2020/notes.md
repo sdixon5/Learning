@@ -188,3 +188,56 @@ const animalPairs = [
 animalPairs[2][0] //returns 'peahen'
 ```
 
+## Lesson 58: Intro to Objects
+
+    - Objects are collections of properties
+    - Properties are a key-value pair
+    - Rather than accessing data using an index, we use custom keys
+
+## Lesson 59: Creating object literal
+
+```
+const fitBitData = {
+    totalSteps: '308727,
+    totalMiles: '211.7',
+    avgCalorieBurn: '5755',
+    workoutsThisWeek: '5 of 7',
+    avgGoodSleep: '2:13'
+}
+```
+
+Valid Keys
+
+All Keys are converted to strings
+
+*Except for Symbols, which we haven't covered yet
+
+## Lesson 60: Accessing object properties
+
+```
+const numbers = {
+    100: 'one hundred',
+    15: 'sixteen',
+    '76 trombones': 'great song',
+    wow cool: 'awesome' //this won't work, needs the ''
+}
+
+numbers.100 //this will throw an error
+numbers[100] //will work because the 'number' is converted into a string, just as what happens when 100 is used as a key in the object
+numbers.76 trombones //this wont work, it starts with a # and has a space
+numbers['76 trombones'] //this will work,
+```
+
+You must have the '' if you have #s or spaces inside the key string, also when accessing via square brackets must use '' otherwise js will get confused and just look for passed in value not within the object
+
+## Lesson 61: Adding and Updating Properties
+```
+const userReviews = {};
+
+userReviews['queenBee49'] = 4.0;
+
+userReviews.mrSmith78 = 3.5;
+```
+
+
+
