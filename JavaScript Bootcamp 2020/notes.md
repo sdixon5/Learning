@@ -239,5 +239,121 @@ userReviews['queenBee49'] = 4.0;
 userReviews.mrSmith78 = 3.5;
 ```
 
+## Lesson 73: For...Of Intro
+```
+for (variable of iterable){
+    statement
+}
 
+let subreddits = ['soccer', 'popheads', 'cringe', 'books'];
+
+for(let i = 0; i < subreddits.length; i++){
+    console.log(subreddits[i]);
+}
+
+for(let sub of subreddits){
+    console.log(sub);
+}
+```
+
+For of only works on iterable items
+
+## Lesson 74: Comparing For and For...Of
+```
+//Example of where for of is better
+const magicSquare = [ [2, 7, 6], [9, 5, 1], [4, 3, 8]];
+
+for (let i = 0; i < magicSquare.length, i++){
+    let row = magicSquare[i];
+    let sum = 0;
+    for (let j = 0; j < row.length; j++){
+        sum += row[j];
+    }
+    console.log(`${row} summed to ${sum}`);
+}
+
+for(let row of magicSquare){
+    let sum = 0;
+    for(let num of row){
+        sum += num;
+    }
+    console.log(`${row} summed to ${sum}`);
+}
+
+//Example of where for of is NOT better
+const words1 = ['mail', 'milk', 'bath', 'black'];
+const words2 = ['box', 'shake', 'tub', 'berry'];
+
+for(let i = 0; i < words1.length; i++>){
+    console.log(`${words1[i]}${words2[i]}`);
+}
+
+//For of would be super difficult to implement on this example. Would have to do the for of on the words1 array then use indexOf to match the words2 array, which is more work and is unnecessary
+```
+
+## Lesson 75: For...Of with Objects
+
+Unable to use with objects because objects are not iterable
+```
+const movieReviews = {
+    Avengers: 9.5,
+    'Captain America': 8.5,
+    'Iron Man': 9.0,
+    Thor: 8
+};
+
+//this will not work, because objects are not iterable
+for (let x of movieReviews){
+    console.log(x);
+}
+```
+
+```
+//could do this instead, could use Object.keys() or Object.values()
+for(let movie of Object.keys(movieReviews)){
+    console.log(movie, movieReviews[movie]);
+}
+
+const ratings = Object.values(movieReviews);
+
+let total = 0;
+for(let r of ratings){
+    total += r;
+}
+let avg = total/ratings.length;
+console.log(avg);
+```
+
+## Lesson 76: For...In Loops
+
+Loop over the keys in an object
+```
+for (variable in object){
+    statement
+}
+```
+
+For in loops over the keys/properties of an object
+
+```
+const jeopardyWinnings = {
+    regularPlay: 252700,
+    watsonChallenge: 3000000,
+    tournamentOfChampions: 500000,
+    battleOfTheDecades: 100000
+};
+
+for(let prop in jeopardyWinnings){
+    console.log(prop);
+    console.log(jeopardyWinnings[prop]);
+}
+
+let total = 0;
+for(let prop in jeopardyWinnings){
+    total+= jeopardyWinnings[prop];
+}
+console.log(`Ken Jennings Total Earnings: ${total}`);
+
+//Using a for...in with an array is not recommened, each browser access the keys differently which can have major side-effects when trying to insert data into the array when using a for...in
+```
 
