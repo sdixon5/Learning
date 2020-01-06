@@ -470,3 +470,58 @@ A function will be hoisted so it actually returns the function output.
 
 Essentially just declare stuff before you use anything!
 
+## Lesson 97: forEach
+```
+const numbers = [20, 21, 22, 23];
+
+numbers.forEach(function(num)){
+    console.log(num *2);
+};
+
+//or
+
+function printTriple(n){
+    console.log(n * 3);
+}
+
+numbers.forEach(printTriple);
+```
+
+## Lesson 98: Map
+
+### Map
+Creates a new array with the results of calling a callback on every element in the array.
+
+```
+const texts = ['rofl', 'lol', 'omg', 'ttyl'];
+const caps = texts.map(function (t){
+    return t.toUpperCase();
+});
+
+texts; //['rofl', 'lol', 'omg', 'ttyl'];
+caps; //['ROFL', 'LOL', 'OMG', 'TTYL'];
+```
+
+Essentailly map makes a new array for you.
+
+## Lesson 99: Arrow Functions Intro
+```
+const square = (x) => {
+    return x * x;
+}
+
+const sum = (x, y) => {
+    return x + y;
+}
+
+//parens are optional if there's only one parameter:
+const square = x => {
+    return x * x;
+}
+
+//use empty parens for functions w/ no parameters:
+const singASong = () => {
+    return "LA LA LA";
+}
+```
+
