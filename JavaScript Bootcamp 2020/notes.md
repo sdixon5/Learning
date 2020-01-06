@@ -357,3 +357,47 @@ console.log(`Ken Jennings Total Earnings: ${total}`);
 //Using a for...in with an array is not recommened, each browser access the keys differently which can have major side-effects when trying to insert data into the array when using a for...in
 ```
 
+## Lesson 88: Block Scope
+const and let hold their block scope but var does not
+```
+for(var i = 0; ...){
+
+}
+//i is still accessible out here when using var, so if an i is declared before the loop it will be lost after the loop
+```
+
+## Lesson 89: Lexical Scope
+```
+function outer(){
+    function inner(){
+
+    }
+}
+\\the inner function is not accessbile except for within the outer function
+```
+
+## Lesson 90: Function Expressions
+There are multiple ways to declare a function
+
+```
+function add(x,y){
+    return x + y;
+}
+
+add(4,5);
+
+//technically the function declared for sum is an annoimous function
+const sum = function (x,y){
+    return x + y;
+}
+
+sum(4,5);
+
+const product = function multiply (x,y){
+    return x * y;
+}
+
+product(3,5);
+//multiply(3,5) will not work
+```
+
