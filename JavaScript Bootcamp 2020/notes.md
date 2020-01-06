@@ -401,3 +401,72 @@ product(3,5);
 //multiply(3,5) will not work
 ```
 
+## Lesson 93: Functions as Return Values
+Note: He is using a trick that is hard to understand, may be a factory
+```
+function multiplyBy(num){
+    return function (x){
+        return x * num;
+    }
+}
+
+const triple = multiplyBy(3);
+
+triple(9); //returns 27
+//it makes sense now, mutiplyBy  is just returning a function
+//then calling said annonimous function via triple() is passes in x, which mutiplies by the original number
+```
+
+Another example
+```
+function makeBetweenFunc(x, y){
+    return function (num){
+        return num >=x && num <=y;
+    }
+}
+
+const isChild = makeBetweenFunc(0,18);
+
+isChild(17); //return's true
+```
+
+## Lesson 94: Callbacks
+
+### Callback Functions
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function.
+
+```
+function callTwice(func){
+    func();
+    func();
+}
+
+function laugh(){
+    console.log('HaHaHa');
+}
+
+callTwice(laugh); //laugh is a callback function!!!!!!
+```
+
+## Lesson 95: Hoisting
+How JS handles function and variable declarations before running code
+```
+console.log(animal);
+var animal = 'Tiger';
+```
+The code above should return an unexcepected variable error, but it doesn't 
+
+because JS does the following essentially, techncially no code is re-written, its just OS/browser interpretation stuff
+```
+var animal;
+console.log(animal);
+animal = 'Tiger';
+```
+So the console.log is undefined
+
+If using 'let' you will get an error saying the variable has not be initialized. Because let and const are not hoisted.
+
+A function will be hoisted so it actually returns the function output.
+
+Essentially just declare stuff before you use anything!
+
