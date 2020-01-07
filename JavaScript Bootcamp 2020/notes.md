@@ -525,3 +525,44 @@ const singASong = () => {
 }
 ```
 
+## Lesson 100: Arrow Function Implicit Return
+An implicit return is an arrow function that does not need to declare the return keyword in order to return a value.
+
+```
+const isEven = num => num % 2 === 0; //one-liner implicit return
+```
+
+when the return is one expression it can be used as an implicit return, in one of two ways
+
+```
+const square = n => (
+    return n * n;
+)
+
+//or
+
+const square = n => n * n;
+```
+
+more examples
+```
+const nums = [1, 2, 3, 4, 5];
+
+const doubles1 = nums.map(function (n) {
+    return n * 2;
+})
+
+const doubles2 = nums.map(n => {
+    return n * 2;
+})
+
+const doubles3 = nums.map(n => n * 2);
+
+const parityList = nums.map((n) => n % 2 === 0 ? 'even' : 'odd');
+
+//still an implicit return, just wrapped in {} so that it is easier to read what is going on
+
+const parityList = nums.map((n) => {
+    n % 2 === 0 ? 'even' : 'odd'
+});
+```
