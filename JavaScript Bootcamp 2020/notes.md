@@ -566,3 +566,54 @@ const parityList = nums.map((n) => {
     n % 2 === 0 ? 'even' : 'odd'
 });
 ```
+
+## Lesson 101: Array.find
+.find only returns the first match
+
+## Lesson 102: Filter
+```
+const nums = [9,8,7,6,5,4,3,2,1];
+const odds = nums.filter(n => {
+    return n % 2 === 1; //callback returns true or false, if true item is added to odds array
+})
+```
+
+## Lesson 104: Revisiting Sort
+```
+const prices = [400.50, 3000, 99.99, 35.99, 12.00];
+
+prices.sort(); // will return [12,3000,35.99,400.5,9500,99.99]; because .sort switches everything to a string before comparing, dumb
+
+prices.ascSort((a, b) => a - b); //will sort smallest to largest
+prices.descSort((a, b) => b - a);
+```
+
+### Rules
+arr.sort(compareFunc(a,b))
+* If compareFunc(a,b) returns less than 0
+    * Sort a before b
+* If compareFunc(a,b) returns 0
+    * Leave a and b unchanged with respect to each other
+* If compareFunc(a,b) returns greater than 0
+    * Sort b before a
+
+REMEMBER sort will mutate the original array, so sorting will change the order of the original array
+
+could do arr.slice() to create a copy then do .sort
+```
+const books = [{
+    title: '',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'Changing my mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays']
+}];
+
+books.sort((a,b ) => a.rating - b.rating); //worst to best
+```
+
