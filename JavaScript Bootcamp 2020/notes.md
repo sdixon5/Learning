@@ -617,3 +617,77 @@ const books = [{
 books.sort((a,b ) => a.rating - b.rating); //worst to best
 ```
 
+## Lesson 105: Reduce Intro
+
+Reduce
+
+Executes a reducer function on each element of the array, **resulting in a single value.**
+
+```
+[3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+});
+
+//accumulator is also called the total value
+//the total is passed along as the array keeps increasing the total
+```
+
+| Callback  | Accumulator   | Current Value | Return Value  |
+| ---------- |:----------:|:----------:|----------:|
+| first call | 3 | 5 | 8 |
+| second call | 8 | 7 | 15 |
+| thrid call | 15 | 9 | 24 |
+| fourth call | 24 | 11 | 35 |
+
+The accumulator/first parameter will hold the value of the previous return, until the end when it returns the end result of the reduce function.
+
+```
+const nums = [3, 4, 5, 6, 7];
+const product = nums.reduce((total, currentVal) => {
+    return total * currentVal;
+});
+```
+
+## Lesson 106: Reduce Pt. 2
+
+```
+let grades = [89, 96, 58, 77, 62, 93, 81, 99, 73];
+
+const topScore = grades.reduce((max, currVal) => {
+    if (currVal > max) return currVal;
+    return max;
+});
+topScore; //99
+
+//using Math library and an implicit return
+const topScore = grades.reduce((max, currVal) => {
+    Math.max(max, currVal);
+});
+```
+//Could have an initial value with an extra parameter after the callback function.
+```
+const sum = [10, 20, 30].reduce((sum, currVal) => {
+    return sum + currVal;
+}, 500);
+```
+## Lesson 107: Even More Reduce
+
+```
+const votes = ['y', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'y', 'y'];
+
+const tally = votes.reduce((tally, vote) => {
+    tally[vote] = (tally[vote] || 0) + 1;
+    return tally;
+}, {}); //initial value: {} an object
+
+tally; //{y: 7, n: 6}
+
+//another example
+const groupdedByRating = books.reduce((groupedBooks, book) => {
+    const key = Math.floor(book.rating);
+    if (!groupedBooks[key]) groupedBooks[key] = [];
+    groupedBooks[key].push(book);
+    return groupedBooks;
+}, {});
+```
+
