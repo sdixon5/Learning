@@ -691,3 +691,34 @@ const groupdedByRating = books.reduce((groupedBooks, book) => {
 }, {});
 ```
 
+## Lesson 109: Default Parameters
+```
+//old way
+function multiply(x,y){
+    if(typeof y === 'undefined'){
+        y = 1;
+    }
+    return x * y;
+}
+
+//or 
+function multiply(x,y){
+    y = typeof y === 'undefined' ? 1 : y;
+    return x * y;
+}
+
+//new way
+function multiply(a, b = 1){
+    return a * b;
+}
+
+//another example
+const greet = (person, greeting = 'hi') => {
+    console.log(`${greeting}, ${person}!`);
+}
+```
+
+Note: default parameters have to be at the end, 
+
+it CAN'T be default then normal parameters, it doesn't work like that!
+
