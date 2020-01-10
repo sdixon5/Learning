@@ -722,3 +722,78 @@ Note: default parameters have to be at the end,
 
 it CAN'T be default then normal parameters, it doesn't work like that!
 
+## Lesson 110: Spread for Function Calls
+
+Spread
+
+Spread Syntax allows an iterable such as an array to be expanded in places where zero or more argumetns (for function call) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literal) are expected.
+
+Spread For Function Calls
+
+Expands an iterable (array, string, etc.) into a list of orguments
+```
+const nums = [9, 3, 2, 8];
+Math.max(nums); //Nan
+
+Math.max(...nums); //67
+//Same as calling Math.max(9,3,2,8);
+```
+
+Essentailly instead of passing in the array object, it will pass in the elements in the array instead.
+
+```
+function giveMeFour(a, b, c, d){
+    console.log('a', a);
+    console.log('b', b);
+    console.log('c', c);
+    console.log('d', d);
+}
+
+const colors = ['red', 'blue', 'black'];
+
+giveMeFour(colors); //returns -> a [], b undefined ...
+giveMeFour(...colors); //returns -> a red, b blue ...
+```
+
+## Lesson 111: Spread in Array Literals
+
+Spread In Array Literals
+
+Create a new array using an existing array. Spreads the elements from one array into a new array.
+
+```
+const nums1 = [1, 2, 3];
+const nums2 = [4, 5, 6];
+
+[ ...nums, ...nums2];
+//[1,2,3,4,5,6]
+['a','b', ...nums2];
+//['a','b',4,5,6];
+```
+
+## Lesson 112: Spread in Object Literals
+
+Spread in object literals
+
+Copies properties from one object into another object literal.
+
+```
+const feline = {
+    legs: 4,
+    family: 'Felidae'
+};
+
+const canine = {
+    family: 'Caninae',
+    furry: true
+};
+
+const cat = {
+    ...feline,
+    personality: 'unpredicatable',
+    awesome: true
+};
+```
+
+When spreading it matters the order in cases where properties have the same key name.
+
