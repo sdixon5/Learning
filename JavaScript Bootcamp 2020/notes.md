@@ -797,3 +797,138 @@ const cat = {
 
 When spreading it matters the order in cases where properties have the same key name.
 
+## Lesson 113: The Arguments Object(not new)
+
+The Arguments Object:
+
+* Available inside every function
+* It's an array-like object
+    * Has a length property
+    * Does not have array methods like push/pop
+* Containes all the arguments passed to the function
+* Not available inside of arrow function!
+
+```
+function sumAll(){
+    let total = 0;
+    for(let i = 0; i < arguments.length; i++){
+        total += arguments[i];
+    }
+    return total;
+}
+sumAll(8, 4, 3, 2); //17
+sumAll(2,3); //5
+```
+
+considered 'meh!' to use
+
+## Lesson 114: Rest Parameters (new!)
+
+Rest Params
+
+Collects all remaining arguments into an actual array
+```
+function sumAll(...nums){
+    let total = 0;
+    for(let n of nums) total += n;
+    return total;
+}
+sumAll(1,2); //3
+sumAll(1,2,3,4,5); //15
+```
+
+It will actually let you capture undefined arguments into an array, that doesn't contain original arguments!
+```
+function fullName(first, last, ...titles){
+    console.log('first', first);
+    console.log('last', last);
+    console.log('titles', titles);
+}
+```
+
+## Lesson 115: Destructuring Arrays
+
+A way to unpack values from array into distinct variables
+
+Array Destructuring
+
+```
+const raceResults = ['Eluid Kipchoge', 'Feyisa Lelisa', 'Galen Rupp', 'Billy Bob'];
+
+const [gold, silver, bronze] = raceResults;
+gold; //Eluid
+silver; //Feyisa
+bronze: //galen
+
+const [fastest, ...everyoneElse] = raceResults;
+fastest; //Eluid
+everyoneElse; //feyisa, galen
+
+const [first, , , fourth] = raceResults;
+first; //eluid
+fourth; //billy bob
+```
+
+If commas are used in destructuring those elements will be skipped!
+
+## Lesson 116: Destructuring Objects
+
+```
+const racer {
+    first: 'Lewis Hamilton',
+    last: 'Vettel',
+    country: 'Spain',
+    title: 'World Champ'
+}
+
+const {first, last, country, time} = racer;
+
+first; //Lewis
+last; //vettel
+country; //spain
+time; //undefined
+
+const {first: champ} = racer;
+champ; //lewis
+```
+
+Variable names must be the same, also must be set to name of the object
+
+## Lesson 117: Nested Destructuring
+
+```
+const results = [{
+    first: 'lewis',
+    last: 'hamilton',
+    country: 'britan'
+},
+{
+    first: 'sebastian',
+    last: 'vettel',
+    country: 'germany'
+},
+{
+    first: 'valerie',
+    last: 'bottas',
+    country: 'i forgot'
+}]
+
+const [{first: champ},,{country}] = results;
+```
+
+## Lesson 118: Destructuring Parameters
+
+```
+const fullName = ({first, last}) => {
+    return `${first} ${last}`;
+}
+
+const racer = {
+    first: 'lewis',
+    last: 'hamilton',
+    country: 'britian'
+}
+
+fullName(racer); //lewis hamilton
+```
+
