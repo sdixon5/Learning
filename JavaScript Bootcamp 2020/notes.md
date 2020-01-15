@@ -932,3 +932,22 @@ const racer = {
 fullName(racer); //lewis hamilton
 ```
 
+## Lesson 119: Shorthand Object Properties
+```
+//instead of returning {max: max, min: min, etc}
+//can do the following
+const getStats = (arr) => {
+    const max = Math.max(...arr);
+    const min = Math.min(...arr);
+    const sum = arr.reduce((sum, r) => sum + r);
+    const avg = sum / arr.length;
+    return {
+        max, min, sum, avg
+    }
+}
+
+const reviews = [4.5, 5, 3.44, 2,8, 3.5, 4, 3.5];
+
+const stats = getStats(reviews);
+```
+
