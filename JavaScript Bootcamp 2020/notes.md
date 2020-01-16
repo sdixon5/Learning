@@ -951,3 +951,51 @@ const reviews = [4.5, 5, 3.44, 2,8, 3.5, 4, 3.5];
 const stats = getStats(reviews);
 ```
 
+## Lesson 120: Computed Properties
+
+```
+const user = 'Jools';
+
+const userRoles = {
+    [user]: 'Admin'
+}
+
+userRoles; //Jools: Admin
+```
+
+Stuff inside the [] is evaluated before so the correct value will be used.
+
+Otherwise would have to make empty object and then do:
+```
+userRoles ={}
+userRoles[user] = 'Admin'
+```
+
+## Lesson 121: Adding Methods to Objects
+```
+const math = {
+    multiply : function(x,y) {
+        return x*y;
+    }
+    square : function(x){
+        return x*x;
+    }
+}
+```
+
+## Lesson 122: Method Shorthand Syntax
+
+```
+const auth = {
+    username: 'Test',
+    login: () => {
+        console.log("you logged in")
+    },
+    logout(){
+        console.log('you logged out')
+    }
+}
+
+//arrow functions aren't shorthand this way, just do logout() {}
+```
+
