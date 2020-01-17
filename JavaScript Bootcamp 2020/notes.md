@@ -999,3 +999,58 @@ const auth = {
 //arrow functions aren't shorthand this way, just do logout() {}
 ```
 
+## Lesson 123: Intro to keyword this
+
+this gives back an object
+
+let and const not added to windows scoep but var is
+
+## Lesson 124: Using this in methods
+
+using this within an object method returns the object itself
+
+```
+const person = {
+    first: 'lewis',
+    last: 'hamilton',
+    nickName: '6 time champ',
+    fullName() {
+        const {first, last, nickName} = this; //destruct this
+        console.log(`${first} ${last} AKA ${nickName}`); //would be this.first this.last but used destructuring on line above
+    }
+}
+```
+
+## Lesson 125: This: Invocation Context
+
+The value of this depends on the invocation context of the function it is used in.
+
+The value will change depending on function execution.
+
+this is a shapeshifter
+
+```
+person.printBio(); will return the object before the dot, in this case the person object
+
+versus if const printBio = person.printBio;
+
+printBio();
+
+then this will refer to the global execution scope, the window, because there is nothing to the left of printBio, ie not dot
+```
+
+this is not set in stone, it can change
+
+invocation context = how you run the code
+
+arrow functions do not get there own value of this
+
+```
+laugh: () => {
+    //stuff
+}
+//this will return window
+
+//this.property will return undefined
+```
+
