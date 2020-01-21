@@ -1054,3 +1054,65 @@ laugh: () => {
 //this.property will return undefined
 ```
 
+## Lesson 131: Taste of the DOM
+
+All HTML and CSS is translated into JS objects
+
+## Lesson 133: The Document Object
+
+The document object is our entry point into the world of the DOM. It contains representation of all the content on a page, plus tons of useful methods and properties.
+
+## Lesson 134: getElementById
+
+```
+const id = document.getElementById('id');
+console.dir(id);
+```
+
+## Lesson 135: getElementsByTagName
+
+```
+const inputs = document.getElementsByTagName;
+console.dir(inputs);
+```
+
+This will look like an array is returned, but it is not an array
+
+An HTMLCollection is returned
+
+An HTML Collection is an array like object, but it is a collection of objects
+
+Array indecies still work, and so does lenght, but pop/push etc does not work
+
+It is an iterable so spread will work, so you can turn it into an array of tag type
+
+## Lesson 136: getElementsByClassName
+
+An HTML Collection will be returned
+
+## Lesson 137: querySelector & querySelectorAll
+
+A newer, all-in-one method to select a single element.
+
+Pass in a CSS selector
+
+```
+//Finds first h1 element
+document.querySelector('h1');
+
+//Finds first element with ID of red
+document.querySelector('#red');
+
+//Finds first element with class of big
+document.querySelector('.big');
+
+//can be more specific
+document.querySelector('body section ul li.special');
+//body and ul are redundant but valid
+
+//css attribute syntax
+document.querySelector('input[type="password"]');
+```
+
+querySelectorAll will return a Node List of specified element
+
