@@ -1116,3 +1116,41 @@ document.querySelector('input[type="password"]');
 
 querySelectorAll will return a Node List of specified element
 
+## Lesson 138: innerText & textContext
+
+Important DOM props & methods
+    classList
+    getAttribute()
+    setAttribute()
+    appendChild()
+    append()
+    prepend()
+    removeChild()
+    remove()
+    createElement
+    innerText
+    textContext
+    innerHTML
+    value
+    parentElement
+    children
+    nextSibling
+    previousSibling
+    style
+
+innerText is text from simple element
+
+innerText from a ul is all of the li's content
+
+setting innerText of nested element will remove all nested elements and leave the innerText only
+
+textContext gets returns and any javascript text content like a console.log('text')
+
+## Lesson 139: innerHTML
+
+accepts html elements as a string
+
+## Lesson 140: value, src, href and more
+
+attributes we can select
+
