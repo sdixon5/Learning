@@ -111,7 +111,7 @@ const salutations = (data) => {
         let res = i.response;
         for(let j of res){
             let div = document.createElement('div');
-            //div.classList.add('ui segment');
+            div.classList.add("ui segment");
             let p = document.createElement('p');
             p.innerText = j;
             div.appendChild(p);
