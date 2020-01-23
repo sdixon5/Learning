@@ -1154,3 +1154,41 @@ accepts html elements as a string
 
 attributes we can select
 
+## Lesson 141: Getting and Setting attributes
+
+```
+range.getAttribute('max'); //500
+```
+
+## Lesson 142: parent/chilren/siblings
+
+```
+ul.children; //etc.
+```
+
+## Lesson 144: Altering Styles
+
+Reading current styles does not work, unless stuff is set inline, which is rare
+
+Also in the dom css attributes are camel cased, so...
+
+background-color becomes backgroundColor
+
+Only updates sytles one at a time, classes is a better way to go
+
+## Lesson 145: getComputedStyle
+
+will return the current styles, ie it reads the css file when needed
+
+## Lesson 146: Manipulating Classes
+
+Could use the classList attribute with toggle method
+
+todo.classList.toggle('class');
+
+## Lesson 147: Creating Elements
+
+```
+const newImg = document.createElement('img');
+```
+
