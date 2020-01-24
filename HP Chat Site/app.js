@@ -2,67 +2,67 @@ const responses = [
     {
         key: "Lines In Display",
         respone: [
-            ""
+            "Device was accidentally dropped by a student during passing period. The device has lines in the display but no physical damage. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Touchpad Issues",
         respone: [
-            ""
+            "The device's touchpad is not working. There is no cursor movement and the left clicking does not work either. There is no physical damage to the device and an external mouse works just fine. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Black Screen",
         respone: [
-            ""
+            "The device has a black screen when turned on. You can see the light is turned on but there is no picture. There is no physical damage to the device. Plugging into a second monitor works. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Keys Not Typing",
         respone: [
-            ""
+            "The device has multiple keys that are not typing. An external keyboard works just fine. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Won't Turn on",
         respone: [
-            ""
+            "The device is not turning on. Multiple chargers have been used and we are not getting a charging light. Either the battery or the motherboard is dead. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Motherboard",
         response: [
-            ""
+            "The device has a bad motherboard. The device will not turn on (no LED power light). There is a charging light when it is plugged in, but once again it will not turn on. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Rubber Nipple Missing",
         respone: [
-            ""
+            "The device has a key with the rubber nipple missing. Due to this the key is not functioning. An external keyboard works just fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Broken Case",
         respone: [
-            ""
+            "The device was accidentally dropped by a student during passing period. The device now has a broken case corner. The only damage is to the case itself. There is no functionality issues, everything works fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Missing Key",
         respone: [
-            ""
+            "The device has a missing key, due to a broken latch. There is no physical damage to the device. An external keyboard works just fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Randomly Shutting Down",
         respone: [
-            ""
+            "The device is randomly shutting down. The device is also overheating which may be leading to the shut downs. I am unable to determine if the shut down is due to the battery or motherboard. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Shift Keys",
         respone: [
-            ""
+            "The device shift keys that are not typing. An external keyboard works just fine. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
 ];
@@ -87,12 +87,7 @@ const standardInfo = [
     {
         key: "Contact Info",
         response: [
-            "hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hello",
-            "this\
-            is a multi\
-            line\
-            string",
-            "here is a line <br /> next line? <br /> next line?"
+            "Company name (if any): Weld County School District 6<br/><br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday"
         ]
     }
 ];
@@ -324,3 +319,11 @@ buildPage();
 $('.ui.selection.dropdown')
     .dropdown()
 ;
+
+let buttons = document.getElementsByTagName('button');
+
+for(btn of buttons){
+    btn.addEventListener('click', function(){
+        console.log(btn.innerText);
+    });
+}
