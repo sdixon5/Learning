@@ -1192,3 +1192,19 @@ todo.classList.toggle('class');
 const newImg = document.createElement('img');
 ```
 
+## Lesson 157: The event object
+
+```
+document.body.addEventListener('keypress', function(e){
+    console.log(e);
+});
+
+//e is the event callback, it is also the event object, is shows what happened and constains useful information
+
+//in this case it can tell us what key was pressed
+```
+
+## Lesson 158: key events
+
+keypress does not register keys that do not have a direct affect on the input, ie the shift key
+
