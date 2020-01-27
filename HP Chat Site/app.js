@@ -1,3 +1,8 @@
+const firstName = "";
+const lastName = "";
+const email = "";
+const phoneNumber = "";
+
 const responses = [
     {
         key: "Lines In Display",
@@ -192,6 +197,9 @@ const title = () => {
 
     header.innerText = 'HP Chat Responses';
 
+    //header.href = '#';
+    header.setAttribute('href', '#');
+
     return header;
 }
 
@@ -230,6 +238,8 @@ const buildPage = () => {
 
     
     const header = title();
+
+    //build form here
 
     const dropDown = createDropDown(responses);
 
