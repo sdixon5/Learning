@@ -1,31 +1,31 @@
 const responses = [
     {
         key: "Lines In Display",
-        respone: [
+        response: [
             "Device was accidentally dropped by a student during passing period. The device has lines in the display but no physical damage. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Touchpad Issues",
-        respone: [
+        response: [
             "The device's touchpad is not working. There is no cursor movement and the left clicking does not work either. There is no physical damage to the device and an external mouse works just fine. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Black Screen",
-        respone: [
+        response: [
             "The device has a black screen when turned on. You can see the light is turned on but there is no picture. There is no physical damage to the device. Plugging into a second monitor works. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Keys Not Typing",
-        respone: [
+        response: [
             "The device has multiple keys that are not typing. An external keyboard works just fine. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
     {
         key: "Won't Turn on",
-        respone: [
+        response: [
             "The device is not turning on. Multiple chargers have been used and we are not getting a charging light. Either the battery or the motherboard is dead. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
@@ -37,31 +37,31 @@ const responses = [
     },
     {
         key: "Rubber Nipple Missing",
-        respone: [
+        response: [
             "The device has a key with the rubber nipple missing. Due to this the key is not functioning. An external keyboard works just fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Broken Case",
-        respone: [
+        response: [
             "The device was accidentally dropped by a student during passing period. The device now has a broken case corner. The only damage is to the case itself. There is no functionality issues, everything works fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Missing Key",
-        respone: [
+        response: [
             "The device has a missing key, due to a broken latch. There is no physical damage to the device. An external keyboard works just fine. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Randomly Shutting Down",
-        respone: [
+        response: [
             "The device is randomly shutting down. The device is also overheating which may be leading to the shut downs. I am unable to determine if the shut down is due to the battery or motherboard. Can I please get a box to send the device in for repair."
         ]
     },
     {
         key: "Shift Keys",
-        respone: [
+        response: [
             "The device shift keys that are not typing. An external keyboard works just fine. There is no physical damage to the device. Can I please get a box to send this device in for repair."
         ]
     },
@@ -76,7 +76,6 @@ const standardInfo = [
     },
     {
         key: "Intro",
-        //response: "I'm doing well, thank you for asking. How are you doing today?"
         response: [
             "I'm doing well, thank you for asking. How are you doing today?"
         ]
@@ -87,8 +86,6 @@ const standardInfo = [
             "Thank you for your time and assistance. Have a nice rest of your day!",
             "No that will be all. Thank you for your time and assistance. Have a nice rest of your day!"
         ]
-        //response: "Thank you for your time and assistance. Have a nice rest of your day!",
-        //response2: "No that will be all. Thank you for your time and assistance. Have a nice rest of your day!"
     },
 ];
 
@@ -116,14 +113,7 @@ const createDropDown = (data) => {
     const menu = document.createElement('div');
     menu.classList.add('menu');
 
-
-    //let dropDown = document.createElement('select');
-
-    //dropDown.appendChild(new Option('Select Issue'));
-
     for(let i of data){
-        //let dropDownData = new Option(i.key);
-        //dropDown.appendChild(dropDownData);
         let item = document.createElement('div');
         item.classList.add('item');
         item.innerText = i.key;
@@ -141,124 +131,102 @@ const createDropDown = (data) => {
     return form;
 }
 
+const buildItemDiv = (value) => {
+    let item = document.createElement('div');
+    item.classList.add('item');
+    let content = document.createElement('div');
+    content.classList.add('content');
+    let p = document.createElement('p');
+    p.innerHTML = value;
+    content.appendChild(p);
+    
+    let extra = document.createElement('div');
+    extra.classList.add('extra');
+
+    let btn = document.createElement('button');
+    btn.classList.add('tiny', 'ui', 'blue', 'right', 'floated', 'button');
+    btn.innerText = 'Copy to Clipboard';
+
+    extra.appendChild(btn);
+
+    content.appendChild(extra);
+
+    item.append(content);
+
+    return item;
+}
+
 const salutations = (data) => {
-    //let divs = document.createElement('div');
-    //divs.classList.add('ui', 'grid');
-    //div.classList.add('ui segment');
     const divItems = document.createElement('div');
     divItems.classList.add('ui', 'divided', 'items');
 
     for(let i of data){
         let res = i.response;
         for(let j of res){
-            let item = document.createElement('div');
-            item.classList.add('item');
-            let content = document.createElement('div');
-            content.classList.add('content');
-            let p = document.createElement('p');
-            p.innerHTML = j;
-            content.appendChild(p);
-            //divs.appendChild(div);
-            
-
-            let extra = document.createElement('div');
-            extra.classList.add('extra');
-
-            let btn = document.createElement('button');
-            btn.classList.add('tiny', 'ui', 'blue', 'right', 'floated', 'button');
-            btn.innerText = 'Copy to Clipboard';
-
-            extra.appendChild(btn);
-
-            content.appendChild(extra);
-
-            item.append(content);
-
-            divItems.appendChild(item);
-            //console.log(item);
+            divItems.appendChild(buildItemDiv(j));
         }
     }
-    //console.log(divItems);
     return divItems;
 }
+
+
 
 const buildSections = () => {
     const segment = document.createElement('div');
     segment.classList.add('ui', 'clearing', 'segment');
-    //console.log(segment);
-    //const divItems = document.createElement('div');
-    //divItems.classList.add('ui', 'divided', 'items');
 
     //call salutations
     const greetings = salutations(standardInfo);
 
-    //call based on selected dropdown? this might be difficult to do
-
     //add everything together
     segment.append(greetings);
-    //console.log(segment);
-    //divItems.appendChild(greetings);
+
 
     return segment;
 }
 
-//const element = createDropDown(responses);
 
-//document.body.append(element);
+// const div0 = document.createElement('div');
+// div0.classList.add('ui', 'container');
 
-// const divs = salutations(standardInfo);
+// const div1 = document.createElement('div');
+// div1.classList.add('ui','grid');
 
-// document.body.append(divs);
+// const div2 = document.createElement('div');
+// div2.classList.add('ten', 'wide', 'column');
 
+// const div3 = document.createElement('div');
+// div3.classList.add('ui', 'clearing', 'segment');
 
-//testing
-// let txt = 'testing/rwhat up/nhope it works';
-// const test = document.createElement('p');
-// test.innerHTML = txt;
-// document.body.append(test);
+// const div4 = document.createElement('div');
+// div4.classList.add('ui', 'divided', 'items');
 
+// const div5 = document.createElement('div');
+// div5.classList.add('item');
 
-const div0 = document.createElement('div');
-div0.classList.add('ui', 'container');
+// const div6 = document.createElement('div');
+// div6.classList.add('content');
 
-const div1 = document.createElement('div');
-div1.classList.add('ui','grid');
+// const p = document.createElement('p');
+// p.innerText = 'Testing';
 
-const div2 = document.createElement('div');
-div2.classList.add('ten', 'wide', 'column');
+// const div7 = document.createElement('div');
+// div7.classList.add('six', 'wide', 'column');
 
-const div3 = document.createElement('div');
-div3.classList.add('ui', 'clearing', 'segment');
+// div0.appendChild(div1);
 
-const div4 = document.createElement('div');
-div4.classList.add('ui', 'divided', 'items');
+// div1.appendChild(div2);
+// div1.appendChild(div7);
 
-const div5 = document.createElement('div');
-div5.classList.add('item');
+// div2.appendChild(div3);
 
-const div6 = document.createElement('div');
-div6.classList.add('content');
+// div3.appendChild(div4);
 
-const p = document.createElement('p');
-p.innerText = 'Testing';
+// div4.appendChild(div5);
 
-const div7 = document.createElement('div');
-div7.classList.add('six', 'wide', 'column');
+// div5.appendChild(div6);
 
-div0.appendChild(div1);
-
-div1.appendChild(div2);
-div1.appendChild(div7);
-
-div2.appendChild(div3);
-
-div3.appendChild(div4);
-
-div4.appendChild(div5);
-
-div5.appendChild(div6);
-
-div6.appendChild(p);
+// div6.appendChild(p);
 
 //document.body.appendChild(div0);
 
@@ -270,6 +238,26 @@ const title = () => {
     header.innerText = 'HP Chat Responses';
 
     return header;
+}
+
+const applyButtonEvents = () => {
+    let buttons = document.getElementsByTagName('button');
+
+    for(btn of buttons){
+        btn.addEventListener('click', function(){
+            const extra = this.parentElement;
+            const item = extra.parentElement;
+            const text = item.childNodes[0].innerText;
+    
+            //create text area to copy text from, ie to use the select() method
+            let elem = document.createElement('textarea');
+            document.body.appendChild(elem);
+            elem.value = text;
+            elem.select();
+            document.execCommand('copy');
+            document.body.removeChild(elem);
+        });
+    }
 }
 
 const buildPage = () => {
@@ -301,18 +289,12 @@ const buildPage = () => {
     
     const sect = buildSections();
     leftColumn.append(sect);
-    //console.log(sect);
-    //console.log(leftColumn);
 
     document.body.append(container);
 
-
+    applyButtonEvents();
 
     return null;
-}
-
-const copyText = () => {
-    console.log(this);
 }
 
 buildPage();
@@ -321,30 +303,32 @@ buildPage();
 //-------------------------------------------------------------------------------
 //allow for the dropdown to respond to clicks
 $('.ui.selection.dropdown')
-    .dropdown();
+    .dropdown({
+        onChange: function($selectedItem){
+            const elem = document.getElementsByClassName('ui divided items');
+            const div = elem[0];
+
+            const divChildren = div.children;
+            if(divChildren.length > 4){
+                divChildren[4].remove();
+            }
+
+            for(res of responses){
+                if(res.key.toLowerCase() === $selectedItem){
+
+                    div.appendChild(buildItemDiv(res.response));
+
+                    applyButtonEvents();
+                }
+            }
+        }
+    });
 ;
 
-let buttons = document.getElementsByTagName('button');
 
-for(btn of buttons){
-    btn.addEventListener('click', function(){
-        //console.log(this.parentElement);
-        const extra = this.parentElement;
-        const item = extra.parentElement;
-        const text = item.childNodes[0].innerText;
-        //console.log(text);
-        //text.select();
-        //document.execCommand('copy', text);
 
-        //create text area to copy text from, ie to use the select() method
-        let elem = document.createElement('textarea');
-        document.body.appendChild(elem);
-        elem.value = text;
-        elem.select();
-        document.execCommand('copy');
-        document.body.removeChild(elem);
-    });
-}
+
+
 
 
 
