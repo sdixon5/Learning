@@ -185,51 +185,6 @@ const buildSections = () => {
     return segment;
 }
 
-
-// const div0 = document.createElement('div');
-// div0.classList.add('ui', 'container');
-
-// const div1 = document.createElement('div');
-// div1.classList.add('ui','grid');
-
-// const div2 = document.createElement('div');
-// div2.classList.add('ten', 'wide', 'column');
-
-// const div3 = document.createElement('div');
-// div3.classList.add('ui', 'clearing', 'segment');
-
-// const div4 = document.createElement('div');
-// div4.classList.add('ui', 'divided', 'items');
-
-// const div5 = document.createElement('div');
-// div5.classList.add('item');
-
-// const div6 = document.createElement('div');
-// div6.classList.add('content');
-
-// const p = document.createElement('p');
-// p.innerText = 'Testing';
-
-// const div7 = document.createElement('div');
-// div7.classList.add('six', 'wide', 'column');
-
-// div0.appendChild(div1);
-
-// div1.appendChild(div2);
-// div1.appendChild(div7);
-
-// div2.appendChild(div3);
-
-// div3.appendChild(div4);
-
-// div4.appendChild(div5);
-
-// div5.appendChild(div6);
-
-// div6.appendChild(p);
-
-//document.body.appendChild(div0);
-
 const title = () => {
 
     const header = document.createElement('h1');
