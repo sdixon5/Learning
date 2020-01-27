@@ -69,6 +69,12 @@ const responses = [
 
 const standardInfo = [
     {
+        key: "Contact Info",
+        response: [
+            "Company name (if any): Weld County School District 6<br/><br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday"
+        ]
+    },
+    {
         key: "Intro",
         //response: "I'm doing well, thank you for asking. How are you doing today?"
         response: [
@@ -84,12 +90,6 @@ const standardInfo = [
         //response: "Thank you for your time and assistance. Have a nice rest of your day!",
         //response2: "No that will be all. Thank you for your time and assistance. Have a nice rest of your day!"
     },
-    {
-        key: "Contact Info",
-        response: [
-            "Company name (if any): Weld County School District 6<br/><br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday"
-        ]
-    }
 ];
 
 const createDropDown = (data) => {
@@ -311,19 +311,40 @@ const buildPage = () => {
     return null;
 }
 
+const copyText = () => {
+    console.log(this);
+}
+
 buildPage();
 
 //Handling Events
 //-------------------------------------------------------------------------------
 //allow for the dropdown to respond to clicks
 $('.ui.selection.dropdown')
-    .dropdown()
+    .dropdown();
 ;
 
 let buttons = document.getElementsByTagName('button');
 
 for(btn of buttons){
     btn.addEventListener('click', function(){
-        console.log(btn.innerText);
+        //console.log(this.parentElement);
+        const extra = this.parentElement;
+        const item = extra.parentElement;
+        const text = item.childNodes[0].innerText;
+        //console.log(text);
+        //text.select();
+        //document.execCommand('copy', text);
+
+        //create text area to copy text from, ie to use the select() method
+        let elem = document.createElement('textarea');
+        document.body.appendChild(elem);
+        elem.value = text;
+        elem.select();
+        document.execCommand('copy');
+        document.body.removeChild(elem);
     });
 }
+
+
+
