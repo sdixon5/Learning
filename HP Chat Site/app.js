@@ -7,7 +7,8 @@ const responses = [
     {
         key: "Lines In Display",
         response: [
-            "Device was accidentally dropped by a student during passing period. The device has lines in the display but no physical damage. Can I please get a box to send the device in for repair."
+            "Device was accidentally dropped by a student during passing period. The device has lines in the display but no physical damage. Can I please get a box to send the device in for repair." //,
+            // "The student dropped the device during passing period. When the student picked the device up there were lines in the screen. I have since examined the device and found no external damage to the device."
         ]
     },
     {
@@ -161,16 +162,43 @@ const buildItemDiv = (value) => {
     return item;
 }
 
-const salutations = (data) => {
-    const divItems = document.createElement('div');
-    divItems.classList.add('ui', 'divided', 'items');
-
+const createSingleSection = (data) => {
+    const elem = document.getElementsByClassName('ui divided items');
+    console.log(elem);
+    const divItems = elem[0];
+    console.log(divItems);
     for(let i of data){
         let res = i.response;
         for(let j of res){
             divItems.appendChild(buildItemDiv(j));
         }
     }
+
+    return divItems;
+    //return null;
+}
+
+const salutations = (data) => {
+    const divItems = document.createElement('div');
+    divItems.classList.add('ui', 'divided', 'items');
+
+    //turn this into a function for each response?
+    for(let i of data){
+        let res = i.response;
+        for(let j of res){
+            divItems.appendChild(buildItemDiv(j));
+        }
+    }
+    //const elem = document.getElementsByClassName("ui divided items");
+    //console.log(elem);
+    //const divItems = elem[0];
+    //divItems = createSingleSection(data);
+    return divItems;
+}
+
+const buildDivided = () => {
+    const divItems = document.createElement('div');
+    divItems.classList.add('ui', 'divided', 'items');
     return divItems;
 }
 
@@ -185,6 +213,15 @@ const buildSections = () => {
 
     //add everything together
     segment.append(greetings);
+
+    // const divided = buildDivided();
+    // segment.appendChild(divided);
+
+    // //const greetings = salutations(standardInfo);
+    // //segment.appendChild(greetings);
+
+    // const greetings = createSingleSection(standardInfo);
+    // segment.appendChild(greetings);
 
 
     return segment;
@@ -272,7 +309,8 @@ $('.ui.selection.dropdown')
         onChange: function($selectedItem){
             const elem = document.getElementsByClassName('ui divided items');
             const div = elem[0];
-
+            console.log(elem);
+            console.log(div);
             const divChildren = div.children;
             if(divChildren.length > 4){
                 divChildren[4].remove();
