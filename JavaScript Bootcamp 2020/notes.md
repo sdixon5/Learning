@@ -1230,3 +1230,35 @@ for(let input of [ creditCardInput, termsCheckbox, veggieSelect]) {
 }
 ```
 
+## Lesson 162: The Call Stack
+
+The call stack is just that, a stack, a data structure
+
+## Lesson 163: Call Stack Debuggin w/Dev Tools
+
+Developer tools under sources
+
+## Lesson 165: How Asynchronous Callback Actually Work
+
+callbacks are a way around
+
+the trick is that the browser is doing the work
+
+The browser is most likely written in C++
+
+### Ok But How?
+
+    Browsers come with WEB APIs that are able to handle certain tasks in the background (like making requests or setTimeout)
+
+    The JS call stack recognizes these Web API functions and passes them off to the browser to take care of
+
+    Once the browser finishes those tasks, they return and are pushed onto the stack as a callback.
+
+## Lesson 167: Introducing Promises
+
+A promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+A pattern for writing async code.
+
+A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+
