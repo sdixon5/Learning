@@ -1208,3 +1208,25 @@ document.body.addEventListener('keypress', function(e){
 
 keypress does not register keys that do not have a direct affect on the input, ie the shift key
 
+## Lesson 160: form events and prevent default
+
+can catch the event and call e.preventdefault() to stop form submission
+
+## Lesson 161: Input & Change Events
+
+```
+const creditCardInput = document.querySelector('#cc');
+const termsCheckbox = document.querySelector('#terms');
+const veggieSelect = document.querySelector('#veggie');
+
+const formData = {};
+
+//will work as long as fields have name attribute
+for(let input of [ creditCardInput, termsCheckbox, veggieSelect]) {
+    input.addEventListener('input', ({target}) => {
+        const {name, type, value, checked} = target;
+        formData[e.target.name] = type === 'checkbox' ? checked : value;
+    });
+}
+```
+
