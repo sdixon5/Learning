@@ -114,3 +114,39 @@ If you are new to the concept of using the Promises  we saw in the previous vide
 
 `<CardList name='IronMan'>Shawn</CardList>` the part that says Shawn is accessible via prop.children
 
+## Lesson 34: React Events 
+
+React uses synthetic events
+
+## Lesson 37: Search Box Component
+
+JSX can be written in either the js or jsx file types because bable knows to convert it down to js
+
+Functional components unlike class components don't have access to state, unlike our app.js class component, because they don't have access to constructor which is a class method
+
+And they don't have access to life-cycle methods
+
+A functional component is great, when you just want to render some html, it gets some props and returns some html
+
+## Lesson 38: Where to put state?
+
+It is best to put state where all components can access it.
+
+This is called lifting state up
+
+## Lesson 39: Class Methods and Arrow Functions
+
+if we create our own handleChange class method, we will end up getting a context error when trying to use the this keyword, so up in the constructor must write the following:
+
+```
+this.handleChange = this.handleChange.bind(this);
+```
+
+but this too is redundant and overly complicated, can instead use an arrow function
+
+arrow functions don't set the state, they set the context to the context of whatever declared it
+
+arrow  functions get lexical scoping, and the this is defined to whatever declared them
+
+
+

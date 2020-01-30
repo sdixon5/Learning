@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import { CardList } from "./components/card-list/card-list.component";
+import { SearchBox } from './components/search-box/search-box.component';
 import "./App.css";
 
 // function App() {
@@ -32,6 +33,7 @@ class App extends Component {
       monsters: [],
       searchField: ""
     };
+
   }
 
   componentDidMount() {
@@ -40,15 +42,27 @@ class App extends Component {
       .then(users => this.setState({ monsters: users }));
   }
 
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value })
+  }
+
   render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    //the const above is equivalent to the following
+    //const monsters = this.state.monsters;
+    //const searchField = this.state.searchField;
+
     return (
       <div className="App">
-        <input
-          type="search"
-          placeholder="Search Monsters"
-          onChange={e => this.setState({ searchField: e.target.value })}
+        <SearchBox
+          placeholder='search monsters'
+          handleChange={this.handleChange}
         />
-        <CardList monsters={this.state.monsters} />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
