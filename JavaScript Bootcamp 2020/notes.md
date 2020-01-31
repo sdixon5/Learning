@@ -1262,3 +1262,9 @@ A pattern for writing async code.
 
 A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
 
+## Lesson 172: Intro to AJAX
+
+AJAX - Asynchronous JavaScript and XML
+
+Most people work with JSON not XML anymore
+
