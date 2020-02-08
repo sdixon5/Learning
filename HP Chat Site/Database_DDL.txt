@@ -1,0 +1,53 @@
+Create Table User
+{
+    User_ID Integer,
+    Username Varchar(50),
+    Password Varchar(50),
+    Primary Key (User_ID)
+};
+
+Create Table Response
+{
+    Response_ID Integer,
+    Description Varchar(500),
+    User_ID Integer,
+    Primary Key (Response_ID),
+    Foreign Key (User_ID)
+};
+
+Create Table Tag
+{
+    Tag_ID Integer,
+    Name Varchar(25),
+    Primary Key (Tag_ID)
+};
+
+Create Table Response_Tag
+{
+    Response_ID Integer,
+    Tag_ID Integer,
+    Primary Key (Response_ID, Tag_ID),
+    Foreign Key (Response_ID) References Response,
+    Foreign Key (Tag_ID) References Tag
+};
+
+Create Sequence User_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Response_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Tag_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+
+
