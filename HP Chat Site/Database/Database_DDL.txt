@@ -1,0 +1,226 @@
+Create Table User
+{
+    User_ID Integer,
+    FirstName Varchar(25),
+    LastName Varchar(25),
+    Username Varchar(50),
+    Password Varchar(50),
+    Primary Key (User_ID)
+};
+
+Create Table Response
+{
+    Response_ID Integer,
+    Description Varchar(500),
+    User_ID Integer,
+    Primary Key (Response_ID),
+    Foreign Key (User_ID)
+};
+
+Create Table Tag
+{
+    Tag_ID Integer,
+    Name Varchar(25),
+    Primary Key (Tag_ID)
+};
+
+Create Table Response_Tag
+{
+    Response_ID Integer,
+    Tag_ID Integer,
+    Primary Key (Response_ID, Tag_ID),
+    Foreign Key (Response_ID) References Response,
+    Foreign Key (Tag_ID) References Tag
+};
+
+Create Sequence User_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Response_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Tag_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+--Select All Users
+Create Procedure allUsers
+As
+Select *
+From User;
+Go
+
+--Select One User
+Create Procedure singleUser
+@User_Id Integer
+As
+Select *
+From User
+Where User_ID = @User_id;
+Go
+
+--Insert User
+Create Procedure insertUser
+@FirstName Varchar(25),
+@LastName Varchar(25),
+@Username Varchar(50),
+@Password Varchar(50)
+As
+Insert Into User Values(Next Value For User_ID, FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password);
+Go
+
+--Update User
+Create Procedure updateUser
+@User_ID Integer,
+@Username Varchar(50),
+@Password Varchar(50)
+As
+Update User
+Set Username = FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password
+Where User_ID = @User_ID;
+Go
+
+--Delete User
+Create Procedure deleteUser
+@User_ID Integer
+As
+Delete From User
+Where User_ID = @User_ID;
+Go
+
+--Select All Responses
+Create Procedure allResponses
+As
+Select *
+From Response;
+Go
+
+--Select One Response
+Create Procedure singleResponse
+@Response_ID Integer
+As
+Select *
+From Response
+Where Response_ID = @Response_ID;
+Go
+
+--Insert Response
+Create Procedure insertResponse
+@Description Varchar(500),
+@User_ID Integer
+As
+Insert Into Response Values(Next Value For Response_ID, Description = @Description, User_ID = @User_ID);
+Go
+
+--Update Response
+Create Procedure updateResponse
+@Response_ID Integer,
+@Description Varchar(500),
+@User_ID Integer
+As
+Update Response
+Set Description = @Description, User_ID = @User_ID
+Where Response_ID = @Response_ID;
+Go
+
+--Delete Response
+Create Procedure deleteResponse
+@Response_ID Integer
+As
+Delete From Response
+Where Response_ID = @Response_ID;
+Go
+
+--Select All Tags
+Create Procedure allTags
+As
+Select *
+From Tag;
+Go
+
+--Select One Tag
+Create Procedure singleTag
+@Tag_ID Integer
+As
+Select *
+From Tag
+Where Tag_ID = @Tag_ID;
+Go
+
+--Insert Tag
+Create Procedure insertTag
+@Name Varchar(25)
+As
+Insert Into Tag Values(Next Value For Tag_ID, Name = @Name);
+Go
+
+--Update Tag
+Create Procedure updateTag
+@Tag_ID Integer,
+@Name Varchar(25),
+As
+Update Tag
+Set Name = @Name
+Where Tag_ID = @Tag_ID;
+Go
+
+--Delete Tag
+Create Procedure deleteTag
+@Tag_ID Integer
+As
+Delete From Tag
+Where Tag_ID = @Tag_ID;
+Go
+
+--Select All Response_Tag
+Create Procedure allResponseTags
+As
+Select *
+From Response_Tag;
+Go
+
+--Select One Response_Tag
+Create Procedure singleResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Select *
+From Response_Tag
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go
+
+--Insert Response_Tag
+Create Procedure insertResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Insert Into Response_Tag Values(Response_ID = @Response_ID, Tag_ID = @Tag_ID);
+Go
+
+--Update Response_Tag
+Create Procedure updateResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Update Response_Tag
+Set Response_ID = @Response_ID, Tag_ID = @Tag_ID
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go
+
+--Delete Response_Tag
+Create Procedure deleteResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Delete From Response_Tag
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go
+

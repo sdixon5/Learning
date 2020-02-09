@@ -1,0 +1,40 @@
+--Select All
+Create Procedure allTags
+As
+Select *
+From Tag;
+Go
+
+--Select One
+Create Procedure singleTag
+@Tag_ID Integer
+As
+Select *
+From Tag
+Where Tag_ID = @Tag_ID;
+Go
+
+--Insert
+Create Procedure insertTag
+@Name Varchar(25)
+As
+Insert Into Tag Values(Next Value For Tag_ID, Name = @Name);
+Go
+
+--Update
+Create Procedure updateTag
+@Tag_ID Integer,
+@Name Varchar(25),
+As
+Update Tag
+Set Name = @Name
+Where Tag_ID = @Tag_ID;
+Go
+
+--Delete
+Create Procedure deleteTag
+@Tag_ID Integer
+As
+Delete From Tag
+Where Tag_ID = @Tag_ID;
+Go

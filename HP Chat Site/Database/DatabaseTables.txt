@@ -1,6 +1,8 @@
 Create Table User
 {
     User_ID Integer,
+    FirstName Varchar(25),
+    LastName Varchar(25),
     Username Varchar(50),
     Password Varchar(50),
     Primary Key (User_ID)
@@ -30,24 +32,3 @@ Create Table Response_Tag
     Foreign Key (Response_ID) References Response,
     Foreign Key (Tag_ID) References Tag
 };
-
-Create Sequence User_ID
-    Increment By 1
-    Start With 1
-    NoMaxValue
-;
-
-Create Sequence Response_ID
-    Increment By 1
-    Start With 1
-    NoMaxValue
-;
-
-Create Sequence Tag_ID
-    Increment By 1
-    Start With 1
-    NoMaxValue
-;
-
-
-

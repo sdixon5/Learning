@@ -1,0 +1,17 @@
+Create Sequence User_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Response_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;
+
+Create Sequence Tag_ID
+    Increment By 1
+    Start With 1
+    NoMaxValue
+;

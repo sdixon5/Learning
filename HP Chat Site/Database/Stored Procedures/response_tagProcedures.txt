@@ -1,0 +1,43 @@
+--Select All
+Create Procedure allResponseTags
+As
+Select *
+From Response_Tag;
+Go
+
+--Select One
+Create Procedure singleResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Select *
+From Response_Tag
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go
+
+--Insert
+Create Procedure insertResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Insert Into Response_Tag Values(Response_ID = @Response_ID, Tag_ID = @Tag_ID);
+Go
+
+--Update
+Create Procedure updateResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Update Response_Tag
+Set Response_ID = @Response_ID, Tag_ID = @Tag_ID
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go
+
+--Delete
+Create Procedure deleteResponseTag
+@Response_ID Integer,
+@Tag_ID Integer
+As
+Delete From Response_Tag
+Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
+Go

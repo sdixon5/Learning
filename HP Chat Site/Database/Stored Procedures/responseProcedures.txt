@@ -1,0 +1,42 @@
+--Select All
+Create Procedure allResponses
+As
+Select *
+From Response;
+Go
+
+--Select One
+Create Procedure singleResponse
+@Response_ID Integer
+As
+Select *
+From Response
+Where Response_ID = @Response_ID;
+Go
+
+--Insert
+Create Procedure insertResponse
+@Description Varchar(500),
+@User_ID Integer
+As
+Insert Into Response Values(Next Value For Response_ID, Description = @Description, User_ID = @User_ID);
+Go
+
+--Update
+Create Procedure updateResponse
+@Response_ID Integer,
+@Description Varchar(500),
+@User_ID Integer
+As
+Update Response
+Set Description = @Description, User_ID = @User_ID
+Where Response_ID = @Response_ID;
+Go
+
+--Delete
+Create Procedure deleteResponse
+@Response_ID Integer
+As
+Delete From Response
+Where Response_ID = @Response_ID;
+Go
