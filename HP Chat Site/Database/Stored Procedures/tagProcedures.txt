@@ -18,13 +18,13 @@ Go
 Create Procedure insertTag
 @Name Varchar(25)
 As
-Insert Into Tag Values(Next Value For Tag_ID, Name = @Name);
+Insert Into Tag Values(Next Value For Tag_ID, @Name);
 Go
 
 --Update
 Create Procedure updateTag
 @Tag_ID Integer,
-@Name Varchar(25),
+@Name Varchar(25)
 As
 Update Tag
 Set Name = @Name

@@ -20,7 +20,7 @@ Create Procedure insertResponseTag
 @Response_ID Integer,
 @Tag_ID Integer
 As
-Insert Into Response_Tag Values(Response_ID = @Response_ID, Tag_ID = @Tag_ID);
+Insert Into Response_Tag Values(@Response_ID, @Tag_ID);
 Go
 
 --Update

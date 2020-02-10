@@ -1,109 +1,110 @@
-Create Table User
-{
-    User_ID Integer,
+Create Table Account
+(
+    Account_ID Integer,
     FirstName Varchar(25),
     LastName Varchar(25),
     Username Varchar(50),
-    Password Varchar(50),
-    Primary Key (User_ID)
-};
+    P_Word Varchar(50),
+    Primary Key (Account_ID)
+);
 
 Create Table Response
-{
+(
     Response_ID Integer,
     Description Varchar(500),
-    User_ID Integer,
+    Account_ID Integer,
     Primary Key (Response_ID),
-    Foreign Key (User_ID)
-};
+    Foreign Key (Account_ID) References Account
+);
 
 Create Table Tag
-{
+(
     Tag_ID Integer,
     Name Varchar(25),
     Primary Key (Tag_ID)
-};
+);
 
 Create Table Response_Tag
-{
+(
     Response_ID Integer,
     Tag_ID Integer,
     Primary Key (Response_ID, Tag_ID),
     Foreign Key (Response_ID) References Response,
     Foreign Key (Tag_ID) References Tag
-};
+);
 
-Create Sequence User_ID
+Create Sequence Account_ID
     Increment By 1
     Start With 1
-    NoMaxValue
 ;
 
 Create Sequence Response_ID
     Increment By 1
     Start With 1
-    NoMaxValue
 ;
 
 Create Sequence Tag_ID
     Increment By 1
     Start With 1
-    NoMaxValue
 ;
 
---Select All Users
-Create Procedure allUsers
-As
-Select *
-From User;
 Go
 
---Select One User
-Create Procedure singleUser
-@User_Id Integer
+--Select All
+Create Procedure allAccounts
 As
 Select *
-From User
-Where User_ID = @User_id;
+From Account;
 Go
 
---Insert User
-Create Procedure insertUser
+--Select One
+Create Procedure singleAccount
+@Account_ID Integer
+As
+Select *
+From Account
+Where Account_ID = @Account_ID;
+Go
+
+--Insert
+Create Procedure insertAccount
 @FirstName Varchar(25),
 @LastName Varchar(25),
 @Username Varchar(50),
-@Password Varchar(50)
+@P_Word Varchar(50)
 As
-Insert Into User Values(Next Value For User_ID, FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password);
+Insert Into Account Values(Next Value For Account_ID, @FirstName, @LastName, @Username, @P_Word);
 Go
 
---Update User
-Create Procedure updateUser
-@User_ID Integer,
+--Update
+Create Procedure updateAccount
+@Account_ID Integer,
+@FirstName Varchar(25),
+@LastName Varchar(25),
 @Username Varchar(50),
-@Password Varchar(50)
+@P_Word Varchar(50)
 As
-Update User
-Set Username = FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password
-Where User_ID = @User_ID;
+Update Account
+Set FirstName = @FirstName, LastName = @LastName, Username = @Username, P_Word = @P_Word
+Where Account_ID = @Account_ID;
 Go
 
---Delete User
-Create Procedure deleteUser
-@User_ID Integer
+--Delete
+Create Procedure deleteAccount
+@Account_ID Integer
 As
-Delete From User
-Where User_ID = @User_ID;
+Delete From Account
+Where Account_ID = @Account_ID;
 Go
 
---Select All Responses
+--Select All
 Create Procedure allResponses
 As
 Select *
 From Response;
 Go
 
---Select One Response
+--Select One
 Create Procedure singleResponse
 @Response_ID Integer
 As
@@ -112,26 +113,26 @@ From Response
 Where Response_ID = @Response_ID;
 Go
 
---Insert Response
+--Insert
 Create Procedure insertResponse
 @Description Varchar(500),
-@User_ID Integer
+@Account_ID Integer
 As
-Insert Into Response Values(Next Value For Response_ID, Description = @Description, User_ID = @User_ID);
+Insert Into Response Values(Next Value For Response_ID, @Description, @Account_ID);
 Go
 
---Update Response
+--Update
 Create Procedure updateResponse
 @Response_ID Integer,
 @Description Varchar(500),
-@User_ID Integer
+@Account_ID Integer
 As
 Update Response
-Set Description = @Description, User_ID = @User_ID
+Set Description = @Description, Account_ID = @Account_ID
 Where Response_ID = @Response_ID;
 Go
 
---Delete Response
+--Delete
 Create Procedure deleteResponse
 @Response_ID Integer
 As
@@ -139,14 +140,14 @@ Delete From Response
 Where Response_ID = @Response_ID;
 Go
 
---Select All Tags
+--Select All
 Create Procedure allTags
 As
 Select *
 From Tag;
 Go
 
---Select One Tag
+--Select One
 Create Procedure singleTag
 @Tag_ID Integer
 As
@@ -155,24 +156,24 @@ From Tag
 Where Tag_ID = @Tag_ID;
 Go
 
---Insert Tag
+--Insert
 Create Procedure insertTag
 @Name Varchar(25)
 As
-Insert Into Tag Values(Next Value For Tag_ID, Name = @Name);
+Insert Into Tag Values(Next Value For Tag_ID, @Name);
 Go
 
---Update Tag
+--Update
 Create Procedure updateTag
 @Tag_ID Integer,
-@Name Varchar(25),
+@Name Varchar(25)
 As
 Update Tag
 Set Name = @Name
 Where Tag_ID = @Tag_ID;
 Go
 
---Delete Tag
+--Delete
 Create Procedure deleteTag
 @Tag_ID Integer
 As
@@ -180,14 +181,14 @@ Delete From Tag
 Where Tag_ID = @Tag_ID;
 Go
 
---Select All Response_Tag
+--Select All
 Create Procedure allResponseTags
 As
 Select *
 From Response_Tag;
 Go
 
---Select One Response_Tag
+--Select One
 Create Procedure singleResponseTag
 @Response_ID Integer,
 @Tag_ID Integer
@@ -197,15 +198,15 @@ From Response_Tag
 Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
 Go
 
---Insert Response_Tag
+--Insert
 Create Procedure insertResponseTag
 @Response_ID Integer,
 @Tag_ID Integer
 As
-Insert Into Response_Tag Values(Response_ID = @Response_ID, Tag_ID = @Tag_ID);
+Insert Into Response_Tag Values(@Response_ID, @Tag_ID);
 Go
 
---Update Response_Tag
+--Update
 Create Procedure updateResponseTag
 @Response_ID Integer,
 @Tag_ID Integer
@@ -215,7 +216,7 @@ Set Response_ID = @Response_ID, Tag_ID = @Tag_ID
 Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
 Go
 
---Delete Response_Tag
+--Delete
 Create Procedure deleteResponseTag
 @Response_ID Integer,
 @Tag_ID Integer
@@ -223,4 +224,3 @@ As
 Delete From Response_Tag
 Where Response_ID = @Response_ID AND Tag_ID = @Tag_ID;
 Go
-

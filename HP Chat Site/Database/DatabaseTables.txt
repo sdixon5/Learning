@@ -1,34 +1,34 @@
-Create Table User
-{
-    User_ID Integer,
+Create Table Account
+(
+    Account_ID Integer,
     FirstName Varchar(25),
     LastName Varchar(25),
     Username Varchar(50),
-    Password Varchar(50),
-    Primary Key (User_ID)
-};
+    P_Word Varchar(50),
+    Primary Key (Account_ID)
+);
 
 Create Table Response
-{
+(
     Response_ID Integer,
     Description Varchar(500),
-    User_ID Integer,
+    Account_ID Integer,
     Primary Key (Response_ID),
-    Foreign Key (User_ID)
-};
+    Foreign Key (Account_ID) References Account
+);
 
 Create Table Tag
-{
+(
     Tag_ID Integer,
     Name Varchar(25),
     Primary Key (Tag_ID)
-};
+);
 
 Create Table Response_Tag
-{
+(
     Response_ID Integer,
     Tag_ID Integer,
     Primary Key (Response_ID, Tag_ID),
     Foreign Key (Response_ID) References Response,
     Foreign Key (Tag_ID) References Tag
-};
+);

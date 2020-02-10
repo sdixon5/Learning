@@ -1,44 +1,46 @@
 --Select All
-Create Procedure allUsers
+Create Procedure allAccounts
 As
 Select *
-From User;
+From Account;
 Go
 
 --Select One
-Create Procedure singleUser
-@User_Id Integer
+Create Procedure singleAccount
+@Account_ID Integer
 As
 Select *
-From User
-Where User_ID = @User_id;
+From Account
+Where Account_ID = @Account_ID;
 Go
 
 --Insert
-Create Procedure insertUser
+Create Procedure insertAccount
 @FirstName Varchar(25),
 @LastName Varchar(25),
 @Username Varchar(50),
-@Password Varchar(50)
+@P_Word Varchar(50)
 As
-Insert Into User Values(Next Value For User_ID, FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password);
+Insert Into Account Values(Next Value For Account_ID, @FirstName, @LastName, @Username, @P_Word);
 Go
 
 --Update
-Create Procedure updateUser
-@User_ID Integer,
+Create Procedure updateAccount
+@Account_ID Integer,
+@FirstName Varchar(25),
+@LastName Varchar(25),
 @Username Varchar(50),
-@Password Varchar(50)
+@P_Word Varchar(50)
 As
-Update User
-Set Username = FirstName = @FirstName, LastName = @LastName, Username = @Username, Password = @Password
-Where User_ID = @User_ID;
+Update Account
+Set FirstName = @FirstName, LastName = @LastName, Username = @Username, P_Word = @P_Word
+Where Account_ID = @Account_ID;
 Go
 
 --Delete
-Create Procedure deleteUser
-@User_ID Integer
+Create Procedure deleteAccount
+@Account_ID Integer
 As
-Delete From User
-Where User_ID = @User_ID;
+Delete From Account
+Where Account_ID = @Account_ID;
 Go

@@ -17,19 +17,19 @@ Go
 --Insert
 Create Procedure insertResponse
 @Description Varchar(500),
-@User_ID Integer
+@Account_ID Integer
 As
-Insert Into Response Values(Next Value For Response_ID, Description = @Description, User_ID = @User_ID);
+Insert Into Response Values(Next Value For Response_ID, @Description, @Account_ID);
 Go
 
 --Update
 Create Procedure updateResponse
 @Response_ID Integer,
 @Description Varchar(500),
-@User_ID Integer
+@Account_ID Integer
 As
 Update Response
-Set Description = @Description, User_ID = @User_ID
+Set Description = @Description, Account_ID = @Account_ID
 Where Response_ID = @Response_ID;
 Go
 
