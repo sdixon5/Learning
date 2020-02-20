@@ -148,5 +148,9 @@ arrow functions don't set the state, they set the context to the context of what
 
 arrow  functions get lexical scoping, and the this is defined to whatever declared them
 
+## Lesson 41: Binding in React
+
+In the previous video, we learned about arrow functions and binding in React. A good rule of thumb is this: Use arrow functions on any class methods you define and aren't part of React (i.e. render(), componentDidMount()). 
+
 
 

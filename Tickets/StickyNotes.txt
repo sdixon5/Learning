@@ -1,0 +1,23 @@
+Ticket:
+Asset:
+Serial Number:
+Location:
+Description:
+Case Number:
+Tracking Number:
+
+Ticket: 67862
+Asset: 51687, 51363
+Serial Number:
+Location: Franklin
+Description: Swap 51687 with 51363
+Case Number:
+Tracking Number:
+
+Ticket: 68104
+Asset: 59689
+Serial Number: 
+Location: Franklin
+Description: 
+Case Number: 5044493267
+Tracking Number: 
