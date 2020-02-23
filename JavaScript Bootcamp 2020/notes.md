@@ -1268,3 +1268,13 @@ AJAX - Asynchronous JavaScript and XML
 
 Most people work with JSON not XML anymore
 
+## Lesson 174: XMLHttpRequests: The Basics
+
+The 'original' way of sending requests via JS.
+
+Does not support promises, so...lots of callbacks!
+
+WTF is going on with the weird capitalization?
+
+Clunky syntax that I find difficult to remember!
+
