@@ -1278,3 +1278,15 @@ WTF is going on with the weird capitalization?
 
 Clunky syntax that I find difficult to remember!
 
+## Lesson 176: A Better Way: Fetch
+
+Fetch API
+
+The newer way of making requests via JS
+
+Supports promises!
+
+Not supported in Internet Explorer, duh!
+
+Fetch will still complete the promise even with a 404 or 500, then only time the catch block will run, ie the promise failed, is if the network drops or something similar happens.
+
