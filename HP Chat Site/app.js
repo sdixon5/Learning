@@ -76,6 +76,12 @@ const responses = [
         response: [
             "The device needs a new motherboard. The charging LED is flashing whether the device is on, plugged in, or off.  The only way to stop the flashing is to unplug the battery. Also, inside of crosh, when running battery_test command it returns a status of No Battery Found. I believe the port on the motherboard is at fault. Can I please get a box to send the device in for repair."
         ]
+    },
+    {
+        key: "Charging Issues",
+        response: [
+            "The device is not charging. There is no charging LED shown either. Multiple chargers have been used and none of them work. There is no physical damage to the device. Can I please get a box to send the device in for repair."
+        ]
     }
 ];
 
