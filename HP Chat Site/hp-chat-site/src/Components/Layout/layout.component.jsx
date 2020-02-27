@@ -114,13 +114,16 @@ export class Layout extends Component {
   }
 
   render() {
+
+    const {responses, standardInfo} = this.state;
+
     return (
       <Grid>
         <Grid.Column width={10}>
 
         </Grid.Column>
         <Grid.Column width={6}>
-          <IssueForm></IssueForm>
+          <IssueForm responses={responses}></IssueForm>
         </Grid.Column>
       </Grid>
     );

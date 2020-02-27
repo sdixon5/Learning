@@ -3,12 +3,12 @@ import "./issueForm.component.css";
 import { Form } from "semantic-ui-react";
 import { IssueDropdown } from '../IssueDropdown/issueDropdown.component.jsx';
 
-const IssueForm = () => {
+const IssueForm = ({responses}) => {
   return (
     <Form>
       <Form.Field>
         <label>Issue</label>
-        <IssueDropdown></IssueDropdown>
+        <IssueDropdown responses={responses}></IssueDropdown>
       </Form.Field>
     </Form>
   );
