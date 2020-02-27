@@ -1,5 +1,6 @@
 import React from 'react'
-import './container.component.css';
+import './page.component.css';
+import { Layout } from '../Layout/layout.component';
 import { Container } from 'semantic-ui-react';
 
 // export default function container() {
@@ -10,10 +11,10 @@ import { Container } from 'semantic-ui-react';
 //     )
 // }
 
-export const Container = () => {
+export const Page = () => {
     return (
         <Container>
-
+            <Layout></Layout>
         </Container>
     );
 };
