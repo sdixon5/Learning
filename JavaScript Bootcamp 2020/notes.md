@@ -1290,3 +1290,7 @@ Not supported in Internet Explorer, duh!
 
 Fetch will still complete the promise even with a 404 or 500, then only time the catch block will run, ie the promise failed, is if the network drops or something similar happens.
 
+## Lesson 178: An Even Better Way: Axios
+
+Axios will not resolve a 404 like fetch, it will reject which sends it to the catch block of the promise
+
