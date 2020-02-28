@@ -5,7 +5,11 @@ import { Item } from 'semantic-ui-react';
 export const IssueDropdownItems = ({responses}) => {
     return (
         responses.map(res =>
-            <Item>res.key</Item>    
+            <Item>res.key</Item>
         )
+        // responses.map(res =>
+        //     <p>res</p>
+        // )
+        // <option>Blah</option>
     );
 }
