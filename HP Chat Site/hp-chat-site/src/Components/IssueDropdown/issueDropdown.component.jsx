@@ -9,10 +9,17 @@ export const IssueDropdown = ({responses}) => {
         <Dropdown
             placeholder='Issue'
             selection
+            options={responses.map(res => (
+                <IssueDropdownItems key={responses[res]} response={res}/>
+            ))}
         >
 
             <Icon></Icon>
             {/* <IssueDropdownItems></IssueDropdownItems> */}
+            
+            {/* {responses.map(res => (
+                <IssueDropdownItems response={res}/>
+            ))} */}
 
         </Dropdown>
     );

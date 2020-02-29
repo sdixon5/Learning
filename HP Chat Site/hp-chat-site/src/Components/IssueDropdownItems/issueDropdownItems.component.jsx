@@ -2,17 +2,10 @@ import React from "react";
 import "./issueDropdownItems.component.css";
 import { Item } from "semantic-ui-react";
 
-export const IssueDropdownItems = ({ responses }) => {
+export const IssueDropdownItems = ({ response }) => {
   return (
-      <p>Testing</p>
-    // <React.Fragment>
-    //   responses.map(res =>
-    //   <Item>res.key</Item>)
-    // </React.Fragment>
-
-    // responses.map(res =>
-    //     <p>res</p>
-    // )
-    // <option>Blah</option>
+    <Item>
+      {response.key}
+    </Item>
   );
 };
