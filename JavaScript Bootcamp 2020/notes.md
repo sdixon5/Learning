@@ -1294,3 +1294,17 @@ Fetch will still complete the promise even with a 404 or 500, then only time the
 
 Axios will not resolve a 404 like fetch, it will reject which sends it to the catch block of the promise
 
+## Lesson 182: The Async Keyword
+
+Async functions always return a promise
+
+If the function returns a value, the promise will be resolved with that value
+
+If the function throws an exception, the promise will be rejected
+
+## Lesson 183: The Await Keyword
+
+We can only use the await keyword inside of functions declared with async
+
+Await will pause the execution of the function, waitinf for a promise to be resolved
+
