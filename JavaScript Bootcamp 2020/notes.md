@@ -1308,3 +1308,21 @@ We can only use the await keyword inside of functions declared with async
 
 Await will pause the execution of the function, waitinf for a promise to be resolved
 
+## Lesson 188: What on Earth are Prototypes?
+
+JavaScripts version of Object Oriented Programming
+
+MDN definition of Object Prototypes:
+
+Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the prototype property can be used to add methods to existing constructors.
+
+side note: __ = dunder -> which stands for double under
+
+Prototypes are a template object
+
+Thing.prototype is the actual template object, ie the class 
+
+vs
+
+instantiated object.__proto__ is a reference to the the template object
+
