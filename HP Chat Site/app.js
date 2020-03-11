@@ -82,6 +82,12 @@ const responses = [
         response: [
             "The device is not charging. There is no charging LED shown either. Multiple chargers have been used and none of them work. There is no physical damage to the device. Can I please get a box to send the device in for repair."
         ]
+    },
+    {
+        key: "Battery Issues",
+        response: [
+            "The device is turning off within 10 seconds of turning it on. The device is unable to hold a charge and will shut off even when it is plugged in. Can I please get a box to send the device in for repair."
+        ]
     }
 ];
 
