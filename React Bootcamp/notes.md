@@ -1,3 +1,5 @@
+# Section 1
+
 ## Lesson 4: Introducting Components
 
 The building blocks of react
@@ -51,6 +53,72 @@ Our Approach
     That way you only have to worry about one syntax at first
 
     Later in the course we learn Hooks and mainly write function components
+
+# Section 2
+
+## Lesson 10: Basic Rules of JSX
+
+JSX = JavaScript Syntax Extension or JavaScript plus XML
+
+Combine UI and JS
+
+You can write React without JSX but it is not recommended.
+
+Using JSX
+
+    JSX isn't legal JavaScript
+        It has to be 'transpiled' to JavaScript
+    You can do this with Babel
+
+JSX Rules
+
+    JSX is more strict than HTML - elements must either:
+        Have an explicit close tag: <b> ... </b>
+        Be explicitly self-closed: <input name='msg' />
+            Cannot leave off that / or will get syntax error
+
+
+## Lesson 11: How JSX works behind the scenes
+
+Babel does all of the work for us to compile the JSX into JS
+
+## Lesson 12: Embedding JavaScript in JSX
+
+```
+class JSXDemo extends React.Component {
+    render(){
+        return (
+            <div>
+                <h1>My number is: {2 * 8.4}</h1>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<JSXDemo />, document.getElemnetById('root'));
+```
+The {} will escape JSX and will execute JS inside them ... this returns:
+
+my number is 16.8
+
+## Lesson 14: Standard React App Layout
+
+App
+
+    It's conventional for the top-level component to be named App.
+    This renders the other components.
+
+    This way readers of code knwo where to start
+    This is usually the only thing rendered in index.js
+
+Order of Script Tags is important. 
+
+Used script tags have to be known before they can be used.
+
+So if index.js has a hello component then when loading scritps it should be ...
+
+Hello.js
+index.js
 
 
 
