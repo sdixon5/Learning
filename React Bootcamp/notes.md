@@ -18,7 +18,6 @@ Class Components
     Write Logic in a JS Class
     Must include a render method
 
-
 Bable takes jsx and turns it into js
 
 Inside of the render return you can only return one thing, one element
@@ -31,20 +30,18 @@ Function Components
     Write logic in a JS function
     No render method needed, just return content
 
-
 What's the difference?
 
     Both can accept props and render content
 
     Historically, function components couldn't use important features like:
         State
-        
+
         Lifecycle methods
-    
+
     With the introduction of Hooks, we can now write full-featured function components
 
     This course covers hooks!
-
 
 Our Approach
 
@@ -77,7 +74,6 @@ JSX Rules
         Be explicitly self-closed: <input name='msg' />
             Cannot leave off that / or will get syntax error
 
-
 ## Lesson 11: How JSX works behind the scenes
 
 Babel does all of the work for us to compile the JSX into JS
@@ -97,6 +93,7 @@ class JSXDemo extends React.Component {
 
 ReactDOM.render(<JSXDemo />, document.getElemnetById('root'));
 ```
+
 The {} will escape JSX and will execute JS inside them ... this returns:
 
 my number is 16.8
@@ -111,7 +108,7 @@ App
     This way readers of code knwo where to start
     This is usually the only thing rendered in index.js
 
-Order of Script Tags is important. 
+Order of Script Tags is important.
 
 Used script tags have to be known before they can be used.
 
@@ -120,5 +117,66 @@ So if index.js has a hello component then when loading scritps it should be ...
 Hello.js
 index.js
 
+## Lesson 15: Intro to React Props
 
+Properties
 
+    aka. Props
+
+    A useful component is a reusable one.
+
+    This often means making it configurable or customizable.
+
+## Lesson 16: Props are Immutable?
+
+Properties Requirements
+
+    Properties are for confiuring your component
+
+    Properties are immutable
+        they don't change, they cannot change
+        props are read only!
+        cannot add props either
+
+## Lesson 17: Other types of props
+
+Properties Requirements
+
+    Properties can be strings
+
+    For other types, embed JS expression using the curly braces
+        this is how you pass in numbers, arrays and other JS data types
+
+## Lesson 21: looping in JSX
+
+Looping in JSX
+
+It's common to use array.map(fn) to output loops in JSX
+
+## Lesson 22: Adding Default Props
+
+Default Props
+
+    Components can specify default values for missing props
+
+    Simply define an object called default props
+
+```
+class Hello extends React.Component {
+    static defaultProps = {
+        from: "Joel",
+    };
+}
+```
+
+    YES ... the object must be called defaultProps !
+
+## Lesson 23: Styling React
+
+Styling React
+
+    Like normal with a few react specific tweaks
+
+    Inline Styles
+
+        You can inline CSS styles, but now style takes a JS object
