@@ -18,7 +18,7 @@ There are also function components
     Write Logic in a JS Class
     Must include a render method
 
-Bable takes jsx and turns it into js
+Babel takes jsx and turns it into js
 
 Inside of the render return you can only return one thing, one element
 
