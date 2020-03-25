@@ -1,4 +1,4 @@
-# Section 1
+# Section 1: A Taste of React
 
 ## Lesson 4: Introducting Components
 
@@ -51,7 +51,7 @@ Inside of the render return you can only return one thing, one element
 
     Later in the course we learn Hooks and mainly write function components
 
-# Section 2
+# Section 2: Introducing JSX
 
 ## Lesson 10: Basic Rules of JSX
 
@@ -117,6 +117,8 @@ So if index.js has a hello component then when loading scritps it should be ...
 Hello.js
 index.js
 
+# Section 3: Props and More
+
 ## Lesson 15: Intro to React Props
 
 ### Properties
@@ -180,6 +182,8 @@ class Hello extends React.Component {
     Inline Styles
 
         You can inline CSS styles, but now style takes a JS object
+
+# Section 4: Introducing Create React App
 
 ## Lesson 24: Intro to Create React App
 
@@ -282,6 +286,8 @@ class Hello extends React.Component {
 
     Store images in src/folder with the components
     Load them where needed, and use imported name where path should go
+
+# Section 5: Pokedex Project
 
 
     
