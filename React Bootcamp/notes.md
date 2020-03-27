@@ -289,5 +289,5 @@ class Hello extends React.Component {
 
 # Section 5: Pokedex Project
 
-
+# Section 6: Introducing State
     
