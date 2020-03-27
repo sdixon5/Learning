@@ -219,13 +219,12 @@ class Hello extends React.Component {
             Is very clever and tries to only reload relevant files
         Enables easy testing and deployment
 
-
 ## Lesson 28: Modules: Import & Export Crash Course
 
 ### Modules
 
     CRA uses ES2015 'modules'
-    
+
     This is a newer, standardized version of Node's require()
 
     You use this to export/import classes/data/functions between JS files
@@ -235,7 +234,7 @@ class Hello extends React.Component {
     Export Default will only export one function, so in the example only helpful() is exported
 
     Instead could export {helpful, sort, sing} but in doing so will have to change the import statement, can no longer just be h or help, also has to be {helpful, sort, sing} and in this import the names must match, because we are looking for a specific thing
-    
+
     In the second case order does not matter because we are going based on the name
 
     You can have a default export and additional exports just the import changes...
@@ -279,7 +278,7 @@ class Hello extends React.Component {
                 <p className="House-title"></p>
                 <p className="House-address"></p>
             </div>
-    
+
     Styles used in any css file will be used if they are imported. So even if you make a div specific style in Dog.css when dog.css is imported than the div styling will be applied to all other divs within the application, essentially just like css works by default
 
 ### Images
@@ -289,5 +288,112 @@ class Hello extends React.Component {
 
 # Section 5: Pokedex Project
 
+    This was an exercise section, see source code to see what was done.
+
 # Section 6: Introducing State
+
+## Lesson 40: State Goals
+
+### Goals
+
+    Understand the concept of state in web applications
+    Learn how to model state in React
+    Use events to trigger state changes
+
+## Lesson 41: Quick Detour: React Dev Tools
+
+Use the react dev tools
+
+## Lesson 42: State in General
+
+### What is State?
+
+    In any sufficeintly advanced web application, the user interface has to be stateful.
+
+    Examples:
+        Logged-In Users see a different screen than logged-out users
+
+        clicking 'edit profile' opens up a modal (pop-up) window
+
+        sections of a website can expand or collapse, for instance clicking 'read more'
+
+    The state of the client interface (frontend) is not always directly tied to state on the server.
+
+### State Changes
+
+    State is designed to constantly change in response to events.
+
+    Example:
+        A great way to think about state is to think of games, for instance chess. At any point in time, the board is in a complex state.
+
+            Every new move represents a single discrete state change.
+
+### What Does State Track?
+
+    There are two types of things state on the client/frontedn keeps track of:
+
+        **UI logic** - the changing state of the interface e.g., there is a modal open right now because I'm editing my profile
+
+        **business logic** - the changing state of data e.g., in my inbox, messages are either read or unread, and this in turn affects how they display.
+
+### Vanilla / jQuery State
+
+* The way we kept track of state with jQuery was by selecting DOM elements and seeing if they were displayed/hidden, or if they had certain styles or attributes.
+
+* In other words, we were inferring the state of the application from the DOM itself.
+
+* React is going to do the opposite!
+
+## Lesson 43: Initializing State
+
+### Core React Concept Review
+
+ * component
+
+     * building block of React
+
+     * combines logic (JS) and presentation (JSX)
+
+  * prop
+
+     * data passed to a component (or found via defaults)
+
+     * immutable; component cannot change its own props
+
+  * state
+
+     * internal data specific to a component
+
+     * data that changes over time!
+
+### What is a React State?
+
+ * In React, state is an instance attribute on a component.
+
+ * It's always an object (POJO), since you'll want to keep track of several keys/values.
+
+     * POJO = Plain Old JavaScript Object
     
+### Initial State
+
+ * State should be initialized as soon as the component is created.
+
+ * So we set it in the constructor function:
+    ```
+    class ClickCount extends Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                numClicks: 0 // start at zero clicks
+            };
+        }
+    }
+    ```
+    
+### React Constructor Function
+
+ * If your component is stateless, you can omit the constructor function.
+
+ * If you are building a component with state, you need a standard React constructor.
+
+ * **constructor** takes one argument, **props**
