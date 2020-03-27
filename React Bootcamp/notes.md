@@ -646,3 +646,9 @@ class Dog extends Pet{
 * This idea is generalized in React as **'downward data flow'**. It means that components get simpler as you go down the component hierarchy, and parents tend to be more stateful than their children.
 
 # Section 7: React State Dice Exercise
+
+* This section was an exercise, everything was done in `code`.
+
+# Section 8: React State Patterns
+
+
