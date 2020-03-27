@@ -23,11 +23,9 @@ class Pokegame extends Component {
         let hand1 = [];
         let hand2 = [...this.props.pokemon];
 
-        while(hand1.length < hand2.length){
+        while (hand1.length < hand2.length){
             let randIdx = Math.floor(Math.random() * hand2.length);
-        
             let randPokemon = hand2.splice(randIdx, 1)[0];
-
             hand1.push(randPokemon);
         }
         console.log(hand1);
