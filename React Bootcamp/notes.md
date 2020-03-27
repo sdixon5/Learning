@@ -400,3 +400,249 @@ import helpful, {sort, sing} from './filename';
 
  * **constructor** takes one argument, **props**
 
+ * You must call `super(props)` at start of constructor, which 'registers' your class as a React **Component**
+
+ * Inside the instance methods, you can refer to `this.state` just like you did `this.props`
+
+ ## Lesson 44: IMPORTANT! Alternate Syntax
+
+ * The alternate syntax uses something called the class properties proposal
+
+ * Instead of using:
+
+    ```
+    constructor(props){
+        super(props);
+        this.state = {
+            score: 0,
+            gameOver: false
+        };
+    }
+    ```
+
+ * We instead uses this:
+    
+    ```
+    state = {
+        score: 99,
+        gameOver: false
+    };
+    ```
+
+ ### So what is happening?
+
+ * Babel is taking the non JS code, (the second example) and turning it into JS code.
+
+ * Babel goes and set the constructor on each instance of the class, setting the state to the one we created.
+
+ * Colt does not lead with the second option, because he does not want to confuse people, and you need to have babel in order to use it. Using this syntax outside of Create-React-App would require you to configure Babel so that you could use the second option without running into syntax errors
+
+ * So the second option is simply a shorcut, where Babel does the work behind the scenes
+
+ * Colt does not use it as he feels it is decieving to the student, many students new to JS thought the second option was valid JS, and attempted to use it outside of React, where it fails because it is not valid JS. So instead, Colt teaches students the original way of writing the syntax, taking Babel somewhat out of the equation.
+
+ * Also it teaches you the fundamentals and its much clearer as to what is happening
+
+## Lesson 45: WTF is super() vs super(props)
+
+ * It is always safe to use `super(props)`
+
+### JS Classes and Constructors
+
+```
+class Component {
+    constructor(){
+        console.log('Inside Component Constructor');
+    }
+}
+
+class Game extends Component {
+    constructor(){
+        super();
+        console.log('Inside Game Constructor');
+    }
+}
+```
+
+ * If you do not have the `super()` you will get an error and nothing works.
+
+ * That is because we are making a new constructor inside of the Game, which is extending from the Component. When we do this we need Game to take on the properties that are set up by the parent constructor, in this case the Component class.
+
+ * If we go back to the JS Bootcamp and extending classes we made the following 3:
+
+ ```
+class Pet {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    eat(){
+        return `${this.name} is eating`;
+    }
+}
+
+class Cat extends Pet{
+    constructor(name, age, livesLeft = 9){
+        super(name, age);
+        this.livesLeft = livesLeft;
+    }
+    meow(){
+        return 'Meow!';
+    }
+    eat(){
+        return `${this.name} scarfs her food`;
+    }
+}
+
+class Dog extends Pet{
+    bark(){
+        return 'Bark!';
+    }
+}
+ ```
+
+ * In the case of the dog, it does not need `super()` because it is not defining it's own constructor
+
+ * But in the case of the cat, we are defining our own constructor, and we are adding a new property to the constructor
+
+     * So inside of the cat constructor, we call `super(name, age)` where we can use the name and age construction from the Pet class which cat is extending. Then we add the livesLeft property to the class within the Cat constructor.
+
+### Why props in `super(props)`
+
+ * Props are just an object that are being passed in
+
+ * When making the `<Demo animal='Tiger' food='Pizza' />` it is essentially making `new Demo({animal: 'Bobcat', food='pizza'})`
+
+ * The following code will lead to an undefined in the console, because if we want access to the props in the constructor we need to pass them through via the `super()`
+
+    ```
+    constructor(props){
+        super();
+        console.log(this.props);
+    }
+    ```
+ * Must have `super()` at the very least but `super(props)` is better so that you can have access to the props within the constructor.
+
+## Lesson 46: Setting State Correctly
+
+### Chaning State
+
+ * Never change state directly. It is possible but not recommended.
+
+ * **`this.setState()`** is the built-in React method of changing a component's state.
+
+ * There are multiple ways to set state but we will first learn to do it by passing in an object
+
+    ```
+    this.setState({ playerName: "Matt", score: 0 })
+    ```
+
+ * Can call in any instance method  except the constructor
+
+ * It is also not recommended to set the state from within the render method
+
+ * Takes an object describing the state changes
+
+ * Patches state object - keys that you didn't specify don't change
+
+ * Asynchronous!
+
+     * The component state will eventually update.
+    
+     * React controls when the state will actually change, for performance reasons.
+
+ * Components re-render when their state changes
+
+ * Think of `setState()` as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.
+
+ * This is why you don't set state directly, React is in charge of when the state will re-render not us
+
+## Lesson 47: Crash Course: Click Events in React
+
+### React Events
+
+* State most commonly changes in direct response to some event.
+
+* In React, every JSX element has built-in attributes representing every kind of browser event.
+
+* They are camel-cased, like **onClick** and take callback functions as event listeners.
+
+    ```
+    <button onClick={function(e) {alert('You clicked me'); } }>
+        Click me!
+    </button>
+    ```
+### Broken Click
+
+* If we're updating state in response to an event, we'll have to call a method with `this.setState()`
+
+### `this` is back
+
+* But this is undefined!
+
+* Who is calling handleClick for us?
+
+* What is it calling it on?
+
+    * It doesn't remember to call it on our instance
+
+    * The method was called 'out of context'
+
+* What do we do?
+
+    * `.bind()` it!
+
+        * Within the constructor do the following: 
+
+        ```
+        this.handleClick = this.handleClick.bind(this);
+        ```
+
+        * The line above is setting the context of `handleClick` to `this`
+
+        * The value of this inside of the constructor is the value of the individual component
+
+## Lesson 48: Alternate Syntax Pt 2
+
+* Can use babel proposed properties syntax
+
+* Not taught as the primary way because it may lead to mis-understandings
+
+* Also other way is clearier for beginners
+
+## Lesson 51: The 'State As Props' Desgin Pattern
+
+### State vs Props
+
+* **State** and **Props** are the most important concepts in React (after knowing what a 'component' is).
+
+    |term    |structure     |mutable     |purpose                       |
+    |--------|--------------|------------|------------------------------|
+    |state   |POJO `{}`     |yes         |stores changing component data|
+    |props   |POJO `{}`     |no          |stores component configuration|
+
+### State as Props
+
+* A common pattern we will see over and over again is a stateful ('smart') parent component passing down its state values as props to stateless ('dumb') child components.
+
+    ```
+    class CounterPartent extends Component {
+        constructor(props){
+            super(props);
+            this.state = {count: 5};
+        }
+        render(){
+            // passing down parent state as a prop to the child
+            return(
+                <div>
+                    <CounterChild count={this.state.count} />
+                    // count is a prop in the counterchild component
+                </div>
+            )
+        }
+    }
+    ```
+
+* This idea is generalized in React as **'downward data flow'**. It means that components get simpler as you go down the component hierarchy, and parents tend to be more stateful than their children.
+
+# Section 7: React State Dice Exercise
