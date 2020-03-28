@@ -651,4 +651,119 @@ class Dog extends Pet{
 
 # Section 8: React State Patterns
 
+## Lesson 57: Updating Existing State
 
+### React State Patterns
+
+### Goals
+
+* Learn how to update state based off of existing state.
+
+* Properly manage state updates for mutable data structures.
+
+* Discuss best practices for modeling state and designing components.
+
+### Setting State Using State
+
+* One way to setState of an already existing state object is the following:
+
+    ```
+    singleKill(){
+            this.setState({ score: this.state.score + 1 });
+        }
+    ```
+* But it is not the best idea and presents some issues
+
+* The main reason you do not want to do it this way, is because it depends on the previous state which could lead to issues.
+
+* If we set up another example:
+
+    ```
+    tripleKill(){
+        this.setState({ score: this.state.score + 1 });
+        this.setState({ score: this.state.score + 1 });
+        this.setState({ score: this.state.score + 1 });
+    }
+    ```
+
+* Interestingly when calling this function from a button click the score of kill is not 3, as one might expect. Instead, the score is 1. And that has to do with the was setState works
+
+* We've established that `**setState()**` is asynchronous...
+
+* So: it's risky to assume previous call has finished when you call it. Also, React will sometimes batch (squash together) calls to `**setState**` together into one for performance reasons.
+
+* React will essentially do the last call when it sees a similar call, so it will only call the last `setState` for `tripleKill`. So if we changed the last `setState` to add 4. Then the application will add 4 when we click the `tripleKill` button.
+
+* You can think of React as only wanting to execute the latest version of a specific call.
+
+* If a call to `**setState()**` depends on current state, the safest thing is to use the alternate 'callback form'.
+
+### `setState` Callback Form
+
+* `this.setState(callback)`
+
+* Instead of passing an object, pass it a callback with the current state as a parameter.
+
+* The callback should return an object representing the new state.
+
+    ```
+    this.setState(curState => ({ count: curState.count + 1 }));
+    ```
+
+* Example:
+
+    ```
+    tripleKill(){
+        //st references the current state
+        this.setState(st => { 
+            return {score: st.score + 1 }; 
+        });
+        this.setState(st => { 
+            return {score: st.score + 1 }; 
+        });
+        this.setState(st => { 
+            return {score: st.score + 1 }; 
+        });
+    }
+    ```
+
+### Abstracting State Updates
+
+* The fact that you can pass a function to `this.setState` lends itself nicely to a more advanced pattern called **functional setState**.
+
+* Basically you can describe your state updates abstractly as separate function. But why would you do this?
+
+    ```
+    //elsewhere in the code
+    function incrementCounter(prevState){
+        return { count: prevState.count + 1 };
+    }
+    //somewhere in the component
+    this.setState(incrementCounter);
+    ```
+
+* Because testing your state changes is as simple as testing a plain function:
+    ```
+    expect(incrementCounter({ count: 0 })).toEqual({ count: 1 });
+    ```
+
+* This pattern also comes up all the time in Redux!
+
+* Why don't we have to bind the incrementScore function?
+
+    * Answer from Colt in the Q&A:
+    
+        * We only need to bind methods when they are being called outside the context of the component, like when we pass them to an onClick or other event handler prop.  When we do something like onClick={this.tripleKill} we are not actually calling that function, we are just passing a reference to onClick which will eventually be called once a user clicks.  We need to bind tripleKill (and singleKill) so that the value of this is preserved in the function.  If we are simply calling a method inside of another method in the same React component, like we are with incrementScore, we don't need to bind.
+
+
+## Lesson 58: Mutating State the Safe Way
+
+## lesson 59: Desiging State: Minimizing State
+
+## Lesson 60: Desiging State: Downward Data Flow
+
+## Lesson 61: State Design Example: Lottery
+
+## Lesson 62: State Design Example: LottoBall Component
+
+## Lesson 63: State Design Example: Lottery Component

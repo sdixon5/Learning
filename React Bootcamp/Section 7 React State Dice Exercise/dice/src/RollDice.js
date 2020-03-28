@@ -30,7 +30,7 @@ class RollDice extends Component {
         //set state of die to new numbers
         this.setState({ die1: newDie1, die2: newDie2, rolling: true });
 
-        //wait one second, then set rolling to false!
+        //wait one second, then set rolling back to false!
         setTimeout(() => {
             this.setState({ rolling: false });
         }, 1000);
