@@ -1118,6 +1118,41 @@ Here’s some inspiration:
 
 ## Lesson 69: The Joys of Method Binding :(
 
+### Method Binding
+
+### The keyword *`this`*
+
+* When your event handlers reference the keyword **this**, watch out!
+
+* You will lose the **this** context when you pass a function as a handler.
+
+* Let's see what happens when we try to move our quotes into **defaultProps**
+
+### Fixing our binding
+
+* There are three ways to fix this:
+
+    1. Use **bind** inline
+    2. Use an arrow function
+    3. Method bind in the constructor
+
+    * Inline
+    ```
+    <div className='WiseSquare' onMouseEnter={ this.dispsenseWisdom.bind(this) }>
+        {/* */}
+    </div>
+    ```
+
+    * Pros
+    
+        * Very Explicit
+    
+    * Cons
+
+        * What if you need to pass `this.dispenseWisdom` to multiple components?
+
+        * new function created on every render
+
 ## Lesson 70: Alternative Binding with Class Properties
 
 ## Lesson 71: Binding with Arguments
