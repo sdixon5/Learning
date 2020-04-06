@@ -797,7 +797,7 @@ class Dog extends Pet{
 
     ```
     completeTodo(id) {
-        //Array.prototype.may returns a new array
+        //Array.prototype.map returns a new array
         const newTodos = this.state.todos.map(todo => {
             if (todo.id === id){
                 //make a copy of the todo object with done -> true
@@ -832,7 +832,62 @@ class Dog extends Pet{
 
 * This pattern is a *good habit* to get into for React apps and *required* for using Redux.
 
-## lesson 59: Desiging State: Minimizing State
+## Lesson 59: Desiging State: Minimizing State
+
+### Designing State
+
+* Desiging the state of a React application (or any modern web app) is a challening skill! It takes practice and time!
+
+* However, there are some easy best-practices that we can talk about in this setion to give you a jump-start.
+
+### Minimize Your State
+
+* In React, you want to try to put as little data in state as possible.
+
+* Litmus test
+
+    * does *x* change? If not, *x* should not be part of state. It should be a prop.
+
+    * is *x* already captured by some other value y in state or props? Derive it from there instead.
+
+### Bad Example of State Design
+
+* Let's pretend we're modelling a Person...
+
+    ```
+    this.state = {
+        firstName: 'Matt',
+        lastName: 'Lane',
+        birthday: '1955-01-08T07:37:59.711Z',
+        age: 64,
+        mood: 'irate'
+    };
+    ```
+
+* Does Matt's first name or last name ever change? not often I hope...
+
+* Does Matt's birthday ever change? How is that even possible!
+
+* Matt's **age** does change, however if we had `this.props.birthday` we could easily derive it from that.
+
+* Therefore, the only property here that is truly stateful is arguably **mood** (although Matt might dispute this 😉).
+
+### Fixed Example of State Design
+
+    ```
+    console.log(this.props);
+    {
+        firstName: 'Matt',
+        lastName: 'Lane',
+        birthday: '1955-01-08T07:37:59.711Z',
+        age: 64,
+    }
+
+    console.log(this.state);
+    {
+        modd: 'insane'
+    }
+    ```
 
 ## Lesson 60: Desiging State: Downward Data Flow
 
