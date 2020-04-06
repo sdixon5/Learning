@@ -1066,6 +1066,37 @@ Here’s some inspiration:
 
 # Section 10: The World of React Events
 
+### React Events
+
+### Goals
+
+* Attach event handlers to components in React
+
+* Use method binding to preserver the **this** context with event handlers
+
+* Pass event handlers down as props to child components
+
+* Understand the **key** prop that React asks for when mapping over data
+
+### React Events Review
+
+### React Events
+
+* You can attach event handlers to HTML elements in React via special reserved attributes.
+
+* ( You can do this in vanilla JS too, though the syntax is a bit different. )
+
+### Event Attributes
+
+* Any event you can listen for in JS, you can listen for in React.
+
+* Examples:
+
+    * Mouse events: `onClick`, `onMouseOver`, etc
+    * Form events: `onSubmit`, etc
+    * Keyboard events: `onKeyDown`, `onKeyUp`, `onKeyPress`
+    * [Full List] (https://reactjs.org/docs/events.html "React Events")
+
 # Section 11: Hangman Exercise
 
 # Section 12: Lights Out Game
