@@ -1066,6 +1066,8 @@ Here’s some inspiration:
 
 # Section 10: The World of React Events
 
+## Lesson 68: Commonly Used React Events
+
 ### React Events
 
 ### Goals
@@ -1095,7 +1097,36 @@ Here’s some inspiration:
     * Mouse events: `onClick`, `onMouseOver`, etc
     * Form events: `onSubmit`, etc
     * Keyboard events: `onKeyDown`, `onKeyUp`, `onKeyPress`
-    * [Full List] (https://reactjs.org/docs/events.html "React Events")
+    * [Full List](https://reactjs.org/docs/events.html "React Events")
+
+    ```
+    class WiseSquare extends Component {
+        dispenseWisdom(){
+            let messages = [ /*wise message go here*/];
+            let rIndex = Math.floor(Math.random() * messages.length);
+        }
+
+        render(){
+            return (
+                <div onMouseEnter={this.dispenseWisdom}>
+                    
+                </div>
+            );
+        }
+    }
+    ```
+
+## Lesson 69: The Joys of Method Binding :(
+
+## Lesson 70: Alternative Binding with Class Properties
+
+## Lesson 71: Binding with Arguments
+
+## Lesson 72: Passing Methods to Child Components
+
+## Lesson 73: Parent-Child Method Naming
+
+## Lesson 74: Quick Detour: React Keys
 
 # Section 11: Hangman Exercise
 
