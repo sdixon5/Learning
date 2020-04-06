@@ -891,8 +891,174 @@ class Dog extends Pet{
 
 ## Lesson 60: Desiging State: Downward Data Flow
 
+### State Should Live On the Parent
+
+* As previously mentioned, we want to support the "downward data flow" philosophy of React.
+
+* In general, it makes more sense for a parent component to manage state and have a bunch of "dumb" stateless child disply components.
+
+* This makes debugging easier, because the state is centralized. It's easier to predict where to find state:
+
+    * *Is the current component stateless? Find out what is rendering it. There's the state.*
+
+### State Should Live On the Parent
+
+* Todo Example: 
+
+    ```
+    class TodoList extends Component {
+        constructor(props){
+            super(props);
+            this.state = {
+                todos: [
+                    { task: 'do the dishes', done: false, id: 1 },
+                    { task: 'vacumm the floor', done: true, id: 2 }
+                ]
+            };
+        }
+        /* ... lots of other methods ... */
+        render(){
+            return(
+                <ul>
+                    {this.state.todos.map(t => <Todo { ...t } />)}
+                </ul>
+            );
+        }
+    }
+    ```
+* **TodoList** is a smart parent with lots of methods, while the individual **Todo** items are just `<li>` tags with some text and styling.
+
 ## Lesson 61: State Design Example: Lottery
+
+### Example Design: Lottery
+
+### Let's Design an App!
+
+(Image) - 6 lotto balls, with a generate button to pick new numbers
+
+`<Lottery />`
+
+* Should show 6 balls
+
+* Value 1-40 generated when button clicked
+
+### Should Be Reusable, Flexible
+
+(Image) - Original
+
+(Image) - Only 4 balls, numbers between 1-10
+
+```
+<div>
+    <Lottery />
+    <Lottery title='Mini Daily' numBalls={4}, maxNum={10} />
+</div>
+```
+
+* Should be able to control title, num balls to show, and max value
+
+### Design
+
+* What components will we need?
+
+* What props will they need?
+
+* What state will we need?
+
+### Lottery Component
+
+* Props
+
+    * **title**: title of the lottery
+    * **numBalls**: num of balls to display
+    * **maxNum**: max value of ball
+
+* State
+
+    * **nums**: array of `[num, num, num, ...]` for balls
+
+* Events
+
+    * **onClick**: regenerate nums in state
+
+### LotteryBall Component
+
+* Props
+
+    * **num**: value on this ball
+
+* State
+
+    * none!
+
+* Events
+
+    * none!
 
 ## Lesson 62: State Design Example: LottoBall Component
 
+* See Code!
+
 ## Lesson 63: State Design Example: Lottery Component
+
+# Section 9: State Exercises!
+
+# Section 10: The World of React Events
+
+# Section 11: Hangman Exercise
+
+# Section 12: Lights Out Game
+
+# Section 13: Forms in React
+
+# Section 14: Forms Exercise
+
+# Section 15: Todo List Project
+
+# Section 16: Building Yahtzee
+
+# Section 17: React Lifecycle Methods
+
+# Section 18: LifeCycle Methods & API Exercise
+
+# Section 19: Building the Dad Jokes App
+
+# Section 20: React Router:
+
+# Section 21: Vending Machine Exercise
+
+# Section 22: React Router Patterns
+
+# Section 23: Router Exercises Part 2
+
+# Section 24: The Massive Color Project Pt 1
+
+# Section 25: The Massive Color Project Pt 2
+
+# Section 26: JSS & withStyles (Color App)
+
+# Section 27: The Massive Color Project Pt 3
+
+# Section 28: The Massive Color Project Pt 4
+
+# Section 29: The Massive Color Project Pt 5
+
+# Section 30: The Massive Color Project Pt 6
+
+# Section 31: The Massive Color Project Pt 7
+
+# Section 32: Introducing React Hooks
+
+# Section 33: React Hooks Project
+
+# Section 34: Introducing The Context API!
+
+# Section 35: Using Context with Hooks
+
+# Section 36: State Management w/ useReducer & useContext
+
+# Section 37: Next JS
+
+# Section 38: Next: Fetching & Server API
+
+# Section 39: Bonus: Webpack Mini Course - Your Own Simple Version of Create React App
