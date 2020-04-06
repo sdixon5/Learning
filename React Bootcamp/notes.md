@@ -1026,9 +1026,43 @@ class Dog extends Pet{
 
 ## Lesson 65: State Exercise 1: Coin Flipper Solution
 
+* See my code, or colts for solution
+
 ## Lesson 66: State Exercise 2: Color Boxes
 
+### Part 2: Color Boxes
+* For this part, you should show a series of 16 boxes (a box is just square div with a background color).
+
+* Initially, each box should have a background color chosen from a random list of colors.
+
+* When you click any box:
+
+* it should change its color to a different random color.
+Here’s some inspiration:
+
+(image)
+
+### Note: Downward Data Flow?
+
+* For this exercise, you might need to violate the “children are dumber than their parents” rule of thumb, since each box will probably need to have its own color state, while the parent container doesn’t really need to be smart.
+
+* One of the further study points is to see if you can design the app to make the container smarter than the child boxes. This is quite advanced though, so be careful if you go down this path!
+
+### Further Study
+* **Default Properties**
+* For both parts, there are opportunities to move some things into default properties:
+
+    * the list of possible colors for boxes
+    * the number of boxes (so it doesn’t always have to be 16!)
+    * the sides and images for the coin being flipped
+* **Color Boxes Data Flow**
+* Try to make the parent container of color boxes hold all the state. It’s a little tricky with what we know now. We’ll cover it soon, once we talk about react events in detail. Don’t sweat it if you get stuck!
+
 ## Lesson 67: State Exercise 2: Color Boxes Solution
+
+* The solution provided works, but it lacks the ability for the parent to hold all of the state, and the reason is how does the parent know which box was clicked on, so it can re-render that box alone?
+
+* We will learn in the next section.
 
 # Section 10: The World of React Events
 
