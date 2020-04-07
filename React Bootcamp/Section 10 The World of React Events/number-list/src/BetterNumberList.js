@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BetterNumberItem from './BetterNumberItem';
 
 export class BetterNumberList extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ export class BetterNumberList extends Component {
     
     render() {
         let nums = this.state.nums.map(n => (
-            <BetterNumberList value={n} remove={this.remove} />
+            <BetterNumberItem value={n} remove={this.remove} />
         ));
         return (
             <div>
