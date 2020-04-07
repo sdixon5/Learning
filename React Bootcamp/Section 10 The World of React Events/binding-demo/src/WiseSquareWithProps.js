@@ -9,6 +9,11 @@ export default class WiseSquareWithProps extends Component {
           ]
     }
 
+    constructor(props) {
+      super(props);
+      this.dispenseWisdom = this.dispenseWisdom.bind(this);
+    }
+
     dispenseWisdom() {
         let {messages} = this.props; //right here this is undefined
         let rIndex = Math.floor(Math.random() * messages.length);
@@ -17,7 +22,18 @@ export default class WiseSquareWithProps extends Component {
 
   render() {
     return (
-      <div className="WiseSquare" onMouseEnter={this.dispenseWisdom.bind(this)}>
+      //inline binding
+      // <div className="WiseSquare" onMouseEnter={this.dispenseWisdom.bind(this)}>
+      //   😃
+      // </div>
+
+      //arrow function inline
+      // <div className='WiseSquare' onMouseEnter={() => this.dispenseWisdom()}>
+      //   😃
+      // </div>
+
+      //in the constructor - needed to add a constructor
+      <div className='WiseSquare' onMouseEnter={this.dispenseWisdom}>
         😃
       </div>
     );

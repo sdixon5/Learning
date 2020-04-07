@@ -1137,23 +1137,89 @@ Here’s some inspiration:
     3. Method bind in the constructor
 
     * Inline
-    ```
-    <div className='WiseSquare' onMouseEnter={ this.dispsenseWisdom.bind(this) }>
-        {/* */}
-    </div>
-    ```
+        ```
+        <div className='WiseSquare' onMouseEnter={ this.dispsenseWisdom.bind(this) }>
+            {/* */}
+        </div>
+        ```
 
-    * Pros
-    
-        * Very Explicit
-    
-    * Cons
+        * Pros
+        
+            * Very Explicit
+        
+        * Cons
 
-        * What if you need to pass `this.dispenseWisdom` to multiple components?
+            * What if you need to pass `this.dispenseWisdom` to multiple components?
 
-        * new function created on every render
+            * new function created on every render
+
+    * Arrow Functions
+
+        * Inline Arrow Function
+
+        ```
+        <div className='WiseSquare' 
+                onMouseEnter={() => this.dispenseWisdom()} >
+            {/* */}
+        </div>
+        ```
+        * Pros
+
+            * No mention of bind!
+
+        * Cons
+
+            * Intent less clear
+
+            * Again, what if you need to pass the fn to multiple components?
+
+            * new function created on every render
+
+    * In the constructor
+
+        ```
+        class WiseSquareWithProps extends Component {
+            constructor(props) {
+                super(props);
+                /* do other stuff */
+                this.dispenseWisdom = this.dispenseWisdom.bind(this);
+            }
+        }
+        ```
+
+        * Pros
+
+            * Only need to bind once!
+
+            * More performant
+
+        * Cons
+
+            * Ugly!?
 
 ## Lesson 70: Alternative Binding with Class Properties
+
+* Use Arrow Functions with the function and let Babel correct any JS compatibility issues with the browsers
+
+    ```
+    class Cat {
+        handleMeow = () => {
+            console.log('Meow');
+        }
+    }
+
+    //turns into
+
+    class Cat {
+        constructor(){
+            this.handleMeow = () => {
+                console.log('Meow');
+            };
+        }
+    }
+    ```
+
+* It too only binds it one time, and does not create a new function for each render!
 
 ## Lesson 71: Binding with Arguments
 
