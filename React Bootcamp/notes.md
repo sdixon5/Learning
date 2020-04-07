@@ -1399,6 +1399,8 @@ you may use the iteration index as a key as a last resort:
 
 # Section 11: Hangman Exercise
 
+* This is an exercise with starter code provided. See Code!
+
 # Section 12: Lights Out Game
 
 # Section 13: Forms in React
