@@ -1403,6 +1403,8 @@ you may use the iteration index as a key as a last resort:
 
 # Section 12: Lights Out Game
 
+* See Code!
+
 # Section 13: Forms in React
 
 # Section 14: Forms Exercise

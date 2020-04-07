@@ -40,8 +40,8 @@ class Board extends Component {
 
     // TODO: set initial state
     this.state = {
-        hasWon: false,
-        board: this.createBoard()
+      hasWon: false,
+      board: this.createBoard(),
     };
   }
 
@@ -50,12 +50,12 @@ class Board extends Component {
   createBoard() {
     let board = [];
     // TODO: create array-of-arrays of true/false values
-    for(let y = 0; y < this.props.nrows; y++){
-        let row = [];
-        for(let x = 0; x < this.props.ncols; x++){
-           row.push(Math.random() < this.props.chanceLightStartsOn)
-        }
-        board.push(row);
+    for (let y = 0; y < this.props.nrows; y++) {
+      let row = [];
+      for (let x = 0; x < this.props.ncols; x++) {
+        row.push(Math.random() < this.props.chanceLightStartsOn);
+      }
+      board.push(row);
     }
     return board;
   }
@@ -75,7 +75,7 @@ class Board extends Component {
       }
     }
 
-    flipCell(y,x); //Flip Initial Cell
+    flipCell(y, x); //Flip Initial Cell
     flipCell(y, x - 1); //Flip left
     flipCell(y, x + 1); //flip right
     flipCell(y - 1, x); //flip below
@@ -86,7 +86,7 @@ class Board extends Component {
     // win when every cell is turned off
     // TODO: determine is the game has been won
 
-    let hasWon = board.every(row => row.every(cell => !cell));
+    let hasWon = board.every((row) => row.every((cell) => !cell));
 
     this.setState({ board, hasWon });
   }
@@ -110,13 +110,19 @@ class Board extends Component {
     // TODO
     let tblBoard = [];
 
-    for(let y = 0; y < this.props.nrows; y++){
-        let row = [];
-        for(let x = 0; x < this.props.ncols; x++){
-            let coord = `${y}-${x}`;
-            row.push(<Cell key={coord} isLit={this.state.board[y][x]} flipCellsAroundMe={() => this.flipCellsAround(coord)} />);
-        }
-        tblBoard.push(<tr key={y}>{row}</tr>);
+    for (let y = 0; y < this.props.nrows; y++) {
+      let row = [];
+      for (let x = 0; x < this.props.ncols; x++) {
+        let coord = `${y}-${x}`;
+        row.push(
+          <Cell
+            key={coord}
+            isLit={this.state.board[y][x]}
+            flipCellsAroundMe={() => this.flipCellsAround(coord)}
+          />
+        );
+      }
+      tblBoard.push(<tr key={y}>{row}</tr>);
     }
 
     // return (
@@ -134,28 +140,26 @@ class Board extends Component {
     // )
 
     return (
-        <div>
-            {this.state.hasWon ? (
-            <div className='Board-title'>
-            <div className='winner'>
-                <span className='neon-orange'>YOU</span>
-                <span className='neon-blue'>WIN!</span>
+      <div>
+        {this.state.hasWon ? (
+          <div className="Board-title">
+            <div className="winner">
+              <span className="neon-orange">YOU</span>
+              <span className="neon-blue">WIN!</span>
             </div>
-        </div>
-            ) : (
-                <div>
-                <div className='Board-title'>
-                    <div className='neon-orange'>Lights</div>
-                    <div className='neon-blue'>Out</div>
-                </div>
-                <table className="Board">
-                    <tbody>
-                        {tblBoard}
-                    </tbody>
-                </table>
+          </div>
+        ) : (
+          <div>
+            <div className="Board-title">
+              <div className="neon-orange">Lights</div>
+              <div className="neon-blue">Out</div>
             </div>
-            )}
-        </div>
+            <table className="Board">
+              <tbody>{tblBoard}</tbody>
+            </table>
+          </div>
+        )}
+      </div>
     );
   }
 }
