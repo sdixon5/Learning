@@ -1223,7 +1223,71 @@ Here’s some inspiration:
 
 ## Lesson 71: Binding with Arguments
 
+### Method Binding with Arguments
+
+* In our previous examples, `this.dispenseWisdom` didn't take any arguments.
+
+* But what if we need to pass arguments to an event handler?
+
+* An Example
+
+    ```
+    class ButtonList extends Component {
+        static defaultProps = {
+            colors: ['green', 'red', 'blue', 'pink']
+        };
+
+        handleClick(color){
+            console.log(`You clicked on the $(color) button`.);
+        }
+
+        render(){
+            return (
+                <div className='ButtonList'>
+                    {this.props.color.map(c => {
+                        const colorObjt = { background: c };
+                        return (
+                            <button style={colorObj}
+                                    onClick={this.handleClick.bind(this, c)}>
+                            Click on me!</button>
+                        );
+                    })}
+                </div>
+            );
+        }
+    }
+    ```
+* Inside of a loop, you can bind and pass in additional arguments
+
+* Also possible to use an arrow function
+
+* Both these approaches suffer from the same performance downsides we’ve already seen
+
+* We can do better, but first we need to talk about…
+
 ## Lesson 72: Passing Methods to Child Components
+
+### Passing functions to child components
+
+* A very common pattern in React
+
+* The idea: children are often not stateful,
+but need to tell parents to change state
+
+* How we send data “back up” to a parent component
+
+### How data flows
+
+* A parent component defines a function
+
+* The function is passed as a prop to a child component
+
+* The child component invokes the prop
+
+* The parent function is called, usually setting new state
+
+* The parent component is re-rendered along with its children
+
 
 ## Lesson 73: Parent-Child Method Naming
 
