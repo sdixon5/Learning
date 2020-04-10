@@ -1641,6 +1641,8 @@ let handler function decide the appropriate key in state to update based on `eve
 
 # Section 16: Building Yahtzee
 
+* See Code!
+
 # Section 17: React Lifecycle Methods
 
 # Section 18: LifeCycle Methods & API Exercise
