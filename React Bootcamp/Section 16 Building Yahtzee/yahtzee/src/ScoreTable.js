@@ -19,7 +19,7 @@ import {
 
 class ScoreTable extends Component {
   getTotalScore(){
-    const scores = this.props;
+    const {scores} = this.props;
     let totalScore = 0;
 
     for(let key in scores){
