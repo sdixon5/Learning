@@ -1637,6 +1637,8 @@ let handler function decide the appropriate key in state to update based on `eve
 
 # Section 15: Todo List Project
 
+* See Code!
+
 # Section 16: Building Yahtzee
 
 # Section 17: React Lifecycle Methods
