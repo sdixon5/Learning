@@ -42,4 +42,12 @@
     width: 70%;
     overflow: scroll;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+
+    /*following line to stop the showing of the scroll bars*/
+    -ms-overflow-style: none;
+}
+
+/*folloing section to stop the showing of the scroll bars*/
+.JokeList-jokes::-webkit-scrollbar {
+    display: none;
 }
