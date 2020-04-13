@@ -1777,6 +1777,8 @@ to update application state and reflect the changes to the UI before/after key r
 
 # Section 18: LifeCycle Methods & API Exercise
 
+See Code!
+
 # Section 19: Building the Dad Jokes App
 
 # Section 20: React Router:
