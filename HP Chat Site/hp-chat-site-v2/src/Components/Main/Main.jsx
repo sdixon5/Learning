@@ -3,6 +3,7 @@ import "semantic-ui-react";
 import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "../IssueList/IssueList";
+import 'semantic-ui-css/semantic.min.css';
 
 export class Main extends Component {
     constructor(props) {

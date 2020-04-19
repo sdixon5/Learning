@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Item, Segment } from "semantic-ui-react";
 import SectionItem from "../SectionItem/SectionItem";
+import 'semantic-ui-css/semantic.min.css';
 
 export class SectionList extends Component {
     render() {

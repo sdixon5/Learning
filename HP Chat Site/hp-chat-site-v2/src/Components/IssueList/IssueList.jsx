@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, Dropdown, Icon } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css';
 
 export class IssueList extends Component {
     render() {

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lVRFYEdk20qBiXzllFvXOy7sAORoDJLCD58q6jmmH15LTczt3FaP6ieWfz8wkLS1YZnQzTqzF9DNRDbLHvua6w==",
+  "success": true,
+  "projectFilePath": "D:\\shawn\\Documents\\GitHub\\Learning\\HP Chat Site\\API\\API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shawn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
