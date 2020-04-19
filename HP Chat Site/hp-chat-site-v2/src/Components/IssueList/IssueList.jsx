@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Dropdown, Icon } from "semantic-ui-react";
-import 'semantic-ui-css/semantic.min.css';
+import "semantic-ui-css/semantic.min.css";
 
 export class IssueList extends Component {
     render() {
@@ -16,10 +16,20 @@ export class IssueList extends Component {
                 text: "test2",
             },
         ];
+        // const options = {this.props.responses.map(res => (
+
+        // ))}
+
+        
         return (
-            <Dropdown selection fluid placeholder="Issue" options={testOptions}>
-                <Icon></Icon>
-            </Dropdown>
+            <Form>
+                <Form.Field>
+                    <label>Issue</label>
+                </Form.Field>
+                <Dropdown selection fluid options={testOptions} >
+                    <Icon></Icon>
+                </Dropdown>
+            </Form>
         );
     }
 }

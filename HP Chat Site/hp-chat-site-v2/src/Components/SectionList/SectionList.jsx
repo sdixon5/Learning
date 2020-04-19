@@ -8,9 +8,16 @@ export class SectionList extends Component {
         return (
             <Segment clearing>
                 <Item.Group divided>
-                    {this.props.responses.map(responseObject => (
+                    {/* {this.props.responses.map(responseObject => (
                         responseObject.response.map(innerResponse => (
                             <SectionItem 
+                                response = {innerResponse}
+                            />
+                        ))
+                    ))} */}
+                    {this.props.standardInfo.map(infoObject => (
+                        infoObject.response.map(innerResponse => (
+                            <SectionItem
                                 response = {innerResponse}
                             />
                         ))
