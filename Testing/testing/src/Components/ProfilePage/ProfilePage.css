@@ -1,0 +1,41 @@
+.ProfilePage{
+    color: red;
+}
+
+/* .ui.card {
+    position: absolute;
+} */
+
+.ProfilePage-banner{
+    position: fixed;
+    margin-bottom: 200px;
+}
+
+.ProfilePage-card{
+    position: fixed;
+    margin-top: 300px;
+} 
+
+.ProfilePage-main{
+    margin-top: 300px;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+/* .ui.card {
+    margin-right: 1rem;
+} */
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "Image Image Image Image" "Card Main Main Main" ". Main Main Main";
+  }
+  
+  .Image { grid-area: Image; position: fixed; }
+  
+  .Card { grid-area: Card; position: fixed; }
+  
+  .Main { grid-area: Main; } */
