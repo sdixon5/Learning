@@ -10,11 +10,17 @@ export class IssueList extends Component {
 
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleClear = this.handleClear.bind(this);
     }
 
     //why does this work? confusing syntax!
     // handleChange(evt, { value }){
     //     this.setState({ value: value });
+    // }
+
+    // componentDidMount(){
+    //     const val = this.state.value;
+    //     console.log('Val: ' + val);
     // }
 
     handleChange(event){
@@ -23,9 +29,24 @@ export class IssueList extends Component {
         // console.log(event.currentTarget);
         // console.log(event.target);
         //console.log([event.target.name]: event.target.value);
-        this.setState({
-            value: event.target.value
-        });
+        let val = this.state.value;
+        if(val === ''){
+            //inside here we will remove the uneeded selection!
+            this.setState({
+                value: ''
+            });
+        }
+        else{
+            //inside here we will add the needed selection
+            this.setState({
+                value: event.target.value
+            });
+        }
+        
+    }
+
+    handleClear(event){
+        console.log('Handle Clear')
     }
 
     render() {
@@ -67,6 +88,8 @@ export class IssueList extends Component {
                 //value={this.state.value}
                 onChange={this.handleChange}
                 options={keys}
+                // onClose={this.handleClear}
+                
             />
         );
     }
