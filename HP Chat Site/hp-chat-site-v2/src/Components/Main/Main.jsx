@@ -127,7 +127,7 @@ export class Main extends Component {
                         />
                     </Grid.Column>
                     <Grid.Column width={6}>
-                        <IssueList key={this.state.responses}/>
+                        <IssueList responses={this.state.responses}/>
                     </Grid.Column>
                 </Grid>
             </Container>
