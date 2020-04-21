@@ -1785,6 +1785,147 @@ See Code!
 
 # Section 20: React Router:
 
+## Lesson 143: Intro to Client-Side Routing
+
+### Goals
+* Describe what client-side routing is and why it’s useful
+* Compare client-side routing to server-side routing
+* Implement basic client-side routing with React Router
+
+### Server-Side Routing
+* Traditional routing is “Server-side routing”
+    * Clicking a **`<a>`** link causes browser to request a new page & replace entire DOM
+* Server decides what HTML to return based on URL requested, entire page refreshes
+
+### Client-Side Routing
+
+### Faking Client Side Routing
+* demo/nonrouted/src/App.js
+    ```
+    class App extends Component {
+    state = {page: "home"};
+
+    goToPage(page) {
+        this.setState({page: page});
+    }
+
+    showRightPage() {
+        if (this.state.page === "home") return <Home />;
+        else if (this.state.page === "eat") return <Eat />;
+        else if (this.state.page === "drink") return <Drink />;
+    }
+
+    render() {
+        return (
+        <main>
+            <nav>
+            <a onClick={() => this.goToPage('home')}>Home</a>
+            <a onClick={() => this.goToPage('eat')}>Eat</a>
+            <a onClick={() => this.goToPage('drink')}>Drink</a>
+            </nav>
+            { this.showRightPage() }
+        </main>
+        );
+    }
+    }
+    ```
+
+### Faking Client Side Routing
+* That’s okay
+
+* It does let us show different “pages”
+    * All in the front-end, without loading new pages from server
+* But we don’t get
+    * A different URL as we move around “pages”
+    * The ability to use the back/forward browser buttons ⬅️ ➡️ 😭
+    * Any way to bookmark a “page” on the site 📖 📑 😱
+    * More complex route/pattern matching
+
+## Lesson 144: Adding Our First Route
+
+### Real Client-Side Routing
+* **React can give us real Client-Side Routing**
+
+
+### Client-Side Routing: What?
+* Client-side routing handles mapping between URL bar and the content a user
+sees via browser rather than via server.
+* Sites that exclusively use client-side routing are **single-page applications**.
+* We use JavaScript to manipulate the URL bar with a Web API called History
+
+
+### React Router
+
+### Installation
+* To get started with React Router, install react-router-dom.
+    ```
+    $ create-react-app routed
+    $ cd routed
+    $ npm install react-router-dom
+    ```
+
+### Including the Router
+* demo/routed/src/index.js
+    ```
+    import {BrowserRouter} from "react-router-dom";
+
+    ReactDOM.render(
+        <BrowserRouter>
+        <App />
+        </BrowserRouter>,
+        document.getElementById("root")
+    );
+    ```
+* Wrap your **`<App />`** renders with a **BrowserRouter**
+
+* There are other routers besides **BrowserRouter** — don’t worry about them.
+
+## Lesson 145: Using Switch and Exact
+
+* Routing by default tries to match as much as possible, so will render root, and desired page
+
+## Lesson 146: Intro to the Link Component
+
+### Routes, Switch, and Links
+
+### Route Component
+* `<Route exact path="/eat" render={() => <Eat />} />`
+* **Route** component acts as translation service between routes & components.
+    * Tell it path to look for in URL, and what to render when it finds match.
+* Props you can set on a **Route**:
+    * **exact** (optional bool), does path need to match exactly?
+/foo/bar in URL bar will match `path="/foo"` — but match won’t be exact.
+    * **path**: path that must match
+    * **render** what should be rendered (expects function that returns JSX)
+* That example: “when path is exactly /eat, render **`<Eat />`** component”
+
+### Switch Component
+
+* Since we only expect one of these to match, wrap in `<Switch>`
+* This stops searching once it finds a match
+* This is almost always what you want
+
+### Link Component
+* The `<Link>` component acts as a replacement for `<a>` tags.
+* Instead of an **href** attribute, `<Link>` uses a **to** prop.
+* Clicking on `<Link>` does not issue a GET request.
+    * JS intercepts click and does client-side routing
+    `<p>Go to <Link to="/drink">drinks</Link> page</p>`
+
+
+## Lesson 147: Adding in NavLinks
+
+### NavLink Component
+* `<NavLink>` is just like link, with one additional feature
+    * If at page that link would go to, the `<a>` gets a CSS class of active
+    * This lets you stylize links to “page you are already at” using the `activeStyle` (in-line) or `activeClassName` props
+    * You should include an **exact** prop here as well
+* Very helpful for navigation menus
+
+## Lesson 148: Render props vs Component props in Routes
+
+* Component will create a new class component each time, vs render will only create one class component object
+
 # Section 21: Vending Machine Exercise
 
 # Section 22: React Router Patterns
