@@ -1928,7 +1928,122 @@ sees via browser rather than via server.
 
 # Section 21: Vending Machine Exercise
 
+* See Code!
+
 # Section 22: React Router Patterns
+
+
+## Lesson 154: Working with URL Params
+
+### URL Parameters
+
+### An Anti-Pattern
+
+### What’s the Problem?
+```
+<App>
+  <Route path="/food/tacos"
+         render={() => <Food name="tacos" />} />
+  <Route path="/food/salad"
+         render={() => <Food name="salad" />} />
+  <Route path="/food/sushi"
+         render={() => <Food name="sushi" />} />
+  <Route path="/food/pasta"
+         render={() => <Food name="pasta" />} />
+</App>
+```
+* Lots of duplication
+* What if we want to add more foods?
+* Solution: Let’s use URL parameters!
+
+
+### A Better Way
+```
+import React, { Component } from "react";
+import Nav from "./Nav";
+import {Route} from "react-router-dom";
+import Food from "./Food";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+        <Route path="/food/:name"
+               render={routeProps => <Food {...routeProps} />} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+* Like with Express, we indicate a URL parameter with a colon :
+
+### Accessing URL Parameters
+* The match route prop stores info on URL and associated URL parameters.
+
+    * It’s an object with these keys:
+        * path: same as path prop passed to Route
+        * url: specific URL found in the URL bar
+        * isExact: is match between url & path exact?
+        * params: object of all of the url parameters
+
+## Lesson 155: Multiple Route Params
+
+### Multiple URL Parameters
+* In that example, we only used one URL parameter.
+
+* It’s possible to have multiple parameters in a single route.
+
+* For example, to have food and beverage pairings in route:
+    ```
+    <Route path="/food/:foodName/drink/:drinkName"
+        render={routeProps => <Food {...routeProps} />} />
+    ```
+* In this case, `props.match.params` would be an object with two keys: `foodName` and `drinkName`.
+
+## Lesson 156: Adding a 404 Not Found Route
+
+* Put the route at the **bottom**. Be sure to use a switch, and be sure to have all other routes set to exact.
+
+## Lesson 158: The Redirect Component
+
+### Client-side Redirects
+* With React Router we can mimic the behavior of server-side redirects.
+* Useful after certain user actions (e.g. submitting a form)
+* Can be used in lieu of having a catch-all 404 component.
+
+### How to Redirect
+* In React Router, there are two ways to redirect:
+    * Using the <Redirect> component
+        * Useful for “you shouldn’t have gotten here, go here instead”
+    * Calling .push method on history route prop
+        * Useful for “you finished this, now go here”
+
+## Lesson 159: Pushing onto the History Prop
+
+### The history prop
+* **history** route prop is a wrapper over the browser’s history API
+* On history prop is .push(url), which add URL to the session history.
+    * So, unlike <Redirect>, hitting back button will return here
+* After pushing this new URL, React Router will update the view accordingly.
+    ```
+    handleSubmit(evt) {
+        evt.preventDefault();
+        this.storeEmail(this.state.email);
+        // imperatively redirect to homepage
+        this.props.history.push("/");
+    }
+    ```
+
+## Lesson 160: Comparing History and Redirect
+
+## Lesson 161: withRouter Higher Order Component
+
+## Lesson 162: Implementing a Back Button
+
+
 
 # Section 23: Router Exercises Part 2
 
