@@ -2037,15 +2037,9 @@ export default App;
     }
     ```
 
-## Lesson 160: Comparing History and Redirect
-
-## Lesson 161: withRouter Higher Order Component
-
-## Lesson 162: Implementing a Back Button
-
-
-
 # Section 23: Router Exercises Part 2
+
+* See Code
 
 # Section 24: The Massive Color Project Pt 1
 
