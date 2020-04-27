@@ -1,0 +1,50 @@
+.NavBar {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: flex;
+  }
+  
+  /* .NavBar #myLinks {
+    display: none;
+  } */
+
+  .NavBar-expanded {
+      display: block;
+  }
+
+  .NavBar-hidden {
+      display: none;
+  }
+  
+  .NavBar a {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .NavBar a.icon {
+    float: right;
+  }
+  
+  .NavBar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* .NavBar .fa .fa-bars{
+    color: white;
+    display: flex-end;
+  } */
+
+  /* .NavBar-lines{
+      border-radius: 10px;
+      background-color: red;
+  } */
