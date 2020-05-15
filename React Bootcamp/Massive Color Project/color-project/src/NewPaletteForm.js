@@ -21,6 +21,8 @@ import { ChromePicker } from "react-color";
 import { Button } from "@material-ui/core";
 import DraggableColorBox from "./DraggableColorBox";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import DraggableColorList from "./DraggableColorList";
+import { arrayMove } from "react-sortable-hoc";
 
 const drawerWidth = 400;
 
@@ -83,12 +85,16 @@ const styles = (theme) => ({
 });
 
 export class NewPaletteForm extends Component {
+  static defaultProps = {
+    maxColors: 20,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       open: true,
       currentColor: "teal",
-      colors: [],
+      colors: this.props.palettes[0].colors,
       newColorName: "",
       newPaletteName: "",
     };
@@ -96,6 +102,9 @@ export class NewPaletteForm extends Component {
     this.addNewColor = this.addNewColor.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.removeColor = this.removeColor.bind(this);
+    this.clearColors = this.clearColors.bind(this);
+    this.addRandomColor = this.addRandomColor.bind(this);
   }
 
   componentDidMount() {
@@ -152,9 +161,40 @@ export class NewPaletteForm extends Component {
     this.props.history.push("/");
   }
 
+  removeColor(colorName) {
+    this.setState({
+      colors: this.state.colors.filter((color) => color.name !== colorName),
+    });
+  }
+
+  onSortEnd = ({ oldIndex, newIndex }) => {
+    this.setState(({ colors }) => ({
+      colors: arrayMove(colors, oldIndex, newIndex),
+    }));
+  };
+
+  clearColors() {
+    this.setState({
+      colors: [],
+    });
+  }
+
+  addRandomColor() {
+    //pick random color from existing palettes
+    const allColors = this.props.palettes
+      .map((palette) => palette.colors)
+      .flat();
+    let rand = Math.floor(Math.random() * allColors.length);
+    const randomColor = allColors[rand];
+    this.setState({
+      colors: [...this.state.colors, randomColor],
+    });
+  }
+
   render() {
-    const { classes, theme } = this.props;
-    const { open } = this.state;
+    const { classes, theme, maxColors } = this.props;
+    const { open, colors } = this.state;
+    const paletteIsFull = colors.length >= maxColors;
 
     return (
       <div className={classes.root}>
@@ -210,10 +250,19 @@ export class NewPaletteForm extends Component {
           <Divider />
           <Typography variant="h4">Design Your Palette</Typography>
           <div>
-            <Button variant="contained" color="secondary">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={this.clearColors}
+            >
               Clear Palette
             </Button>
-            <Button variant="contained" color="primary">
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={this.addRandomColor}
+              disabled={paletteIsFull}
+            >
               Random Color
             </Button>
           </div>
@@ -236,10 +285,15 @@ export class NewPaletteForm extends Component {
             <Button
               variant="contained"
               color="primary"
-              style={{ backgroundColor: this.state.currentColor }}
+              style={{
+                backgroundColor: paletteIsFull
+                  ? "grey"
+                  : this.state.currentColor,
+              }}
+              disabled={paletteIsFull}
               type="submit"
             >
-              Add Color
+              {paletteIsFull ? "Palette Full" : "Add Color"}
             </Button>
           </ValidatorForm>
         </Drawer>
@@ -249,9 +303,12 @@ export class NewPaletteForm extends Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          {this.state.colors.map((color) => (
-            <DraggableColorBox color={color.color} name={color.name} />
-          ))}
+          <DraggableColorList
+            colors={this.state.colors}
+            removeColor={this.removeColor}
+            axis="xy"
+            onSortEnd={this.onSortEnd}
+          />
         </main>
       </div>
     );
