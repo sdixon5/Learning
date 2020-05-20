@@ -26,45 +26,8 @@ import { arrayMove } from "react-sortable-hoc";
 import { Link } from "react-router-dom";
 import { Palette } from "./Palette";
 import PaletteMetaForm from "./PaletteMetaForm";
-
-const drawerWidth = 400;
-
-const styles = (theme) => ({
-  root: {
-    display: "flex",
-  },
-  appBar: {
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "64px",
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
-  navBtns: {
-    marginRight: "1rem",
-    "& a": {
-      textDecoration: "none",
-    },
-  },
-  button: {
-    margin: "0 0.5rem",
-  },
-});
+import AddToPhotosIcon from "@material-ui/icons/AddToPhotos";
+import styles from "./styles/PaletteFormNavStyles";
 
 export class PaletteFormNav extends Component {
   constructor(props) {
@@ -112,9 +75,11 @@ export class PaletteFormNav extends Component {
               color="inherit"
               aria-label="Open drawer"
               onClick={this.props.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
+              className={classNames(classes.menuButton, {
+                [classes.hide]: open,
+              })}
             >
-              <MenuIcon />
+              <AddToPhotosIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" noWrap>
               Create A Palette
