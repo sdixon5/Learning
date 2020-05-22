@@ -2,31 +2,17 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import { ChromePicker } from "react-color";
 import { Button } from "@material-ui/core";
-import DraggableColorBox from "./DraggableColorBox";
-import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import DraggableColorList from "./DraggableColorList";
 import { arrayMove } from "react-sortable-hoc";
-import { Link } from "react-router-dom";
 import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
 import styles from "./styles/NewPaletteFormStyles";
+import seedColors from "./seedColors";
 
 export class NewPaletteForm extends Component {
   static defaultProps = {
@@ -37,7 +23,7 @@ export class NewPaletteForm extends Component {
     super(props);
     this.state = {
       open: true,
-      colors: this.props.palettes[0].colors,
+      colors: seedColors[0].colors,
     };
     this.addNewColor = this.addNewColor.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -96,8 +82,19 @@ export class NewPaletteForm extends Component {
     const allColors = this.props.palettes
       .map((palette) => palette.colors)
       .flat();
-    let rand = Math.floor(Math.random() * allColors.length);
-    const randomColor = allColors[rand];
+
+    let rand;
+    let randomColor;
+    let isDuplicateColor = true;
+
+    while (isDuplicateColor) {
+      rand = Math.floor(Math.random() * allColors.length);
+      randomColor = allColors[rand];
+      isDuplicateColor = this.state.colors.some(
+        (color) => color.name === randomColor.name
+      );
+    }
+
     this.setState({
       colors: [...this.state.colors, randomColor],
     });
