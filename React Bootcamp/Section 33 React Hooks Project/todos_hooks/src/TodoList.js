@@ -1,21 +1,21 @@
 import React, { useState, Fragment } from "react";
-import {
-  Divider,
-  List,
-  ListItem,
-  ListItemText,
-  Paper,
-} from "@material-ui/core";
+import { Divider, List, Paper } from "@material-ui/core";
+import Todo from "./Todo";
 
-function TodoList(props) {
+function TodoList({ todos, removeTodo, toggleTodo }) {
   return (
     <Paper>
       <List></List>
-      {props.todos.map((todo) => (
+      {todos.map((todo) => (
         <Fragment>
-          <ListItem>
-            <ListItemText>{todo.task}</ListItemText>
-          </ListItem>
+          <Todo
+            task={todo.task}
+            key={todo.id}
+            completed={todo.completed}
+            removeTodo={removeTodo}
+            id={todo.id}
+            toggleTodo={toggleTodo}
+          />
           <Divider />
         </Fragment>
       ))}
