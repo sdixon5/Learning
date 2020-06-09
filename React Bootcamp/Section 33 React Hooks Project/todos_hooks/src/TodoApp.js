@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { AppBar, Paper, Toolbar, Typography, Grid } from "@material-ui/core";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
-import { v4 as uuid } from "uuid";
+import useTodoState from "./hooks/useTodoState";
 
 function TodoApp() {
   const initialTodos = [
@@ -10,26 +10,25 @@ function TodoApp() {
     { id: 2, task: "Wash car", completed: true },
     { id: 3, task: "Grow beard", completed: false },
   ];
+  // const initialTodos = JSON.parse(window.localStorage.getItem("todos")) || [
+  //   { id: 1, task: "Clean Fishtank", completed: false },
+  //   { id: 2, task: "Wash car", completed: true },
+  //   { id: 3, task: "Grow beard", completed: false },
+  // ];
 
-  const [todos, setTodos] = useState(initialTodos);
+  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
+    initialTodos
+  );
 
-  const addTodo = (newTodoText) => {
-    setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }]);
-  };
+  // const initialTodos = [
+  //   { id: 1, task: "Clean Fishtank", completed: false },
+  //   { id: 2, task: "Wash car", completed: true },
+  //   { id: 3, task: "Grow beard", completed: false },
+  // ];
 
-  const removeTodo = (todoId) => {
-    //filter out removed todo
-    const updatedTodos = todos.filter((todo) => todo.id !== todoId);
-    //call setTodos with new todos array
-    setTodos(updatedTodos);
-  };
-
-  const toggleTodo = (todoId) => {
-    const updatedTodos = todos.map((todo) =>
-      todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
-    );
-    setTodos(updatedTodos);
-  };
+  // useEffect(() => {
+  //   window.localStorage.setItem("todos", JSON.stringify(todos));
+  // }, [todos]);
 
   return (
     <div>
@@ -54,6 +53,7 @@ function TodoApp() {
               todos={todos}
               removeTodo={removeTodo}
               toggleTodo={toggleTodo}
+              editTodo={editTodo}
             />
           </Grid>
         </Grid>
