@@ -32,3 +32,13 @@ export class Form extends Component {
 }
 
 export default withStyles(styles)(Form);
+
+// TypeError: Cannot read property 'main' of undefined
+
+// 21 | render() {
+// 22 |   const { classes } = this.props;
+// 23 |   return (
+// >24 |     <main className={classes.main}>
+// 25 |       <Paper>
+// 26 |         <h1>Form!</h1>
+// 27 |         <p>Test</p>
