@@ -123,5 +123,8 @@ D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTra
 D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\obj\Debug\netcoreapp3.1\HealthTracker.csproj.CoreCompileInputs.cache
 D:\shawn\Documents\GitHub\Learning\Testing\healthTracker\HealthTracker\HealthTracker\obj\Debug\netcoreapp3.1\HealthTracker.MvcApplicationPartsAssemblyInfo.cache

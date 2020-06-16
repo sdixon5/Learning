@@ -19,18 +19,32 @@ namespace HealthTracker.Controllers
             _context = new DataContext();
         }
 
+        //[HttpGet]
+        //public IEnumerable<Responses> GetResponses()
+        //{
+        //    List<Responses> responseList = _context.Responses.ToList();
+        //    return responseList;
+        //}
+
+        //[HttpGet("{id}")]
+        //public IEnumerable<Responses> GetUserResponses(int id)
+        //{
+        //    List<Responses> responseList = _context.Responses.Include(r => r.User).Where(r => r.UserId == id).ToList();
+        //    return responseList;
+        //}
+
         [HttpGet]
-        public IEnumerable<Responses> GetResponses()
+        public async Task<ActionResult<IEnumerable<Responses>>> Get()
         {
-            List<Responses> responseList = _context.Responses.ToList();
-            return responseList;
+            var responses = await _context.Responses.ToListAsync();
+            return Ok(responses);
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Responses> GetUserResponses(int id)
+        public async Task<ActionResult<IEnumerable<Responses>>> GetUser(int id)
         {
-            List<Responses> responseList = _context.Responses.Include(r => r.User).Where(r => r.UserId == id).ToList();
-            return responseList;
+            var responses = await _context.Responses.Include(r => r.User).Where(r => r.UserId == id).ToListAsync();
+            return Ok(responses);
         }
     }
 }

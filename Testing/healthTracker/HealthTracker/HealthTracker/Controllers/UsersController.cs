@@ -30,7 +30,7 @@ namespace HealthTracker.Controllers
         [HttpGet("{id}")]
         public IEnumerable<Users> GetSpecificUser(string SAmaccountName)
         {
-            List<Users> user = _context.Users.Include(u => u.Responses).Where(u => u.SAmacountName == SAmaccountName).ToList();
+            List<Users> user = _context.Users.Where(u => u.SAmacountName == SAmaccountName).ToList();
             return user;
         }
     }
