@@ -5,7 +5,8 @@ export default function SectionItem({ response }) {
   return (
     <Item>
       <Item.Content>
-        <p>{response}</p>
+        {/* <p>{response}</p> */}
+        <p dangerouslySetInnerHTML={{ __html: response }}></p>
       </Item.Content>
       <Item.Extra>
         <Button size="tiny" color="blue" floated="right">
