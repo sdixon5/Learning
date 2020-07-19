@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
+import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
 
 export default function Main() {
@@ -115,7 +116,9 @@ export default function Main() {
           {/* Section List Component */}
           <SectionList responses={responses} standardInfo={standardInfo} />
         </Grid.Column>
-        <Grid.Column width={6}>{/* Issue List */}</Grid.Column>
+        <Grid.Column width={6}>
+          <IssueList responses={responses} />
+        </Grid.Column>
       </Grid>
     </Container>
   );
