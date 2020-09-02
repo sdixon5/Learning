@@ -90,7 +90,7 @@ export default function Main() {
     {
       key: "Contact Info",
       response: [
-        "Company name (if any): Weld County School District 6<br/><br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday",
+        "Company name (if any): Weld County School District 6<br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday",
       ],
     },
     {
