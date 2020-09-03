@@ -117,7 +117,7 @@ export default function Main() {
           <SectionList responses={responses} standardInfo={standardInfo} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <IssueList responses={responses} />
+          <IssueList responses={responses} setStandardInfo />
         </Grid.Column>
       </Grid>
     </Container>
