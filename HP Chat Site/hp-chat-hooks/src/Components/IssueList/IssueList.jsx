@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dropdown } from "semantic-ui-react";
 import useInputState from "../../Hooks/useInputState";
 
-export default function IssueList({ responses, setStandardInfo }) {
+export default function IssueList({ responses, updateStandardInfo }) {
   // const [value, setValue] = useState();
 
   // handleChange((event) => {
@@ -14,12 +14,12 @@ export default function IssueList({ responses, setStandardInfo }) {
   //   }
   // });
 
-  //const [value, handleChange, reset] = useInputState("");
-  const [value, setValue] = useState("");
+  const [value, handleChange, reset] = useInputState("");
+  //const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setValue(e.target.value);
+  // };
 
   // useEffect(() => {
   //   let result = keys.findIndex((info) => info.key === value);
@@ -32,6 +32,17 @@ export default function IssueList({ responses, setStandardInfo }) {
   //     }
   //   });
   // }, [value]);
+
+  useEffect(() => {
+    responses.forEach((response) => {
+      //console.log("value is: " + value);
+      //if (response.key === value) setIssue = response;
+      if (response.key === value) {
+        console.log(response);
+        updateStandardInfo(response);
+      }
+    });
+  }, [value]);
 
   const keys = [];
 
@@ -60,7 +71,9 @@ export default function IssueList({ responses, setStandardInfo }) {
       selection={true}
       clearable={true}
       onChange={handleChange}
+      //onSearchChange={handleChange}
       options={keys}
+      value={value}
     />
   );
 }

@@ -3,6 +3,7 @@ import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
+import Issue from "../Issue/Issue";
 
 export default function Main() {
   const [responses, setResponses] = useState([
@@ -108,6 +109,17 @@ export default function Main() {
     },
   ]);
 
+  const updateStandardInfo = (response) => {
+    console.log(standardInfo.length);
+    if (standardInfo.length > 3) {
+      let oldStandardInfo = [...standardInfo];
+      oldStandardInfo.pop();
+      setStandardInfo([...oldStandardInfo, response]);
+    } else {
+      setStandardInfo([...standardInfo, response]);
+    }
+  };
+
   return (
     <Container>
       <Grid>
@@ -117,7 +129,10 @@ export default function Main() {
           <SectionList responses={responses} standardInfo={standardInfo} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <IssueList responses={responses} setStandardInfo />
+          <IssueList
+            responses={responses}
+            updateStandardInfo={updateStandardInfo}
+          />
         </Grid.Column>
       </Grid>
     </Container>
