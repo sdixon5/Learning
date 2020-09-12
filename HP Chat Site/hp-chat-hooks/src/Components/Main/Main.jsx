@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
@@ -127,6 +127,11 @@ export default function Main() {
       setSections([...sections, response]);
     }
   };
+
+  useEffect(() => {
+    // standardInfo[0].response = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
+    console.log(standardInfo[0].response);
+  }, [name, phone, email]);
 
   return (
     <Container>
