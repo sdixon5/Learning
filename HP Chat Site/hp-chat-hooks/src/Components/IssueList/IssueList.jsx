@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Dropdown } from "semantic-ui-react";
 import useInputState from "../../Hooks/useInputState";
 
-export default function IssueList({ responses, updateStandardInfo }) {
+export default function IssueList({ responses, updateSections }) {
   const [value, handleChange, reset] = useInputState("");
 
   useEffect(() => {
     responses.forEach((response) => {
       if (response.key === value) {
-        updateStandardInfo(response);
+        updateSections(response);
       }
     });
   }, [value]);
@@ -26,7 +26,6 @@ export default function IssueList({ responses, updateStandardInfo }) {
       selection={true}
       clearable={true}
       onChange={handleChange}
-      //onSearchChange={handleChange}
       options={keys}
       value={value}
     />

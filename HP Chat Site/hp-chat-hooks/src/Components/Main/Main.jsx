@@ -87,11 +87,16 @@ export default function Main() {
       ],
     },
   ]);
+
+  const [name, setName] = useState("Shawn Dixon");
+  const [phone, setPhone] = useState("(970) 348-6546");
+  const [email, setEmail] = useState("sdixon3@greeleyschools.org");
+
   const [standardInfo, setStandardInfo] = useState([
     {
       key: "Contact Info",
       response: [
-        "Company name (if any): Weld County School District 6<br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday",
+        `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`,
       ],
     },
     {
@@ -109,13 +114,15 @@ export default function Main() {
     },
   ]);
 
-  const updateStandardInfo = (response) => {
-    if (standardInfo.length > 3) {
-      let oldStandardInfo = [...standardInfo];
-      oldStandardInfo.pop();
-      setStandardInfo([...oldStandardInfo, response]);
+  const [sections, setSections] = useState(standardInfo);
+
+  const updateSections = (response) => {
+    if (sections.length > standardInfo.length) {
+      let oldSections = [...sections];
+      oldSections.pop();
+      setSections([...oldSections, response]);
     } else {
-      setStandardInfo([...standardInfo, response]);
+      setSections([...sections, response]);
     }
   };
 
@@ -125,13 +132,10 @@ export default function Main() {
         <Grid.Column width={10}>
           <h1>HP Chat Responses</h1>
           {/* Section List Component */}
-          <SectionList responses={responses} standardInfo={standardInfo} />
+          <SectionList sections={sections} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <IssueList
-            responses={responses}
-            updateStandardInfo={updateStandardInfo}
-          />
+          <IssueList responses={responses} updateSections={updateSections} />
         </Grid.Column>
       </Grid>
     </Container>
