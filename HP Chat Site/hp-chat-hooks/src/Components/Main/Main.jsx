@@ -4,6 +4,8 @@ import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
 import Issue from "../Issue/Issue";
+import useInput from "../../Hooks/useInput";
+import UserForm from "../UserForm/UserForm";
 
 export default function Main() {
   const [responses, setResponses] = useState([
@@ -88,9 +90,9 @@ export default function Main() {
     },
   ]);
 
-  const [name, setName] = useState("Shawn Dixon");
-  const [phone, setPhone] = useState("(970) 348-6546");
-  const [email, setEmail] = useState("sdixon3@greeleyschools.org");
+  const [name, setName] = useInput("Shawn Dixon");
+  const [phone, setPhone] = useInput("(970) 348-6546");
+  const [email, setEmail] = useInput("sdixon3@greeleyschools.org");
 
   const [standardInfo, setStandardInfo] = useState([
     {
@@ -131,10 +133,18 @@ export default function Main() {
       <Grid>
         <Grid.Column width={10}>
           <h1>HP Chat Responses</h1>
-          {/* Section List Component */}
           <SectionList sections={sections} />
         </Grid.Column>
         <Grid.Column width={6}>
+          <UserForm
+            name={name}
+            phone={phone}
+            email={email}
+            setName={setName}
+            setPhone={setPhone}
+            setEmail={setEmail}
+          />
+          <br />
           <IssueList responses={responses} updateSections={updateSections} />
         </Grid.Column>
       </Grid>
