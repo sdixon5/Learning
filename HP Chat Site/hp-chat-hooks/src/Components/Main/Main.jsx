@@ -110,7 +110,6 @@ export default function Main() {
   ]);
 
   const updateStandardInfo = (response) => {
-    console.log(standardInfo.length);
     if (standardInfo.length > 3) {
       let oldStandardInfo = [...standardInfo];
       oldStandardInfo.pop();
