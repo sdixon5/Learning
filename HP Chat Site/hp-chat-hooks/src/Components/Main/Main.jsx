@@ -3,7 +3,6 @@ import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
-import Issue from "../Issue/Issue";
 import useInput from "../../Hooks/useInput";
 import UserForm from "../UserForm/UserForm";
 
@@ -129,8 +128,17 @@ export default function Main() {
   };
 
   useEffect(() => {
-    // standardInfo[0].response = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
-    console.log(standardInfo[0].response);
+    let oldSections = [...sections];
+    let section = { ...oldSections[0] };
+    section.response[0] = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
+    oldSections[0] = section;
+    setSections([...oldSections]);
+
+    let oldStandardInfo = [...standardInfo];
+    let contactInfo = { ...oldStandardInfo[0] };
+    contactInfo.response[0] = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
+    oldStandardInfo[0] = contactInfo;
+    setStandardInfo([...oldStandardInfo]);
   }, [name, phone, email]);
 
   return (
