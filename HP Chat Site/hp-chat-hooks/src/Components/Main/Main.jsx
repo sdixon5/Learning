@@ -118,7 +118,11 @@ export default function Main() {
   const [sections, setSections] = useState(standardInfo);
 
   const updateSections = (response) => {
-    if (sections.length > standardInfo.length) {
+    if (response === "") {
+      let oldSections = [...sections];
+      oldSections.pop();
+      setSections([...oldSections]);
+    } else if (sections.length > standardInfo.length) {
       let oldSections = [...sections];
       oldSections.pop();
       setSections([...oldSections, response]);

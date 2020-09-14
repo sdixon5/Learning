@@ -6,11 +6,16 @@ export default function IssueList({ responses, updateSections }) {
   const [value, handleChange, reset] = useInputState("");
 
   useEffect(() => {
-    responses.forEach((response) => {
-      if (response.key === value) {
-        updateSections(response);
-      }
-    });
+    if (value === "") {
+      let response = "";
+      updateSections(response);
+    } else {
+      responses.forEach((response) => {
+        if (response.key === value) {
+          updateSections(response);
+        }
+      });
+    }
   }, [value]);
 
   const keys = [];
