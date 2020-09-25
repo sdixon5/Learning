@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
+import useInput from "../../Hooks/useInput";
+import UserForm from "../UserForm/UserForm";
 
 export default function Main() {
   const [responses, setResponses] = useState([
@@ -86,11 +88,16 @@ export default function Main() {
       ],
     },
   ]);
+
+  const [name, setName] = useInput("Shawn Dixon");
+  const [phone, setPhone] = useInput("(970) 348-6546");
+  const [email, setEmail] = useInput("sdixon3@greeleyschools.org");
+
   const [standardInfo, setStandardInfo] = useState([
     {
       key: "Contact Info",
       response: [
-        "Company name (if any): Weld County School District 6<br/><br/>Full Name: Shawn Dixon<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: (970) 348-6546<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: sdixon3@greeleyschools.org<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday",
+        `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`,
       ],
     },
     {
@@ -108,16 +115,54 @@ export default function Main() {
     },
   ]);
 
+  const [sections, setSections] = useState(standardInfo);
+
+  const updateSections = (response) => {
+    if (response === "") {
+      let oldSections = [...sections];
+      oldSections.pop();
+      setSections([...oldSections]);
+    } else if (sections.length > standardInfo.length) {
+      let oldSections = [...sections];
+      oldSections.pop();
+      setSections([...oldSections, response]);
+    } else {
+      setSections([...sections, response]);
+    }
+  };
+
+  useEffect(() => {
+    let oldSections = [...sections];
+    let section = { ...oldSections[0] };
+    section.response[0] = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
+    oldSections[0] = section;
+    setSections([...oldSections]);
+
+    let oldStandardInfo = [...standardInfo];
+    let contactInfo = { ...oldStandardInfo[0] };
+    contactInfo.response[0] = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
+    oldStandardInfo[0] = contactInfo;
+    setStandardInfo([...oldStandardInfo]);
+  }, [name, phone, email]);
+
   return (
     <Container>
       <Grid>
         <Grid.Column width={10}>
           <h1>HP Chat Responses</h1>
-          {/* Section List Component */}
-          <SectionList responses={responses} standardInfo={standardInfo} />
+          <SectionList sections={sections} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <IssueList responses={responses} />
+          <UserForm
+            name={name}
+            phone={phone}
+            email={email}
+            setName={setName}
+            setPhone={setPhone}
+            setEmail={setEmail}
+          />
+          <br />
+          <IssueList responses={responses} updateSections={updateSections} />
         </Grid.Column>
       </Grid>
     </Container>

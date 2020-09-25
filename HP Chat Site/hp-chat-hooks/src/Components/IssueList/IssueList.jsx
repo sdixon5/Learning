@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Dropdown } from "semantic-ui-react";
 import useInputState from "../../Hooks/useInputState";
 
-export default function IssueList({ responses }) {
-  // const [value, setValue] = useState();
-
-  // handleChange((event) => {
-  //   let val = value;
-  //   if (val === "") {
-  //     setValue = "";
-  //   } else {
-  //     setValue = event.target.value;
-  //   }
-  // });
-
+export default function IssueList({ responses, updateSections }) {
   const [value, handleChange, reset] = useInputState("");
+
+  useEffect(() => {
+    if (value === "") {
+      let response = "";
+      updateSections(response);
+    } else {
+      responses.forEach((response) => {
+        if (response.key === value) {
+          updateSections(response);
+        }
+      });
+    }
+  }, [value]);
 
   const keys = [];
 
@@ -30,6 +32,7 @@ export default function IssueList({ responses }) {
       clearable={true}
       onChange={handleChange}
       options={keys}
+      value={value}
     />
   );
 }
