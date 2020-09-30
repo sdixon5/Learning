@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Grid } from "semantic-ui-react";
 import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
 import useInput from "../../Hooks/useInput";
 import UserForm from "../UserForm/UserForm";
+import { StandardInfoContext } from "./../../Context/StandardInfoContext";
 
 export default function Main() {
+  //console.log("Standard info = " + standardInfo);
+
+  const standardInfoContext = useContext(StandardInfoContext);
+
   const [responses, setResponses] = useState([
     {
       key: "Lines In Display",
@@ -89,40 +94,40 @@ export default function Main() {
     },
   ]);
 
-  const [name, setName] = useInput("Shawn Dixon");
-  const [phone, setPhone] = useInput("(970) 348-6546");
-  const [email, setEmail] = useInput("sdixon3@greeleyschools.org");
+  const [name, setName] = useInput("");
+  const [phone, setPhone] = useInput("");
+  const [email, setEmail] = useInput("");
 
-  const [standardInfo, setStandardInfo] = useState([
-    {
-      key: "Contact Info",
-      response: [
-        `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`,
-      ],
-    },
-    {
-      key: "Intro",
-      response: [
-        "I'm doing well, thank you for asking. How are you doing today?",
-      ],
-    },
-    {
-      key: "Conclusion",
-      response: [
-        "Thank you for your time and assistance. Have a nice rest of your day!",
-        "No that will be all. Thank you for your time and assistance. Have a nice rest of your day!",
-      ],
-    },
-  ]);
+  // const [standardInfo, setStandardInfo] = useState([
+  //   {
+  //     key: "Contact Info",
+  //     response: [
+  //       `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`,
+  //     ],
+  //   },
+  //   {
+  //     key: "Intro",
+  //     response: [
+  //       "I'm doing well, thank you for asking. How are you doing today?",
+  //     ],
+  //   },
+  //   {
+  //     key: "Conclusion",
+  //     response: [
+  //       "Thank you for your time and assistance. Have a nice rest of your day!",
+  //       "No that will be all. Thank you for your time and assistance. Have a nice rest of your day!",
+  //     ],
+  //   },
+  // ]);
 
-  const [sections, setSections] = useState(standardInfo);
+  const [sections, setSections] = useState(standardInfoContext.standardInfo);
 
   const updateSections = (response) => {
     if (response === "") {
       let oldSections = [...sections];
       oldSections.pop();
       setSections([...oldSections]);
-    } else if (sections.length > standardInfo.length) {
+    } else if (sections.length > standardInfoContext.standardInfo.length) {
       let oldSections = [...sections];
       oldSections.pop();
       setSections([...oldSections, response]);
@@ -138,11 +143,11 @@ export default function Main() {
     oldSections[0] = section;
     setSections([...oldSections]);
 
-    let oldStandardInfo = [...standardInfo];
+    let oldStandardInfo = [...standardInfoContext.standardInfo];
     let contactInfo = { ...oldStandardInfo[0] };
     contactInfo.response[0] = `Company name (if any): Weld County School District 6<br/>Full Name: ${name}<br/>Complete address with zip/postal code (US/Canada): 2204 5th Ave Greeley, CO 80631 USA<br/>Contact Phone: ${phone}<br/>Alternate phone (if any):  (970) 348-6500<br/>Email address: ${email}<br/>Time Zone: Mountain Time<br/>Country: United States<br/>Best time to reach me is between 8am and 3pm Monday-Friday`;
     oldStandardInfo[0] = contactInfo;
-    setStandardInfo([...oldStandardInfo]);
+    standardInfoContext.setStandardInfo([...oldStandardInfo]);
   }, [name, phone, email]);
 
   return (
