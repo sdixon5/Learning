@@ -1,14 +1,11 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Accordion, AccordionPanel, Form, Icon } from "semantic-ui-react";
+import { UserContext } from "./../../Context/UserContext";
 
-export default function UserForm({
-  name,
-  phone,
-  email,
-  setName,
-  setPhone,
-  setEmail,
-}) {
+export default function UserForm({}) {
+  const userContext = useContext(UserContext);
+
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleClick = () => {
@@ -29,15 +26,27 @@ export default function UserForm({
         <Form>
           <Form.Field>
             <label>Name</label>
-            <input placeholder="Name" value={name} onChange={setName} />
+            <input
+              placeholder="Name"
+              value={userContext.name}
+              onChange={userContext.setName}
+            />
           </Form.Field>
           <Form.Field>
             <label>Phone</label>
-            <input placeholder="Phone" value={phone} onChange={setPhone} />
+            <input
+              placeholder="Phone"
+              value={userContext.phone}
+              onChange={userContext.setPhone}
+            />
           </Form.Field>
           <Form.Field>
             <label>Email</label>
-            <input placeholder="Email" value={email} onChange={setEmail} />
+            <input
+              placeholder="Email"
+              value={userContext.email}
+              onChange={userContext.setEmail}
+            />
           </Form.Field>
         </Form>
       </Accordion.Content>

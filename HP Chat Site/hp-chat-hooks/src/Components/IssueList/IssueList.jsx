@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Dropdown } from "semantic-ui-react";
 import useInputState from "../../Hooks/useInputState";
+import { ResponsesContext } from "./../../Context/ResponsesContext";
 
 export default function IssueList({ responses, updateSections }) {
   const [value, handleChange, reset] = useInputState("");
+
+  const responsesContext = useContext(ResponsesContext);
 
   useEffect(() => {
     if (value === "") {
       let response = "";
       updateSections(response);
     } else {
-      responses.forEach((response) => {
+      responsesContext.responses.forEach((response) => {
         if (response.key === value) {
           updateSections(response);
         }
@@ -20,7 +23,7 @@ export default function IssueList({ responses, updateSections }) {
 
   const keys = [];
 
-  responses.map((res) =>
+  responsesContext.responses.map((res) =>
     keys.push({ key: res.key, text: res.key, value: res.key })
   );
 
