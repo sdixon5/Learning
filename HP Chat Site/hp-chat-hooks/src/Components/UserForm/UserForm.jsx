@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { Accordion, AccordionPanel, Form, Icon } from "semantic-ui-react";
+import { Accordion, Form, Icon } from "semantic-ui-react";
 import { UserContext } from "./../../Context/UserContext";
 
-export default function UserForm({}) {
+export default function UserForm() {
   const userContext = useContext(UserContext);
 
   const [activeIndex, setActiveIndex] = useState(-1);
