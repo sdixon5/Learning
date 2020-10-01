@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { StandardInfoProvider } from "./Context/StandardInfoContext";
 import { ResponsesProvider } from "./Context/ResponsesContext";

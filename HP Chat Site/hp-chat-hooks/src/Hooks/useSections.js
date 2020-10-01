@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { StandardInfoContext } from "../Context/StandardInfoContext";
 import { UserContext } from "../Context/UserContext";
 
