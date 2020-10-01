@@ -5,6 +5,7 @@ import IssueList from "../Components/IssueList/IssueList";
 import "./HPChat.css";
 import UserForm from "../Components/UserForm/UserForm";
 import useSections from "../Hooks/useSections";
+import ResponseForm from "../Components/ResponseForm/ResponseForm";
 
 export default function HPChat() {
   const [sections, updateSections] = useSections();
@@ -18,6 +19,8 @@ export default function HPChat() {
         </Grid.Column>
         <Grid.Column width={6}>
           <UserForm />
+          <br />
+          <ResponseForm />
           <br />
           <IssueList updateSections={updateSections} />
         </Grid.Column>
