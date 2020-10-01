@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Dropdown } from "semantic-ui-react";
 import useInputState from "../../Hooks/useInputState";
+import useSections from "../../Hooks/useSections";
 import { ResponsesContext } from "./../../Context/ResponsesContext";
 
-export default function IssueList({ responses, updateSections }) {
+export default function IssueList({ updateSections }) {
   const [value, handleChange, reset] = useInputState("");
 
   const responsesContext = useContext(ResponsesContext);

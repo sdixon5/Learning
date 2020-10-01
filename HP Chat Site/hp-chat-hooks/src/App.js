@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Main from "./Components/Main/Main";
 import { StandardInfoProvider } from "./Context/StandardInfoContext";
 import { ResponsesProvider } from "./Context/ResponsesContext";
 import { UserProvider } from "./Context/UserContext";
+import HPChat from "./Pages/HPChat";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <StandardInfoProvider>
         <ResponsesProvider>
           <UserProvider>
-            <Main />
+            <HPChat />
           </UserProvider>
         </ResponsesProvider>
       </StandardInfoProvider>
