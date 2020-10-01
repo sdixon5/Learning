@@ -4,7 +4,7 @@ import SectionList from "../SectionList/SectionList";
 import IssueList from "./../IssueList/IssueList";
 import "./Main.css";
 import UserForm from "../UserForm/UserForm";
-import { StandardInfoContext } from "./../../Context/StandardInfoContext";
+import { StandardInfoContext } from "../../Context/StandardInfoContext";
 import { UserContext } from "./../../Context/UserContext";
 
 export default function Main() {
