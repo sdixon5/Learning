@@ -22,10 +22,10 @@ export default function IssueList({ updateSections }) {
     }
   }, [value]);
 
-  const keys = [];
+  const dropdownOptions = [];
 
   responsesContext.responses.map((res) =>
-    keys.push({ key: res.key, text: res.key, value: res.key })
+    dropdownOptions.push({ key: res.key, text: res.key, value: res.key })
   );
 
   return (
@@ -35,7 +35,7 @@ export default function IssueList({ updateSections }) {
       selection={true}
       clearable={true}
       onChange={handleChange}
-      options={keys}
+      options={dropdownOptions}
       value={value}
     />
   );
