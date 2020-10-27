@@ -21,10 +21,20 @@ export default function SignIn() {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <button disabled={loading} type="submit" className="ui button">
-        Sign In with Google
-      </button>
-    </Form>
+    // <Form onSubmit={handleSubmit}>
+    //   <button disabled={loading} type="submit" className="ui button">
+    //     Sign In with Google
+    //   </button>
+    // </Form>
+
+    <div>
+      {currentUser ? (
+        <Redirect to="/hpchat" />
+      ) : (
+        <button onClick={login} className="ui button">
+          Sign In with Google
+        </button>
+      )}
+    </div>
   );
 }
