@@ -4,6 +4,9 @@ import { StandardInfoProvider } from "./Context/StandardInfoContext";
 import { ResponsesProvider } from "./Context/ResponsesContext";
 import { UserProvider } from "./Context/UserContext";
 import HPChat from "./Pages/HPChat";
+import { Switch, Route } from "react-router-dom";
+import SignInPage from "./Pages/SignInPage";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -11,7 +14,10 @@ function App() {
       <StandardInfoProvider>
         <ResponsesProvider>
           <UserProvider>
-            <HPChat />
+            <Switch>
+              <PrivateRoute exact path="/hpchat" component={HPChat} />
+              <Route exact path="/" component={SignInPage} />
+            </Switch>
           </UserProvider>
         </ResponsesProvider>
       </StandardInfoProvider>

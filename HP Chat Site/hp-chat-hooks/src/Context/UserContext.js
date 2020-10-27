@@ -10,15 +10,26 @@ export function UserProvider({ children }) {
   const [email, setEmail] = useInput("");
 
   const [currentUser, setCurrentUser] = useState();
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
 
   const login = () => {
     signInWithGoogle();
   };
 
+  const logout = () => {
+    auth.signOut();
+    setName("");
+    setPhone("");
+    setEmail("");
+  };
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
+      setLoading(false);
+      setName(user.displayName);
+      setEmail(user.email);
+      console.log(email);
     });
 
     return unsubscribe;
@@ -35,9 +46,10 @@ export function UserProvider({ children }) {
         setEmail,
         login,
         currentUser,
+        logout,
       }}
     >
-      {children}
+      {!loading && children}
     </UserContext.Provider>
   );
 }
