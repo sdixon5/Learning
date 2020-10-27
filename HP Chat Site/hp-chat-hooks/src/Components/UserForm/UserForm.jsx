@@ -49,7 +49,6 @@ export default function UserForm() {
             />
           </Form.Field>
         </Form>
-        <button onClick={userContext.login}>Google Sign In</button>
       </Accordion.Content>
     </Accordion>
   );

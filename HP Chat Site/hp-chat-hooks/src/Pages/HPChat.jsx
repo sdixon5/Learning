@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Button, Container, Grid } from "semantic-ui-react";
 import SectionList from "../Components/SectionList/SectionList";
 import IssueList from "../Components/IssueList/IssueList";
 import "./HPChat.css";
@@ -25,7 +25,8 @@ export default function HPChat() {
           <ResponseForm />
           <br />
           <IssueList updateSections={updateSections} />
-          <button onClick={userContext.logout}>Logout</button>
+          <br />
+          <Button onClick={userContext.logout}>Logout</Button>
         </Grid.Column>
       </Grid>
     </Container>
