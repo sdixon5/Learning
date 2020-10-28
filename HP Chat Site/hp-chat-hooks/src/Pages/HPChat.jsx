@@ -14,9 +14,9 @@ export default function HPChat() {
 
   return (
     <Container>
+      <h1>HP Chat: Responses</h1>
       <Grid>
         <Grid.Column width={10}>
-          <h1>HP Chat Responses</h1>
           <SectionList sections={sections} />
         </Grid.Column>
         <Grid.Column width={6}>
@@ -25,8 +25,6 @@ export default function HPChat() {
           <ResponseForm />
           <br />
           <IssueList updateSections={updateSections} />
-          <br />
-          <Button onClick={userContext.logout}>Logout</Button>
         </Grid.Column>
       </Grid>
     </Container>

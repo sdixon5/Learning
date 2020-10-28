@@ -1,18 +1,21 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "./../../Context/UserContext";
 import { Redirect } from "react-router-dom";
+import { Container, Grid, Segment } from "semantic-ui-react";
+import "./SignIn.css";
+import GoogleButton from "react-google-button";
 
 export default function SignIn() {
   const { login, currentUser } = useContext(UserContext);
 
   return (
-    <div>
+    <div id="wrapper">
       {currentUser ? (
-        <Redirect to="/hpchat" />
+        <Redirect to="/dashboard" />
       ) : (
-        <button onClick={login} className="ui button">
+        <GoogleButton type="dark" onClick={login}>
           Sign In with Google
-        </button>
+        </GoogleButton>
       )}
     </div>
   );

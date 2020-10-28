@@ -7,6 +7,7 @@ import HPChat from "./Pages/HPChat";
 import { Switch, Route } from "react-router-dom";
 import SignInPage from "./Pages/SignInPage";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <ResponsesProvider>
           <UserProvider>
             <Switch>
-              <PrivateRoute exact path="/hpchat" component={HPChat} />
+              {/* <PrivateRoute exact path="/hpchat" component={HPChat} /> */}
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <Route exact path="/" component={SignInPage} />
             </Switch>
           </UserProvider>

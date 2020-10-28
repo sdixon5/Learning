@@ -29,6 +29,7 @@ export function UserProvider({ children }) {
       setLoading(false);
       setName(user.displayName);
       setEmail(user.email);
+      setPhone("(970) 348-6565");
       console.log(email);
     });
 
