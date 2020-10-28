@@ -30,7 +30,6 @@ export function UserProvider({ children }) {
       setName(user.displayName);
       setEmail(user.email);
       setPhone("(970) 348-6565");
-      console.log(email);
     });
 
     return unsubscribe;
