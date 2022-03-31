@@ -118,8 +118,61 @@ kubernetes is the more popular choice, where the action is
 
 ## Kubernetes
 
+Intro
+
 ### Kubernetes: History
 
+Google was running search, gmail etc in containers even years ago
+
+Borg, Omega was their container systems.
+
+These became Kubernetes, now part of cloud native computing foundation - now open source
+
+AWS, google etc support kubernetes
+
+in cloud or on prem
+
+kubernetes is greek for helmsman or captain
+the person who steers the ship
+
+shortened to k8s
+
 ### Kubernetes: The Short and Skinny
+
+Does most things
+
+docker allows you to stop and start individual containers
+
+kubernetes cares about higher level stuff
+scheduling, scaling, healing, updating
+
+how to scale up or down, update etc
+
+docker is like a hypervisor (esxi)
+kubernets is like vcenter
+
+lots of nodes, each run a kubernetes agent and a docker runtime
+
+above all of this is the k8s control plane, the brains of the operation making decisions when to scale,etc
+
+next course: getting started with kubernetes
+
+one more thing
+
+kubernetes allows you to decouple app, can migrate on and off of the cloud, as long as not tightly coupled to that specific cloud provider, but that is app specific
+
+### Recap
+
+kubernetes came out of google
+
+kubernetes manages the apps, no intervention required
+
+## Preparing to Thrive in a Container World
+
+### Preparing to Thrive in a Container World
+
+### Individual Preparedness
+
+### Organization Preparedness
 
 ### Recap
