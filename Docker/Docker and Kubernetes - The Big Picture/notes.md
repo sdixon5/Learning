@@ -171,8 +171,195 @@ kubernetes manages the apps, no intervention required
 
 ### Preparing to Thrive in a Container World
 
+individual and team prep
+
 ### Individual Preparedness
+
+need knowledge and experience
+
+run on docker desktop or run on cloud
+if on cloud (beware of cost!)
+
+get hands on => learn as much as possible
+
+get docker desktop
+
+courses on pluralsight
+
+getting started with docker
+docker deep dive
+getting started with kubernetes
 
 ### Organization Preparedness
 
+how to prep our teams?
+
+containers are coming!
+
+do we have containers already?
+
+start making it official, figure out how we could use them
+
+CI/CD continous integration/continous development
+
+swat team => hand-picked projects, quick build
+
+infra services => need administration of docker, logging, monitoring, etc.
+
+TALK to team about this idea
+
+dont forget about budgets
+
 ### Recap
+
+containers are coming
+
+soon they will be everywhere
+
+## Suitable Workloads
+
+### Suitable Workloads
+
+Stateless or Stateful apps? Which works with docker?
+
+Since 2018 docker and kubernetes have become better with stateful.
+
+Stateful
+-has to remember stuff
+
+Stateless
+- doesn't remember stuff
+
+### Low-hanging Fruit
+
+Cloud Native & Microservices
+
+modern buisness need to be reactive
+
+The ability to adapt and change is key to any successful buisness
+
+hypervisor revolutionized IT
+
+hypervisor still has crappy legacy apps.
+
+It is possible to deploy some of our legacy apps into containers but that is not the goal.
+Refactor and make the app better.
+
+### State & Legacy Apps
+
+Docker is amazing with Stateless apps.
+
+Docker works with Stateful apps.
+State is harder.
+
+Docker and kubernetes added features for stateful apps.
+
+some apps can be migrated directly to containers
+
+### Recap
+
+Docker is ready for stateful apps now.
+
+## Enterprise and Production Readiness
+
+### Enterprise and Production Readiness
+
+Are these tech, enterprise ready? (Docker and Kubernetes)
+
+### Docker
+
+Prod and environment ready?
+
+community and enterprise edition
+
+enterprise is all about stability, does cost
+but has more services.
+is ad/ldap ready.
+policies, fips, pipelines, etc
+
+### Kubernetes
+
+on premises and on cloud
+
+hosted
+
+AWS EKS
+Azure AKS
+Google GKE
+
+or build your own on Prem
+
+kubernetes is huge, has alpha, beta and ga releases
+
+beta stuff is enabled by default
+
+ga is here for long-term
+
+lots of support from large and small companies
+
+CHECK OUT GKE, since we are a google focused team
+
+### Ecosystem
+
+container ecosystem =>
+tons of options.
+
+docker and kubernetes will be here long-term but not all compaines will be around long-term so be careful who you partner with.
+
+### Summary
+
+enterprise ready for both docker and kubernetes, but kubernetes is a challenge to manage and it may be best to use a cloud solution.
+
+## A Word on Orchestration
+
+### A Word on Orchestration
+
+orchestration analogy
+
+american football, each person has their own job, need to orchestrate and work together, done by coach
+
+### Orchestration
+
+apps now have multiple interlinked services/clouds
+
+game plan: describes all services, where deployed, and how they work together
+
+document and version control the plan
+
+kubernetes is huge and takes a while to learn.
+
+### Summary
+
+need to plan how the app will all work together when using multiple services
+
+## What's Next?
+
+### What's Next?
+
+Need a refresh => watch the summaries again
+
+Big picture, lots more to join
+
+what next => who are you? what do you do?
+
+instructor: nigel poulton
+
+next course by same instructor:
+* Getting started with kubernetes
+* Getting started with docker
+* Docker Deep Dive
+
+books:
+* docker deep dive
+* the kubernetes book
+
+hands on:
+* play with docker
+* play with kubernetes
+* docker desktop
+
+events:
+* dockercon
+* kubecon
+
+@nigelpoulton on twitter
