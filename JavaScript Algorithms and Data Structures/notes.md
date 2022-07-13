@@ -46,6 +46,41 @@ The problem with time
 - same machine will record diff time
 - fast algorithms, speed measurement not precise enough
 
+If not time, then what?
+
+- Rather than time, count the number of simple operations.
+
+Counting Operations
+
+```
+function addUpTo(n) {
+  return n * (n + 1) / 2;
+}
+```
+
+- There are 3 operations in the function above, 1 multiplication, 1 addition, 1 division. Those are the operations.
+
+```
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+```
+
+- The addition operation in the loop is not one operation. We are adding n, so the plus in the loop is n number of operations. So if n = 5, then 5 operations, but if n = 1 billion, then 1 billion operations. So there are n operations in this function. Plus the equals sign is another operation, so another n operations. The i++ is n additions and n assignments, the comparisons are n operations. The total and i assignments are 1 each.
+
+- The high end of the number of operations is 5n+2
+- The low end of the number of operations is 2n
+
+- Regardless of the exact number, the number of operations grows roughly proportionally with n
+
+Visualizing Time Complexities
+
+- Cool graphing, easy to see time differences.
+
 ## Section 3: Analyzing Performance of Arrays and Objects
 
 ## Section 4: Problem Solving Approach
