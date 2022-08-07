@@ -81,13 +81,153 @@ Visualizing Time Complexities
 
 - Cool graphing, easy to see time differences.
 
+### Big O
+
+Big O Notation is a way to formalize fuzzy counting.
+
+It allows us to talk formally about how the runtime of an algorithm grows as the input grows
+
+We only care about the broad trends.
+
+Big O Definition
+
+We say that an algorithm is O(f(n)) if the number of simple operations the computer has to do is eventaully less than a constant times f(n), as n increases.
+
+- f(n) could be linear (f(n) = n)
+- f(n) could be quadratic (f(n) = n^2)
+- f(n) could be constant (f(n) = 1)
+- f(n) could be something entirely different!
+
+Big O talks about the worst case scenario (the upper bound)
+
+We only care about the order of magnitude
+
+A loop in a loop is n^2, because it has the run through the list multiple times
+
+### Simplifying Big O Expressions
+
+Constants don't matter
+
+Smaller terms don't matter
+
+Big O Shorthands
+
+1. Arithmetic operations are constant
+2. Variable assignment is constant
+3. Accessing elements in an array (by index) or object (by key) is constant
+4. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+
+### Space Complexity
+
+Auxiliary space complexity refers to the space taken up by the algorithm itself and not the space taken up by the inputs
+
+In Javascript
+
+- most primitives (bools, int, undefined, null) are constant space
+- strings require O(n) space (where n is the string length)
+- References types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+A variable that is set and changed is O(1)
+An array that is set and is added to is O(n)
+
+### Logarithms
+
+What is a log again?
+
+A log is the reverse of exponents
+
+log2(8) = 3 (is really asking 2 to the power of what will give us 8) --> 2^3 = 8
+
+log2(value) = exponent --> 2^exponent = value
+
+for us we will omit the 2, the base doesn't matter, we are looking for the general trends
+
+This isn't a math course, so here's a rule of thumb...
+
+- The logarithm of a number roughly measures the number of times you can divide that number by 2 **before you get a value that's less than or equal to one**.
+
+Examples
+
+- log(8) = 3
+- log(25) ~ 4.64
+
+Who cares?
+-searching algorithms have logarithmic time complexity
+-efficient sorting algorithms involve logs
+-recursion sometimes involves logarithmic space complexity
+
+Peformance of algorithm is analyzed with Big O
+
 ## Section 3: Analyzing Performance of Arrays and Objects
+
+This section will covers the runtime for arrays, objects and built-in js methods
+
+### Objects
+
+Unordered, key value pairs
+
+When to use objects
+
+- when you don't need order
+- when you need fast access / insertion and removal
+
+**Big O of objects**
+
+- insertion -> O(1)
+- removal -> O(1)
+- searching -> O(n)
+- access -> O(1)
+
+when you don't need any ordering, objects are an excellent choice!
+
+js uses hashmaps to create objects
+
+**Big O of Object Methods**
+
+- Object.keys -> O(n)
+- Object.values -> O(n)
+- Object.entries -> O(n)
+- hasOwnProperty -> O(1)
+
+### Arrays
+
+Ordered lists!
+
+When to use arrays?
+
+- when you need order
+- when you need fast access/insertion and removal (sort of...)
+
+**Big O of arrays**
+
+- Insertion - It depends
+- Removal - It depends
+- Searching - O(n)
+- Access - O(1) (if using the index)
+
+Insertion at end is O(1), array.push
+Insertion at start is O(n), have to reindex everything, array.unshift()
+
+Remove from beginning forces a re-index. So O(n) array.shift()
+Remove from end of array... O(1) array.pop()
+
+**Big O of Array Operations**
+
+- push -> O(1)
+- pop -> O(1)
+- shift -> O(n)
+- unshift -> O(n)
+- concat -> O(n)
+- slice -> O(n)
+- splice -> O(n)
+- sort -> O(n \* log n)
+- forEach/map/filter/reduce/etc. -> O(n)
 
 ## Section 4: Problem Solving Approach
 
 ## Section 5: Problem Solving Patterns
 
-## Section 6: 100% OPTIONal Challenges
+## Section 6: 100% OPTIONAL Challenges
 
 ## Section 7: Recursion
 
