@@ -225,6 +225,98 @@ Remove from end of array... O(1) array.pop()
 
 ## Section 4: Problem Solving Approach
 
+Objectives:
+
+- define what an algorithm is
+  - a **process** or **set of steps** to accomplish a certain task
+- devise a plan to solve algorithms
+- compare and contrast problem solving patterns including frequency counters, two pointer problems and divide and conquer
+
+Why do i need to know this?
+
+- almost everything that you do in programming involves some kind of algorithm!
+- it's the foundation for being a successful problem solver and developer
+
+How do you improve?
+
+1. devise a plan for problem solving
+2. master common problem solving patterns
+
+This phase covers the strategies.
+
+Problem solving
+
+- understand the problem
+- explore concrete examples
+- break it down
+- solve/simplify
+- look back and refactor
+
+### Understand the problem
+
+Note: many of these strategies are adapted from **George Polya**, whose book _How To Solve It_ is a great resource for anyone who wants to become a better problem solver
+
+investigate the problem
+
+basic question
+
+1. Can I restate the problem in my own words?
+2. What are the inputs that go into the problem?
+3. What are the outputs that should come from the solution to the problem?
+4. Can the outputs be determines from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
+5. How should I label the important pieces of data that are a part of the problem? (What is the terminology?)
+
+### Concrete Examples
+
+Coming up with examples can help you understand the problem better.
+
+Allows you to provide sanity checks
+
+User stories are an example!
+Unit tests!
+
+- Start with simple examples
+- progress to more complex examples
+- explore examples with empty inputs
+- explore examples with invalid inputs
+
+### Break it down
+
+pseudocode
+communicate the plan
+express the steps
+
+Explicitly write out the steps you need to take.
+
+This forces you to think about the code you'll write before you write it, and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (e.g. language syntax) as well.
+
+It's all about seeing your process in interviews!
+
+### Solve/simplify
+
+Solve the problem ... if you can't ... solve a simpler problem
+
+#### Simplify
+
+- Find the core difficulty in what you're trying to do
+- Temporarily ignore that difficulty
+- Write a simplified solution
+- Then incorporate that difficulty back in
+
+### Look back and refactor
+
+Congrats on solving it, but you're not done!
+
+Refactoring questions?
+
+- can you check the result?
+- can you dervice the result differently?
+- can you understand it at a glance?
+- can you use the result or method for some other problem?
+- can you improve the performance of your solution?
+- can you think of other ways to refactor?
+- how have other people solved this problem?
+
 ## Section 5: Problem Solving Patterns
 
 ## Section 6: 100% OPTIONAL Challenges
