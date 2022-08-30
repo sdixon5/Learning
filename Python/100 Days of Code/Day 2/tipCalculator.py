@@ -24,5 +24,4 @@ if("%" in percentage):
 #        (     124.56   /      5)     *  1                   .12
 payout = (float(total) / int(people)) * (1 + (int(percentage)/100))
 
-payout = "{:.2f}".format(payout)
 print(f"Each person should pay: ${payout}")
