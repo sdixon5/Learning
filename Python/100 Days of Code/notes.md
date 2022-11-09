@@ -66,3 +66,57 @@ while not at_goal():
     else:
         move()
 ```
+
+variable wall height:
+
+```
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    count = 0
+    while wall_on_right():
+        move()
+        count += 1
+    turn_right()
+    move()
+    turn_right()
+    for i in range(count):
+        move()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+```
+
+her version
+```
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    count = 0
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+```
