@@ -1,26 +1,22 @@
+#from art import logo
+#print(logo)
+
 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-
-correctChoice = False
-
-while not correctChoice:
-  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-  if(direction == "encode" or direction == "decode"):
-    correctChoice = True
-
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
 
 def caesar(text, shift, direction):
   outputText = ""
   if direction == "decode":
     shift *= -1
-  for letter in text:
-    index = alphabet.index(letter)
-    newIndex = index + shift
-    if newIndex > len(alphabet):
-      outputText += alphabet[(newIndex - len(alphabet))]
-    else:
-      outputText += alphabet[newIndex]
+  for char in text:
+    if char in alphabet:
+      index = alphabet.index(char)
+      newIndex = index + shift
+      if newIndex > len(alphabet):
+        outputText += alphabet[(newIndex - len(alphabet))]
+      else:
+        outputText += alphabet[newIndex]
+    else: 
+      outputText += char
   print(f"The {direction}d text is {outputText}.")
 
 # def encrypt(text, shift):
@@ -71,4 +67,20 @@ def caesar(text, shift, direction):
 # else:
 #   print("That is not an option.")
 
-caesar(text, shift, direction)
+should_continue = True
+
+while should_continue:
+
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+
+  text = input("Type your message:\n").lower()
+  shift = int(input("Type the shift number:\n"))
+
+  shift = shift % 26
+
+  caesar(text, shift, direction)
+
+  result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
+  if result == "no":
+    should_continue = False
+    print("Goodbye")

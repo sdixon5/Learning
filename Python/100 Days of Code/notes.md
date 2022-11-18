@@ -220,3 +220,31 @@ greet("Nowhere", "Bob") #positional arguments --> sentence won't make sense like
 
 greet(location="Nowhere", name="Bob") #keyword arguments --> sentence will make sense now
 ```
+
+Dictionaries and Nesting
+{Key: Value}
+
+```
+programming_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again.",
+}
+
+#Retrieving values
+programming_dictionary["Bug"]
+
+#Adding
+programming_dictionary["Loop"] = "The action of doing something over and over again."
+
+empty_dictionary = {}
+
+#Wipe dictionary
+programming_dictionary = {}
+
+#edit an item
+programming_dictionary["Bug"] = "This has been edited."
+
+#Loop through a dictionary
+for key in programming_dictionary:
+    programming_dictionary[key]
+```
