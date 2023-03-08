@@ -10,3 +10,15 @@ How to be a great react dev?
 1. decide on comonents
 2. decide the state and where it lives
 3. what changes when state changes
+
+NPM downloads down the create-react-app tool, then we use it to create our app
+
+`npm install create-react-app monsters-rolodex`
+
+`npm list <package name>`
+
+`NPM list -g <package name>`
+
+NPX installs and executes the package, then deletes it immediately
+
+`npx install create-react-app monsters-rolodex`
