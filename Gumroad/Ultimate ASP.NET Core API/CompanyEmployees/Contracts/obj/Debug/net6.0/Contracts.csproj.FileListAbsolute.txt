@@ -10,3 +10,15 @@ D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmpl
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\refint\Contracts.dll
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.pdb
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\ref\Contracts.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\bin\Debug\net6.0\Contracts.deps.json
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\bin\Debug\net6.0\Contracts.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\bin\Debug\net6.0\Contracts.pdb
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.csproj.AssemblyReference.cache
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.AssemblyInfoInputs.cache
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.AssemblyInfo.cs
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.csproj.CoreCompileInputs.cache
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\refint\Contracts.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\Contracts.pdb
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\Contracts\obj\Debug\net6.0\ref\Contracts.dll

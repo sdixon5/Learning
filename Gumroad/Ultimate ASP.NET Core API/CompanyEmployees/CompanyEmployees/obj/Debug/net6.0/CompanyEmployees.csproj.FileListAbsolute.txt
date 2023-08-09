@@ -60,3 +60,11 @@ D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmpl
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\obj\Debug\net6.0\CompanyEmployees.pdb
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\obj\Debug\net6.0\CompanyEmployees.genruntimeconfig.cache
 D:\shawn\Documents\GitHub\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\obj\Debug\net6.0\ref\CompanyEmployees.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\nlog.config
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\NLog.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\Contracts.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\LoggerService.dll
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\LoggerService.pdb
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\bin\Debug\net6.0\Contracts.pdb
+E:\GitHub-Work\Learning\Gumroad\Ultimate ASP.NET Core API\CompanyEmployees\CompanyEmployees\obj\Debug\net6.0\CompanyEmployees.csproj.CopyComplete

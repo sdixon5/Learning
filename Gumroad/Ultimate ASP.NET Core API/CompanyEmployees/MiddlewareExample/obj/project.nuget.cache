@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6SXvVlH0Qof/P7eFAe3GXDQk0K1BMjLQwaCOCoN1lrHQ7IhGTJn7eGwegkfDa1mu27JvJiV1qbCp6rUXMJp2rg==",
+  "dgSpecHash": "oDnWUFnq/i/7cgpoFDzB+t8RvOfbVEXUNACiNq/euB/diFqz5iSOpPoS6CXnHWMLfUx5BTENetfPKqbyeI9Q7w==",
   "success": true,
-  "projectFilePath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
+  "projectFilePath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
