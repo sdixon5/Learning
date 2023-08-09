@@ -8,32 +8,37 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sdixon3\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\shawn\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
+      "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
       "projectName": "MiddlewareExample",
-      "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
-      "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\obj\\",
+      "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\MiddlewareExample.csproj",
+      "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+      "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\MiddlewareExample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -70,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
