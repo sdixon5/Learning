@@ -35,6 +35,9 @@
             "projectReferences": {
               "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
                 "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj"
+              },
+              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
+                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj"
               }
             }
           }
@@ -49,6 +52,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[5.3.3, )"
@@ -85,6 +92,66 @@
         "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
         "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -185,6 +252,76 @@
             "NLog": {
               "target": "Package",
               "version": "[5.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.21, )"
             }
           },
           "imports": [
