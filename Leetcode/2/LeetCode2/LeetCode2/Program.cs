@@ -39,7 +39,13 @@ Input: l1 = [2,4,3], l2 = [5,6,4]
 Output: [7,0,8]
 */
 
-int[] arr1 = new int[3] { 2, 4, 3 };
+//int[] arr1 = new int[3] { 2, 4, 3 };
+//int[] arr2 = new int[3] { 5, 6, 4 };
+
+//int[] arr1 = new int[1] { 9 };
+//int[] arr2 = new int[10] { 1, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+
+int[] arr1 = new int[31] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 };
 int[] arr2 = new int[3] { 5, 6, 4 };
 
 ListNode l1 = new ListNode(arr1[0]);
@@ -47,16 +53,16 @@ ListNode current = l1;
 
 for (int i = 1; i < arr1.Length; i++)
 {
-    current.next = new ListNode(i);
+    current.next = new ListNode(arr1[i]);
     current = current.next;
 }
 
 ListNode l2 = new ListNode(arr2[0]);
 ListNode current2 = l2;
 
-for (int i = 1; i < arr2.Length; i++)
+for (int j = 1; j < arr2.Length; j++)
 {
-    current2.next = new ListNode(i);
+    current2.next = new ListNode(arr2[j]);
     current2 = current2.next;
 }
 

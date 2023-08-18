@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
@@ -35,7 +36,7 @@ namespace LeetCode2
             nodeOne = new string(nodeOneChars);
             nodeTwo = new string(nodeTwoChars);
 
-            int valueToReturn = Convert.ToInt32(nodeOne) + Convert.ToInt32(nodeTwo);
+            BigInteger valueToReturn = BigInteger.Parse(nodeOne) + BigInteger.Parse(nodeTwo);
 
             string output = valueToReturn.ToString();
 
