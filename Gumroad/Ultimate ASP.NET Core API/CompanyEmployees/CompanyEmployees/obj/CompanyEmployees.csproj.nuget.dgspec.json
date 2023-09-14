@@ -1,43 +1,49 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj": {}
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj": {}
   },
   "projects": {
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
         "projectName": "CompanyEmployees",
-        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
-        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\obj\\",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
-                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj"
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj"
               },
-              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
-                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj"
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj"
+              },
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj"
               }
             }
           }
@@ -86,33 +92,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\obj\\",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -146,33 +155,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\obj\\",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -206,41 +218,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj",
         "projectName": "LoggerService",
-        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj",
-        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\obj\\",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj"
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj"
               }
             }
           }
@@ -276,44 +291,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\obj\\",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj"
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj"
               },
-              "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj"
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj"
               }
             }
           }
@@ -349,7 +367,140 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\Service.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\Service.Contracts.csproj",
+        "projectName": "Service.Contracts",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\Service.Contracts.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+        "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Contracts\\Contracts.csproj"
+              },
+              "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\Service.Contracts.csproj": {
+                "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service.Contracts\\Service.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

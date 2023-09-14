@@ -862,6 +862,30 @@
         "runtime": {
           "bin/placeholder/Repository.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Service.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
+      },
+      "Service.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Service.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.Contracts.dll": {}
+        }
       }
     }
   },
@@ -2152,6 +2176,16 @@
       "type": "project",
       "path": "../Repository/Repository.csproj",
       "msbuildProject": "../Repository/Repository.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
+    },
+    "Service.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Service.Contracts/Service.Contracts.csproj",
+      "msbuildProject": "../Service.Contracts/Service.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2160,47 +2194,56 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21",
       "NLog.Extensions.Logging >= 5.3.3",
-      "Repository >= 1.0.0"
+      "Repository >= 1.0.0",
+      "Service >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sdixon3\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\shawn\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
+      "projectUniqueName": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
       "projectName": "CompanyEmployees",
-      "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
-      "packagesPath": "C:\\Users\\sdixon3\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\obj\\",
+      "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
+      "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
+      "outputPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\CompanyEmployees\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sdixon3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shawn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj"
+            "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\LoggerService\\LoggerService.csproj"
             },
-            "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
-              "projectPath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj"
+            "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Repository\\Repository.csproj"
+            },
+            "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj": {
+              "projectPath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Service\\Service.csproj"
             }
           }
         }
@@ -2249,7 +2292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

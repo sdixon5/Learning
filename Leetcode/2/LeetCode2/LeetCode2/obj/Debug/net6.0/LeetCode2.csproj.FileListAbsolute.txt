@@ -1,0 +1,15 @@
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\bin\Debug\net6.0\LeetCode2.exe
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\bin\Debug\net6.0\LeetCode2.deps.json
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\bin\Debug\net6.0\LeetCode2.runtimeconfig.json
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\bin\Debug\net6.0\LeetCode2.dll
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\bin\Debug\net6.0\LeetCode2.pdb
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.csproj.AssemblyReference.cache
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.GeneratedMSBuildEditorConfig.editorconfig
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.AssemblyInfoInputs.cache
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.AssemblyInfo.cs
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.csproj.CoreCompileInputs.cache
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.dll
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\refint\LeetCode2.dll
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.pdb
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\LeetCode2.genruntimeconfig.cache
+D:\shawn\Documents\GitHub\Learning\Leetcode\2\LeetCode2\LeetCode2\obj\Debug\net6.0\ref\LeetCode2.dll
