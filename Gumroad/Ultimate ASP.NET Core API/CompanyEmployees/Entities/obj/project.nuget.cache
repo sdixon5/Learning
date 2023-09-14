@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ppr3VUhuje6z0mBQZXeLUF9lpZnpPjdL+zDbeqSmQQRvz3wRFMxxg7gUyHSBeWqNzRwLzFWBdnhahYNt30DKAw==",
+  "dgSpecHash": "dYCL86LZ1onXJEq1B40h9MqVoGYwn9ZU9Vk9CFpCIde1Uj0Vu6tnTlbqSqXEp5L0Kns6ttU5d1Mk8sQ9VTIBwA==",
   "success": true,
-  "projectFilePath": "D:\\shawn\\Documents\\GitHub\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
+  "projectFilePath": "E:\\GitHub-Work\\Learning\\Gumroad\\Ultimate ASP.NET Core API\\CompanyEmployees\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
