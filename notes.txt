@@ -3,3 +3,8 @@ Add C/C++ to vs code
 Download raylib
 
 gitlab.com/gamedevtv/cppcourse
+
+
+Including header files
+<> is for c++ standard library, built-into c++
+"" is for external libraries
